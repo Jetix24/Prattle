@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Navbar from '@/components/Navbar';
 const inter = Inter({ subsets: ["latin"] });
+import { Providers } from "./Providers";
 
 export const metadata = {
   title: "Prattle Chat App",
@@ -21,7 +22,13 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <link rel="shortcut icon" href="/img/logo_seul.png" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <input type="checkbox" id="check" />
+          <Navbar />
+          {children}
+        </Providers>
+        </body>
     </html>
   );
 }
