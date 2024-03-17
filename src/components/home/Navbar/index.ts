@@ -1,0 +1,1 @@
+export { Navbar } from './Navbar'; // src/components/home/Description/Description.tsx

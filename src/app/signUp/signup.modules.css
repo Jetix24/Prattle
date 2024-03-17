@@ -1,0 +1,114 @@
+/* signup-styles.css */
+.container {
+    height: 100vh;
+    padding: 6px;
+  }
+  
+  .left-column {
+    margin-bottom: 12px;
+    width: 50%;
+  }
+  
+  .right-column {
+    width: 50%;
+  }
+  
+  .form-input {
+    position: relative;
+    margin-bottom: 6px;
+  }
+  
+  .form-input input {
+    width: 100%;
+    padding: 0.32rem;
+    border: 1px solid #000; /* Cambia el color y el estilo del borde según tus necesidades */
+    border-radius: 0.25rem;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    outline: none;
+  }
+  
+  .form-input input:focus {
+    /* Estilos para cuando el input está enfocado */
+  }
+  
+  .form-input label {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    margin-bottom: 0;
+    max-width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 0.37rem;
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tu diseño */
+    transition: all 0.2s ease-out;
+    color: #999; /* Cambia el color del texto del label según tus necesidades */
+  }
+  
+  .form-input input:focus + label,
+  .form-input input:not(:placeholder-shown) + label {
+    /* Estilos para cuando el input está enfocado o tiene contenido */
+  }
+  
+  .checkbox-container {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    /* Estilos para el checkbox */
+  }
+  
+  .checkbox-container label {
+    margin-left: 10px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #007bff; /* Cambia el color de fondo según tus necesidades */
+    color: #fff; /* Cambia el color del texto según tus necesidades */
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tu diseño */
+    transition: background-color 0.2s ease;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse según tus necesidades */
+  }
+  
+  .divider {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc; /* Cambia el color del borde según tus necesidades */
+  }
+  
+  .divider p {
+    margin: 0 8px;
+    font-weight: bold;
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tu diseño */
+    color: #333; /* Cambia el color del texto según tus necesidades */
+  }
+  
+  .social-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #55acee; /* Cambia el color de fondo según tus necesidades */
+    color: #fff; /* Cambia el color del texto según tus necesidades */
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tu diseño */
+    transition: background-color 0.2s ease;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .social-button:hover {
+    background-color: #1da1f2; /* Cambia el color de fondo al pasar el mouse según tus necesidades */
+  }
+  
