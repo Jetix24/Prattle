@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
-
 const inter = Inter({ subsets: ["latin"] });
+import { Providers } from "./Providers";
+import '../app/globals.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 export const metadata = {
   title: "Prattle Chat App",
@@ -19,9 +21,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <title>{metadata.title}</title>
-        <link rel="shortcut icon" href="/img/logo_seul.png" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          {children}
+        </Providers>
+        </body>
     </html>
   );
 }
