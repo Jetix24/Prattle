@@ -1,9 +1,9 @@
 import Link from "next/link"
-import styles from "./FormSignUp.module.css"
+import styles from "./FormLogIn.module.css"
 
-export const FormSignUp = () => {
+export const FormLogIn = () => {
     return (
-            <form className={styles.signupForm}>
+            <form className={styles.logInForm}>
                 <div className={styles.formGroup}>
                     <label htmlFor="email">Usuario</label>
                     <input type="email" id="email" name="email" required />
@@ -12,7 +12,7 @@ export const FormSignUp = () => {
                     <label htmlFor="password">Contraseña</label>
                     <input type="password" id="password" name="password" required />
                 </div>
-                    <button type="submit">Ingresar </button>
+                    <button type="submit">Ingresar</button>
             </form>
     )
 }

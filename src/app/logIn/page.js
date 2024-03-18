@@ -1,8 +1,7 @@
-{/* pages/signup.js*/}
-import styles from "./signup.module.css"
-import { FormSignUp } from '@/components/inicioSesion/FormSignUp/FormSignUp';
+import styles from "./logIn.module.css"
+import { FormLogIn} from '@/components/inicioSesion/FormLogIn/FormLogIn';
 import { ButtonGoogle } from '@/components/inicioSesion/ButtonGoogle/ButtonGoogle';
-export default function SignUp() {
+export default function logIn() {
 
   return (
     <section>
@@ -17,7 +16,7 @@ export default function SignUp() {
                         <img src="/img/logo_seul.png" alt="Logo de la página"/>
                         <h2>Iniciar Sesión</h2>
                     </div>
-                        <FormSignUp />
+                        <FormLogIn />
                         <ButtonGoogle />
                 </div>
             </div>

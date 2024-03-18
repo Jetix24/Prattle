@@ -12,7 +12,9 @@ return (
             <div className={styles.navigation}>
                 <button>Proyecto</button>
                 <button>Sobre nosotros</button>
-                <button>Iniciar sesión</button>
+                <Link href="/logIn">
+                    <button>Iniciar sesión</button>
+                </Link>
                 <Link href="/signUp">
                     <button id={styles.registrate}>Registrate</button>
                 </Link>
