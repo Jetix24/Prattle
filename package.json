@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@types/react-dom": "^18.2.21",
+    "mongoose": "^8.2.2",
     "next": "14.1.0",
     "next-auth": "^4.24.7",
     "react": "^18",
