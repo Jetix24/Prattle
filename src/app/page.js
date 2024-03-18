@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className = {styles.Home} >
       <section >
-      
         <Navbar />
         <Description />
       </section>

@@ -84,12 +84,11 @@
       }
     }
     
-
     @media (max-width: 1170px){
       .Navbar nav .navigation{
         display: none;
       }
-      .Navbar #logo{
+      .Navbar img{
         height: 80px;
         margin-left: 50px;
       }
@@ -107,7 +106,7 @@
       label .close-btn{
         display: none;
       }
-      #check:checked ~ header .navigation{
+      #check:checked ~ nav .navigation{
         z-index: 2;
         position: fixed;
         background: #1c202bf3;
@@ -120,16 +119,16 @@
         justify-content: center;
         align-items: center;
       }
-      #check:checked ~ header .navigation a{
+      #check:checked ~ nav .navigation a{
         font-weight: 700;
         margin-right: 0;
         margin-bottom: 50px;
         letter-spacing: 2px;
       }
-      #check:checked ~ header label .menu-btn{
+      #check:checked ~ nav label .menu-btn{
         display: none;
       }
-      #check:checked ~ header label .close-btn{
+      #check:checked ~ nav label .close-btn{
         z-index: 2;
         display: block;
         position:fixed;

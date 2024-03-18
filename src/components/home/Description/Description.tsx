@@ -1,4 +1,3 @@
-import Link from "next/link"
 import styles from "./Description.module.css"
 
 export const Description = () => {
@@ -7,7 +6,7 @@ export const Description = () => {
           <div className={styles.Description}>
             <div className={styles.info}>
               <h2>Añade esa <span>chispa</span> a la conversación</h2>
-              <p>Esta es la descripción</p>
+              <p> Con Prattle, la conversación va más allá de las palabras; nuestra aplicación aprovecha la potencia de la IA para personalizar tus interacciones de manera única</p>
               <a href="registro.html" className={styles.infoBtn}>Comienza ahora</a>
             </div>
           </div>

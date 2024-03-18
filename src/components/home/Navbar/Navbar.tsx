@@ -5,10 +5,10 @@ export const Navbar = () => {
 return (
     <section className = {styles.Navbar}> 
         <input type="checkbox" id={styles.check} />
-        <nav >
-            <Link href="/"> 
+        <nav>
+        <Link href="/"> 
                 <img src="/img/logo_blanc.png" id={styles.logo} alt="Logo" />
-            </Link>
+        </Link>
             <div className={styles.navigation}>
                 <button>Proyecto</button>
                 <button>Sobre nosotros</button>
@@ -18,7 +18,7 @@ return (
                 </Link>
             </div>
 
-            <label htmlFor="check" className="checkbtn">
+            <label htmlFor="check" className={styles.checkbtn}>
                 <i className="fas fa-bars menu-btn"></i>
                 <i className="fas fa-times close-btn"></i>
             </label>
