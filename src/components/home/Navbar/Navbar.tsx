@@ -15,7 +15,7 @@ return (
                 <Link href="/logIn">
                     <button>Iniciar sesión</button>
                 </Link>
-                <Link href="/signUp">
+                <Link href="/SignUp">
                     <button id={styles.registrate}>Registrate</button>
                 </Link>
             </div>
