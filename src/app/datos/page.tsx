@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import UserCard from './UserCard';
 
 const getUsers = async () => {
-  const response = await fetch(process.env.NEXT_PUBLIC_NEXTAUTH_URL+ '/api/user');
+  const response = await fetch(process.env.NEXT_PUBLIC_NEXTAUTH_URL + '/api/user');
   const data = await response.json();
   return data;
 }
@@ -19,8 +19,8 @@ function DataDisplay() {
   return (
     <div>
       <h2>Total Users: {data.length}</h2>
-      {data.map((user) => (
-        <UserCard user={user} />
+      {data.map((user, index) => (
+        <UserCard key={index} user={user} />
       ))}
     </div>
   );

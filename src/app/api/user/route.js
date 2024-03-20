@@ -16,7 +16,7 @@ export async function GET() {
         await connectMongoDB();
 
         const uri = process.env.MONGODB_URI;
-        client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+        const client = new MongoClient(uri);
         await client.connect();
 
         const collection = client.db("google_auth_test").collection("users");
