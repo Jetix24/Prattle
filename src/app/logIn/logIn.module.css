@@ -6,7 +6,7 @@
 
 .left {
   flex: 75%;
-  background: url('/img/background_signUp.png') no-repeat;
+  background: url('/img/background_logIn.png') no-repeat;
   background-size: 100%;
 }
 

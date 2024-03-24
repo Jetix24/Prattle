@@ -1,0 +1,33 @@
+.signUpForm .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .signUpForm label {
+    display: block;
+    color: #00C1E9;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .signUpForm input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #DBDBDB;
+  }
+  
+  .signUpForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #006A80;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold; /* Added font-weight property */
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+ 
