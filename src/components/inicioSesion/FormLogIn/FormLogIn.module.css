@@ -19,7 +19,7 @@
   .logInForm button {
     width: 100%;
     padding: 10px;
-    background-color: #006A80;
+    background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
     border-radius: 15px;
@@ -28,6 +28,9 @@
     font-weight: bold; /* Added font-weight property */
     margin-top: 10px;
     cursor: pointer;
+    transition: all 0.2s ease-in;
   }
-  
- 
+
+  .logInForm button:hover {
+    background-color:  #02A8CB;
+  }
