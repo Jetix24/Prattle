@@ -14,11 +14,30 @@
     background: url('/img/background_signUp.jpeg') no-repeat;
     background-size: 100%;
   }
+
+  .dividerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ffffff; /* Cambia esto al color que quieras para la línea */
+  }
+  
+  .orText {
+    font-size: 20px;
+    padding: 0 10px;
+    color: #ffffff;
+  }
   
   .formContainer{ 
     display: flex;
     flex-direction: column;
-    margin: 25px 120px 25px 120px;
+    margin: 25px 50px 25px 50px;
   }
   
   .logoContainer {
@@ -39,3 +58,26 @@
     margin-top: 10px;
   }
   
+  .loginPrompt {
+    margin-top: 2px; /* Añade margen arriba para dar espacio entre el botón y el texto */
+    text-align: center; /* Centra el texto*/
+    color: #00C1E9;
+  }
+  
+  .loginPrompt a {
+    color: #db9e02; /* Cambia esto al color que quieras para el enlace*/
+    text-decoration: none; /* Elimina el subrayado del enlace*/
+    transition: all 0.2s ease-in;
+  }
+
+  .loginPrompt a:hover {
+    color: #FFB800;
+  }
+
+  .footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+  }

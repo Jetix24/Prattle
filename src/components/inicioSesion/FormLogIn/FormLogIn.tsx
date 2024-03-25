@@ -5,7 +5,7 @@ export const FormLogIn = () => {
     return (
             <form className={styles.logInForm}>
                 <div className={styles.formGroup}>
-                    <label htmlFor="email">Usuario</label>
+                    <label htmlFor="email">Correo</label>
                     <input type="email" id="email" name="email" required />
                 </div>
                 <div className={styles.formGroup}>
