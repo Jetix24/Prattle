@@ -1,4 +1,4 @@
-.signUpForm .formGroup {
+ .signUpForm .formGroup {
     margin-bottom: 10px;
   }
   
@@ -6,14 +6,16 @@
     display: block;
     color: #00C1E9;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
   }
   
   .signUpForm input {
     width: 100%;
-    padding: 8px;
-    border-radius: 15px;
-    font-weight: 500;
+    padding: 7px;
+    padding-left: 5%;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1vw;
     border: 1px solid #bababa;
     background: #D9D9D9;
     transition: all 0.2s ease-in;
@@ -34,7 +36,7 @@
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     color: #fff;
     font-size: 23px;
     font-weight: bold; /* Added font-weight property */
@@ -62,3 +64,40 @@
     justify-content: space-between;
   }
 
+  .inputIconContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .inputIcon {
+    position: absolute;
+    left: 10px; /* Ajusta esto para mover el icono a la izquierda o a la derecha dentro del input */
+    top: 22%;
+    width: 3.5%;
+    height: 65%;
+  }
+
+  .inputIconContainer input {
+    padding-left: 6%; /* Ajusta esto para mover el texto dentro del input */
+  }
+
+
+  .inputIconContainer2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .inputIcon2 {
+    position: absolute;
+    left: 8px; /* Ajusta esto para mover el icono a la izquierda o a la derecha dentro del input */
+    top: 22%;
+
+    width: 7.5%;
+    height: 60%;
+  }
+
+  .inputIconContainer2 input {
+    padding-left: 12%; /* Ajusta esto para mover el texto dentro del input */
+  }

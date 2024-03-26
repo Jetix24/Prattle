@@ -6,11 +6,17 @@ export const FormLogIn = () => {
             <form className={styles.logInForm}>
                 <div className={styles.formGroup}>
                     <label htmlFor="email">Correo</label>
-                    <input type="email" id="email" name="email" required />
+                    <div className={styles.inputIconContainer}>
+                        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo"/>
+                        <img src="/icon/correo.png" alt="icon" className={styles.inputIcon} />
+                    </div>
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="password">Contraseña</label>
-                    <input type="password" id="password" name="password" required />
+                    <div className={styles.inputIconContainer}>
+                            <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña"/>
+                            <img src="/icon/bloquear.png" alt="icon" className={styles.inputIcon} />
+                        </div>
                 </div>
                     <button type="submit">Ingresar</button>
             </form>
