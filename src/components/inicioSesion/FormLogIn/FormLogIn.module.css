@@ -62,3 +62,19 @@
   .inputIconContainer input {
     padding-left: 9%; /* Ajusta esto para mover el texto dentro del input */
   }
+
+  @media (max-width: 1190px) {
+  
+    .logInForm input {
+      font-size: 4vw;
+    }
+
+    .inputIconContainer input {
+      padding-left: 12%; /* Ajusta esto para mover el texto dentro del input */
+    }
+
+    .inputIcon {
+      width: 8%;
+    }
+  }
+  

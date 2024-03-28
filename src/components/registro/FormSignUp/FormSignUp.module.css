@@ -101,3 +101,32 @@
   .inputIconContainer2 input {
     padding-left: 12%; /* Ajusta esto para mover el texto dentro del input */
   }
+
+
+  @media (max-width: 1190px) {
+    .passwordContainer,
+    .dateContainer,
+    .dateButtonContainer {
+    flex-direction: column;
+    }
+  
+    .inputIconContainer2 input,
+    .dateContainer input,
+    .dateButtonContainer button, 
+    .formGroupPassword {
+    width: 100%; /* Asegúrate de que el input y el botón ocupen todo el ancho del contenedor */
+    }
+
+    .signUpForm input, .inputIconContainer input {
+      padding-left: 10%;
+      font-size: 4vw;
+    }
+
+    .inputIcon, .inputIcon2 {
+      position: absolute;
+      left: 10px; /* Ajusta esto para mover el icono a la izquierda o a la derecha dentro del input */
+      top: 22%;
+      width: 6%;
+      height: 65%;
+    }
+  }

@@ -81,3 +81,13 @@
     padding: 20px 0;
     color: #fff;
   }
+
+  @media (max-width: 1190px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left {
+      width: 100%;
+    }
+  }
