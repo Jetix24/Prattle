@@ -1,6 +1,6 @@
 .googleButton {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 /* Estilos base para el botón */
@@ -12,6 +12,7 @@
   border-radius: 0.375rem; /* rounded-lg */
   color: #000; /* text-slate-700 */
   font-size: 18px;
+  font-weight: 500;
   background-color: #DBDBDB;
   transition: transform 0.2s ease-in-out; /* added transition property */
 }
