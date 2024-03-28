@@ -17,7 +17,7 @@
 }
 
 .logoContainer img{
-    width: 22%;
+    width: 20%;
     height: 50%;
 }
 
@@ -37,8 +37,17 @@
     margin: 0 auto;
     width: 100%;
 }
+
+.form a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+}
+
 .form button {
-    padding: 5% 20% 5% 20%;
+    padding: 1% 5% 1% 5%;
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
@@ -56,19 +65,22 @@
 }
 
   @media (max-width: 1190px) and (max-height: 1000px) {
+    .logoContainer{
+        margin-top: 10%;
+    }
     .logoContainer img{
         margin-top: 10%;
-        width: 40%;
-        height: 70%;
+        width: 60%;
+        height: 90%;
     }
 
     .logoContainer h2 {
-        margin-top: 5%;
+        margin-top: 10%;
         font-size: 5vw;
     }
 
     .form{
-        margin-top: 5%;
+        margin-top: 10%;
         width: 100%;
     }
 
@@ -80,10 +92,8 @@
         text-decoration: none
     }
 
-
-    
     .form button {
         padding: 2% 7% 2% 7%;
-        font-size: 5vw;
+        font-size: 7vw;
     }
 }
