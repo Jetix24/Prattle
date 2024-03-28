@@ -84,10 +84,14 @@
       overflow-y: auto;
     }
 
+    .right {
+      display: none;
+    }
+
     .formContainer{ 
       display: flex;
       flex-direction: column;
-      margin: 2% 15% 4% 15%;
+      margin: 2% 12% 10% 12%;
     }
   
     .left {

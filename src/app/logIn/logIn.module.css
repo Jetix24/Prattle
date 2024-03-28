@@ -94,6 +94,10 @@
     margin: 10% 12% 10% 12%;
   }
 
+  .left {
+    display: none;
+  }
+
   .logoContainer,
   .dividerContainer,
   .loginPrompt {

@@ -118,7 +118,7 @@
     }
 
     .signUpForm input, .inputIconContainer input {
-      padding-left: 12%;
+      padding: 2% 0% 2% 12%;
       font-size: 3vw;
     }
 
