@@ -84,6 +84,7 @@
     }
 
     .logInForm button {
+      margin-top: 10%;
       padding: 2%;
       font-size: 6vw;
     }
