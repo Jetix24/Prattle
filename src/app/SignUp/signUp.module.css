@@ -99,12 +99,12 @@
     }
 
     .logoContainer h2 {
-      font-size: 9vw;
+      font-size: 10vw;
       margin-bottom: 10%;
     }
 
     .orText {
-      font-size: 5vw;
+      font-size: 7vw;
       padding: 0 4%;
     }
 
@@ -115,6 +115,7 @@
 
     .footer {
       padding: 0% 0;
-      font-size: 3vw
+      font-size: 3vw;
+      margin-top: -5%; 
     }
   }
