@@ -114,11 +114,11 @@
     }
 
     .signUpForm label {
-      font-size: 4vw;
+      font-size: 5vw;
     }
 
     .signUpForm input, .inputIconContainer input {
-      padding: 3% 0% 3% 12%;
+      padding: 2% 0% 2% 12%;
       font-size: 5vw;
     }
 
@@ -133,6 +133,7 @@
     .dateButtonContainer button {
       margin-top: 10%;
       margin-bottom: 2%;
+      padding: 2%;
       font-size: 7vw;
     }
   }
