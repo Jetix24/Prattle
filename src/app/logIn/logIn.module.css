@@ -6,8 +6,8 @@
 
 .left {
   flex: 75%;
-  background: url('/img/background_logIn.png') no-repeat;
-  background-size: 100%;
+  background: url('/img/background_logIn.png') no-repeat center center;
+  background-size: cover;
 }
 
 .right {
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px 0;
+  margin: 2% 0;
 }
 
 .line {
@@ -29,7 +29,7 @@
 }
 
 .orText {
-  font-size: 20px;
+  font-size: 1.5vw;
   padding: 0 10px;
   color: #ffffff;
 }
@@ -37,7 +37,7 @@
 .formContainer{ 
   display: flex;
   flex-direction: column;
-  margin: 25px 60px 25px 60px;
+  margin: 5% 17% 7% 17%;
 }
 
 .logoContainer {
@@ -46,22 +46,23 @@
 }
 
 .logoContainer img {
-  max-width: 130px;
+  max-width: 40%;
   display: block;
   margin: 0 auto;
 }
 
 .logoContainer h2 {
   color: #fff;
-  font-size: 35px;
+  font-size: 3vw;
   font-weight: bold; /* Added font-weight property */
-  margin-top: 10px;
+  margin-top: 2%;
 }
 
 .loginPrompt {
-  margin-top: 2px; /* Añade margen arriba para dar espacio entre el botón y el texto */
+  margin-top: 2%; /* Añade margen arriba para dar espacio entre el botón y el texto */
   text-align: center; /* Centra el texto*/
   color: #00C1E9;
+  font-size: 1.2vw;
 }
 
 .loginPrompt a {
@@ -77,19 +78,52 @@
 .footer {
   bottom: 0;
   width: 100%;
+  font-size: 1vw;
   text-align: center;
-  padding: 22px 0;
+  padding: 4% 0;
   color: #fff;
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1190px) and (max-height: 1000px) {
   .container {
     flex-direction: column-reverse;
+    overflow-y: auto;
+  }
+
+  .formContainer{ 
+    margin: 10% 12% 10% 12%;
   }
 
   .logoContainer,
   .dividerContainer,
   .loginPrompt {
     width: 100%;
+  }
+
+  .logoContainer img {
+    max-width: 30%;
+  }
+
+  .logoContainer h2 {
+    font-size: 9vw;
+  }
+
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ffffff; /* Cambia esto al color que quieras para la línea */
+  }
+  
+  .orText {
+    font-size: 5vw;
+    padding: 2% 5%;
+  }
+
+  .footer {
+    font-size: 3vw;
+  }
+
+  .loginPrompt {
+    font-size: 4vw;
   }
 }

@@ -12,14 +12,14 @@
   .right {
     flex: 50%;
     background: url('/img/background_signUp.jpeg') no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
 
   .dividerContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    margin: 2% 0;
   }
   
   .line {
@@ -29,15 +29,15 @@
   }
   
   .orText {
-    font-size: 20px;
-    padding: 0 10px;
+    font-size: 2vw;
+    padding: 0 2%;
     color: #ffffff;
   }
   
   .formContainer{ 
     display: flex;
     flex-direction: column;
-    margin: 25px 50px 25px 50px;
+    margin: 2% 12% 4% 12%;
   }
   
   .logoContainer {
@@ -45,23 +45,18 @@
     margin: 0 auto;
   }
   
-  .logoContainer img {
-    max-width: 130px;
-    display: block;
-    margin: 0 auto;
-  }
-  
   .logoContainer h2 {
     color: #fff;
-    font-size: 35px;
+    font-size: 3vw;
     font-weight: bold; /* Added font-weight property */
-    margin-top: 10px;
+    margin-top: 10%;
   }
   
   .loginPrompt {
-    margin-top: 2px; /* Añade margen arriba para dar espacio entre el botón y el texto */
+    margin-top: 1%; /* Añade margen arriba para dar espacio entre el botón y el texto */
     text-align: center; /* Centra el texto*/
     color: #00C1E9;
+    font-size: 1.2vw;
   }
   
   .loginPrompt a {
@@ -78,16 +73,41 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 2% 0;
     color: #fff;
+    font-size: 1vw;
   }
 
-  @media (max-width: 1190px) {
+  @media (max-width: 1190px) and (max-height: 1000px) {
     .container {
       flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .formContainer{ 
+      display: flex;
+      flex-direction: column;
+      margin: 2% 15% 4% 15%;
     }
   
     .left {
       width: 100%;
+    }
+
+    .logoContainer h2 {
+      font-size: 9vw;
+    }
+
+    .orText {
+      font-size: 5vw;
+      padding: 0 4%;
+    }
+
+    .loginPrompt {
+      font-size: 4vw;
+    }
+
+    .footer {
+      font-size: 3vw
     }
   }
