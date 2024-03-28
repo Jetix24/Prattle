@@ -1,18 +1,20 @@
 .logInForm .formGroup {
-    margin-bottom: 15px;
+    margin-bottom: 4%;
   }
   
   .logInForm label {
     display: block;
     color: #00C1E9;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 1.5%;
   }
   
   .logInForm input {
     width: 100%;
-    padding: 8px;
-    border-radius: 15px;
+    padding: 2%;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 600;
     border: 1px solid #bababa;
     background: #D9D9D9;
     transition: all 0.2s ease-in;
@@ -28,15 +30,15 @@
   
   .logInForm button {
     width: 100%;
-    padding: 10px;
+    padding: 1%;
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     color: #fff;
-    font-size: 23px;
+    font-size: 2vw;
     font-weight: bold; /* Added font-weight property */
-    margin-top: 10px;
+    margin-top: 2%;
     cursor: pointer;
     transition: all 0.2s ease-in;
   }
@@ -53,28 +55,37 @@
   
   .inputIcon {
     position: absolute;
-    left: 10px; /* Ajusta esto para mover el icono a la izquierda o a la derecha dentro del input */
+    left: 2.5%;
     top: 22%;
-    width: 5%;
+    width: 6%;
     height: 55%;
   }
 
   .inputIconContainer input {
-    padding-left: 9%; /* Ajusta esto para mover el texto dentro del input */
+    padding-left: 10%; /* Ajusta esto para mover el texto dentro del input */
   }
 
-  @media (max-width: 1190px) {
+  @media (max-width: 1190px) and (max-height: 1000px) {
   
     .logInForm input {
       font-size: 4vw;
     }
 
     .inputIconContainer input {
-      padding-left: 12%; /* Ajusta esto para mover el texto dentro del input */
+      padding-left: 14%; /* Ajusta esto para mover el texto dentro del input */
     }
 
     .inputIcon {
       width: 8%;
+    }
+
+    .logInForm label {
+      font-size: 4.5vw;
+    }
+
+    .logInForm button {
+      padding: 2%;
+      font-size: 6vw;
     }
   }
   

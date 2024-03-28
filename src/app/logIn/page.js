@@ -26,7 +26,7 @@ export default function logIn() {
                         <ButtonGoogle />
                         <div className={styles.loginPrompt}>
                             ¿Aún no tienes cuenta? {" "}
-                            <Link href="/signUp">
+                            <Link href="/SignUp">
                                 Registrate
                             </Link>
                         </div>
