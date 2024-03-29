@@ -30,9 +30,9 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/logIn/page.js", "src/app/signUp/page.js,,
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "src/app/logIn/page.js", "src/app/signUp/page.js", "src/app/maintenance/page.js", "src/app/carga/page.js"],
+    "exclude": [
+      "node_modules"
+    ]
 }
