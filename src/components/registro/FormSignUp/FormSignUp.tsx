@@ -7,7 +7,7 @@ export const FormSignUp = () => {
                 <div className={styles.formGroup}>
                     <label htmlFor="nombre">Nombre</label>
                     <div className={styles.inputIconContainer}>
-                        <input type="nombre" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo" />
+                        <input type="nombre" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" />
                         <img src="/icon/nombre.png" alt="icon" className={styles.inputIcon} />
                     </div>
                 </div>

@@ -114,25 +114,25 @@
     }
 
     .signUpForm label {
-      font-size: 4vw;
+      font-size: 5vw;
     }
 
     .signUpForm input, .inputIconContainer input {
-      padding: 2% 0% 2% 12%;
-      font-size: 3vw;
+      padding: 2% 0% 2% 13%;
+      font-size: 5vw;
     }
 
     .inputIcon, .inputIcon2 {
-      position: absolute;
-      left: 10px; /* Ajusta esto para mover el icono a la izquierda o a la derecha dentro del input */
-      top: 20%;
-      width: 6%;
+      left: 2.5%;
+      top: 22%;
+      width: 8%;
       height: 60%;
     }
 
     .dateButtonContainer button {
-      margin-top: 5%;
+      margin-top: 10%;
       margin-bottom: 2%;
+      padding: 2%;
       font-size: 7vw;
     }
   }

@@ -73,7 +73,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 2% 0;
+    padding: 4% 0;
     color: #fff;
     font-size: 1vw;
   }
@@ -99,19 +99,23 @@
     }
 
     .logoContainer h2 {
-      font-size: 9vw;
+      font-size: 10vw;
+      margin-bottom: 10%;
     }
 
     .orText {
-      font-size: 5vw;
+      font-size: 7vw;
       padding: 0 4%;
     }
 
     .loginPrompt {
       font-size: 4vw;
+      margin-bottom: 0%;
     }
 
     .footer {
-      font-size: 3vw
+      padding: 0% 0;
+      font-size: 3vw;
+      margin-top: -5%; 
     }
   }

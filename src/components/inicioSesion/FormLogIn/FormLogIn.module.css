@@ -68,7 +68,8 @@
   @media (max-width: 1190px) and (max-height: 1000px) {
   
     .logInForm input {
-      font-size: 4vw;
+      font-size: 5vw;
+      padding: 2%;
     }
 
     .inputIconContainer input {
@@ -80,12 +81,13 @@
     }
 
     .logInForm label {
-      font-size: 4.5vw;
+      font-size: 5vw;
     }
 
     .logInForm button {
+      margin-top: 10%;
       padding: 2%;
-      font-size: 6vw;
+      font-size: 7vw;
     }
   }
   

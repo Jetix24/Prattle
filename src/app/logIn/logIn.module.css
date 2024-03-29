@@ -76,7 +76,6 @@
 }
 
 .footer {
-  bottom: 0;
   width: 100%;
   font-size: 1vw;
   text-align: center;
@@ -105,11 +104,12 @@
   }
 
   .logoContainer img {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   .logoContainer h2 {
-    font-size: 9vw;
+    font-size: 10vw;
+    margin-bottom: 10%;
   }
 
   .line {
@@ -119,7 +119,7 @@
   }
   
   .orText {
-    font-size: 5vw;
+    font-size: 7vw;
     padding: 2% 5%;
   }
 
