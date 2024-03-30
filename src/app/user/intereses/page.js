@@ -1,6 +1,6 @@
 import styles from './intereses.module.css'; 
 import Link from 'next/link';
-import { FormIntereses} from '@/components/intereses/FormIntereses/FormIntereses';
+import { FormIntereses} from '@/components/user/intereses/FormIntereses/FormIntereses';
 export default function descripcion() {
 
   return (

@@ -1,7 +1,7 @@
 import styles from './descripcion.module.css'; 
 import Link from 'next/link';
-import { FormPerfil} from '@/components/descripcion/FormPerfil/FormPerfil';
-import { FormDescripcion } from '@/components/descripcion/FormDescripcion/FormDescripcion';
+import { FormPerfil} from '@/components/user/descripcion/FormPerfil/FormPerfil';
+import { FormDescripcion } from '@/components/user/descripcion/FormDescripcion/FormDescripcion';
 export default function descripcion() {
 
   return (
