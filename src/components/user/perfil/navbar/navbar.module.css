@@ -165,7 +165,11 @@
   @media (max-width: 500px) and (max-height: 1000px) {
     .navPerfil{
       margin-top: 0%;
-  }
+    }
+
+    .formGroup {
+      margin-top: -2%;
+    }
   }
 
 }
