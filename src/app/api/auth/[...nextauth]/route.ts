@@ -22,7 +22,7 @@ export const authOptions: AuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error('Invalid credentials');
+          throw new Error(`Invalid credentials. Received: ${JSON.stringify(credentials)}`);
         }
 
         const user = await prisma.user.findUnique({
@@ -32,7 +32,7 @@ export const authOptions: AuthOptions = {
         });
 
         if (!user || !user?.hashedPassword) {
-          throw new Error('Invalid credentials');
+          throw new Error(`Tssss, no te conozco. ¿Quién eres? Received: ${JSON.stringify(credentials)}` );
         }
 
         const isCorrectPassword = await bcrypt.compare(

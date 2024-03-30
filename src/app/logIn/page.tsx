@@ -3,27 +3,41 @@ import styles from "./logIn.module.css"
 import Link from 'next/link';
 import { ButtonGoogle } from '@/components/inicioSesion/ButtonGoogle/ButtonGoogle';
 import { useRouter } from "next/navigation";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import { toast } from "react-hot-toast";
+import { SubmitHandler, FieldValues } from 'react-hook-form';
 
 export default function logIn() {
+    const session = useSession();
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const {
-        handleSubmit,
-        formState: { errors },
-    } = useForm();
+    useEffect(() => {
+        if (session?.status === 'authenticated') {
+          router.push('/dashboard')
+        }
+      }, [session?.status, router]);
 
-    const onSubmit = async (data) => { //La data que se manda es el email y la contraseña del formulario por medio de la función onSubmit, toma los valores de
+      const {
+        register,
+        handleSubmit,
+        formState: {
+          errors,
+        }
+      } = useForm();
+
+      const onSubmit = async (formData) => {
         setIsLoading(true);
         setError(null);
         
+        const { email, password } = formData; // Desestructuramos los valores del formulario
+
         signIn('credentials', {
-            ...data,
+            email, // Enviando el valor del correo electrónico
+            password, // Enviando el valor de la contraseña
             redirect: false,
         })
         .then((callback) => {
@@ -32,6 +46,7 @@ export default function logIn() {
                 toast.error(`Error: ${callback.error}`);
             }
             if (callback?.ok) {
+                toast.success('Logged in successfully');
                 router.push('/dashboard');
             }
         }).catch((error) => {
@@ -60,14 +75,14 @@ export default function logIn() {
                             <div className={styles.formGroup}>
                                 <label htmlFor="email">Correo</label>
                                 <div className={styles.inputIconContainer}>
-                                    <input type="email" id="email" name="email" required placeholder="Ingresa tu correo"/>
+                                    <input type="email" id="email" {...register('email', { required: true })} name="email" required placeholder="Ingresa tu correo"/>
                                     <img src="/icon/correo.png" alt="icon" className={styles.inputIcon} />
                                 </div>
                             </div>
                             <div className={styles.formGroup}>
                                 <label htmlFor="password">Contraseña</label>
                                 <div className={styles.inputIconContainer}>
-                                    <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña"/>
+                                    <input type="password" id="password"  {...register('password', { required: true })} name="password" required placeholder="Ingresa tu contraseña"/>
                                     <img src="/icon/bloquear.png" alt="icon" className={styles.inputIcon} />
                                 </div>
                             </div>
