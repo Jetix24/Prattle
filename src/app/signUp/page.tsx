@@ -1,13 +1,11 @@
 "use client";
 import styles from './signUp.module.css'; 
 import Link from 'next/link';
-import { FormSignUp} from '@/components/registro/FormSignUp/FormSignUp';
 import { ButtonGoogle } from '@/components/registro/ButtonGoogle/ButtonGoogle';
-import { useCallback, useEffect, useState } from 'react';
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { useEffect, useState } from 'react';
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import { signIn, useSession } from 'next-auth/react';
-import { BsGithub, BsGoogle  } from 'react-icons/bs';
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 
