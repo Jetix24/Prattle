@@ -8,18 +8,15 @@ export default function descripcion() {
     <section>
         <div className={styles.container}>
             <div className={styles.header}>
-                <h2>Perfil</h2>
+               <h2>Perfil</h2>
             </div>
-            <div className={styles.left}>
-                <FormPerfil/>
-            </div>    
-            <div className={styles.right}>
-                <FormDescripcion/>
-            </div>
-            <div className={styles.footer}>
-                <Link href="/perfil">
-                    <button>Aceptar</button>
-                </Link>
+            <div className={styles.formContainer}>
+                <div className={styles.left}>
+                    <FormPerfil/>
+                </div>    
+                <div className={styles.right}>
+                    <FormDescripcion/>
+                </div>
             </div>
         </div>
     </section>
