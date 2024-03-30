@@ -8,6 +8,7 @@ import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
 import 'filepond/dist/filepond.min.css';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 import styles from "./FormDescripcion.module.css"
+import Link from 'next/link';
 
 registerPlugin(FilePondPluginImagePreview, FilePondPluginImageResize, FilePondPluginFileEncode);
 
@@ -51,7 +52,9 @@ export const FormDescripcion = () => {
                     </div>
             </div>
         </div>
+        <Link href="/user/intereses">
         <button type="submit">Enviar</button>
+        </Link>
         </form>
     )
 }
