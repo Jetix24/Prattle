@@ -10,7 +10,7 @@ export const Navbar = () => {
                 </Link>
                 <form className={styles.formGroup}>
                     <div className={styles.inputIconContainer}>
-                        <input type="text" id="buscar" name="buscar" required/>
+                        <input type="text" id="buscar" name="buscar" required  placeholder="Buscar"/>
                         <img src="/icon/lupa.png" alt="icon" className={styles.inputIcon} />
                     </div>
                     <button type="submit">Buscar</button>
