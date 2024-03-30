@@ -44,11 +44,11 @@ export default function signUp() {
         password: data.password,
         bornDate: bornDateISO,
       });
-      await signIn('credentials', {
+      await signIn('credentials', { // Aquí se envía correctamente el email y la contraseña al endpoint de inicio de sesión
         ...data,
         redirect: false,
       });
-      router.push('/conversations');
+      router.push('/dashboard'); 
     } catch (error) {
       toast.error('Something went wrong!');
     } finally {
