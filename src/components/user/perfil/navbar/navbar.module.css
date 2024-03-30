@@ -99,10 +99,10 @@
 
 
 
-@media (max-width: 1190px) and (max-height: 1000px) {
+@media (max-width: 1190px) and (max-height: 2000px) {
         
   .navPerfil{
-    margin-top: 0%;
+    margin-top: 8%;
 }
 
   .container{
@@ -114,6 +114,7 @@
       display: none;
   }
 
+
   .formGroup button{
     display: none;
   }
@@ -123,9 +124,8 @@
     align-items: center; /* Alinea verticalmente los elementos al centro */
   }
   
-
   .logoSolo{
-    width: 180%;
+    width: 160%;
     margin-left: 50%;
   }
 
@@ -137,7 +137,6 @@
     display: flex;
     align-items: center;
     margin-left: 5%;
-    margin-top: -2%;
     width: 80%;
     justify-self: start;
   }
@@ -163,5 +162,10 @@
     height: 40%;
   }
 
+  @media (max-width: 500px) and (max-height: 1000px) {
+    .navPerfil{
+      margin-top: 0%;
+  }
+  }
 
 }
