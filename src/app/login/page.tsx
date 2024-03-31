@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { signIn, useSession } from 'next-auth/react';
 import { toast } from "react-hot-toast";
 
-export default function logIn() {
+export default function LogIn() {
     const session = useSession();
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);

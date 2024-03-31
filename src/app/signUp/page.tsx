@@ -9,7 +9,7 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 
-export default function signUp() {
+export default function SignUp() {
   const { data: session } = useSession();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
