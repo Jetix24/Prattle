@@ -1,4 +1,4 @@
-import { connectMongoDB } from 'src/lib/mongodb.js';
+import { connectMongoDB } from 'src/app/libs/mongodb.js';
 import User from 'src/models/user.js';
 import { NextResponse } from 'next/server';
 import { MongoClient } from 'mongodb';

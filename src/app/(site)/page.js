@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Description } from '@/components/home/Description';
 import styles from './Home.module.css';
 import { Navbar } from '@/components/home/Navbar';
