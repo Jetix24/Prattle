@@ -1,33 +1,101 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:wght@600;700&family=Roboto+Slab&family=Rubik&family=Source+Code+Pro:wght@600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/*Aqui empieza el responsivo*/
+@media (max-width: 1170px){
+  header .navigation{
+    display: none;
+  }
+  #logo{
+    height: 80px;
+    margin-left: 50px;
+  }
+  label{
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+    color: #DBDBDB;
+  }
+  label:hover{
+    color: #fff;
+  }
+  label .close-btn{
+    display: none;
+  }
+  #check:checked ~ header .navigation{
+    z-index: 2;
+    position: fixed;
+    background: #1c202bf3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #check:checked ~ header .navigation a{
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+  }
+  #check:checked ~ header label .menu-btn{
+    display: none;
+  }
+  #check:checked ~ header label .close-btn{
+    z-index: 2;
+    display: block;
+    position:fixed;
+  }
+  label .menu-btn{
+    position: absolute;
+  }
+  header #logo{
+    position: absolute;
+    bottom: -6px;
+  }
+  .content .info h2{
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .content .info h2{
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .content .info p{
+    font-size: 14px;
+  }
+  .content .info-btn{
+    color: #fff;  
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 15px;
+    border-radius: 20px;
   }
 }

@@ -1,0 +1,101 @@
+.Description {
+    max-width: 650px;
+    margin: 60px 100px;
+  }
+  
+  .Description .info h2{
+    color: #1f667c;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .Description .info h2 span{
+    color: #fff;
+    font-size: 50px;
+    font: 600;
+  }
+  
+  .Description .info p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  
+  .Description .infoBtn{
+    color: #fff;  
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    transition-property: background;
+  }
+  
+  .Description .infoBtn:hover{
+    animation: changeColor 3s infinite;
+  }
+
+  @keyframes changeColor {
+    0% {
+      background-color: #EF476F; /* Primer color */
+    }
+    25% {
+      background-color: #06D6A0; /* Segundo color */
+    }
+    50% {
+      background-color: #1B9AAA; /* Tercer color */
+    }
+    75% {
+      background-color: #FFC43D; /* Vuelve al primer color  */
+    }
+    100% {
+      background-color: #EF476F; /* Primer color */
+    }
+  }
+/*Aqui empieza el responsivo*/
+@media (max-width: 1170px){
+    
+    .Description .info h2{
+      font-size: 45px;
+      line-height: 50px;
+    }
+    .Description .info h2{
+      font-size: 40px;
+      font-weight: 600;
+    }
+    .Description .info p{
+      font-size: 14px;
+    }
+    .Description .infoBtn{
+      color: #fff;  
+      background: #226A80;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 15px 15px;
+      border-radius: 20px;
+    }
+  }
+  
+  @media (max-width: 560px){
+    .Description .info h2{
+      font-size: 35px;
+      line-height: 40px;
+    }
+    .Description .info h2 span{
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .Descriptio .info p{
+      font-size: 14px;
+    }
+  }
