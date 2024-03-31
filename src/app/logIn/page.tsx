@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { signIn, useSession } from 'next-auth/react';
 import { toast } from "react-hot-toast";
-import { SubmitHandler, FieldValues } from 'react-hook-form';
 
 export default function logIn() {
     const session = useSession();
@@ -96,7 +95,7 @@ export default function logIn() {
                         <ButtonGoogle />
                         <div className={styles.loginPrompt}>
                             ¿Aún no tienes cuenta? {" "}
-                            <Link href="/SignUp">
+                            <Link href="/signup">
                                 Registrate
                             </Link>
                         </div>
