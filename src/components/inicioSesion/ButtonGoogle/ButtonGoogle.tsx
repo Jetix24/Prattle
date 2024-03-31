@@ -1,5 +1,4 @@
 "use client"
-
 import styles from "./ButtonGoogle.module.css"
 import {signIn} from 'next-auth/react';
 
