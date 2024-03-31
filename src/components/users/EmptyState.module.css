@@ -1,0 +1,42 @@
+.state{
+    display: flex; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #F3F4F6; 
+}
+
+.container{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+}
+
+.title{
+    margin-top: 0.5rem; 
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 600; 
+}
+
+
+@media (min-width: 640px) { 
+    .state{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; 
+    }
+ }
+
+@media (min-width: 1024px) { 
+    .state{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem; 
+        padding-left: 2rem;
+        padding-right: 2rem; 
+    }  
+ }
