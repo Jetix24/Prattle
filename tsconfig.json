@@ -32,7 +32,11 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
+<<<<<<< HEAD
     "src/app/login/page.tsx", "src/app/signup/page.tsx", "src/app/maintenance/page.js", "src/app/carga/page.js"],
+=======
+    "src/app/logIn/page.js", "src/app/signUp/page.js", "src/app/maintenance/page.js", "src/app/carga/page.js", "src/app/user/descripcion/page.js","src/app/user/intereses/page.js"],
+>>>>>>> josenext
     "exclude": [
       "node_modules"
     ]

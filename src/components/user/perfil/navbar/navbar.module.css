@@ -1,0 +1,175 @@
+.navPerfil{
+    margin-top: 1.5%;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+}
+
+.navContainer {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Esto alinea los elementos verticalmente en el centro */
+  }
+
+.logoMarca{
+    width: 30%;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+.formGroup{
+    display: flex;
+    justify-content: space-between;
+    margin-left: -22%;
+    width: 70%;
+}
+
+.inputIconContainer input {
+    width: 55vw;
+    padding: 3%;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    font-weight: 600;
+    border: none;
+    border: 1px solid #bababa;
+    background: #D9D9D9;
+    transition: all 0.2s ease-in;
+    padding-left: 17%; /* Ajusta esto para mover el texto dentro del input */
+  }
+
+  .inputIconContainer input:hover {
+    background: #FFFFFF;
+  }
+  .inputIconContainer input:focus {
+    background: #FFFFFF;
+    outline: none;
+  }
+
+.inputIconContainer {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 5%;
+    top: 22%;
+    width: 10%;
+    height: 50%;
+  }
+
+  .formGroup button{
+    width: 15%;
+    background: linear-gradient(to right, #006A80, #02A8CB);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: bold; /* Added font-weight property */
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
+  
+  .linksContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+
+.linksContainer a {
+    width: 35%;
+    height: 100%;
+    margin-left: 3%;
+  }
+
+  .logoSolo{
+    width: 70%;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+.logoUsuario{
+    width: 70%;
+    cursor: pointer;
+    margin-right: -5%;
+}
+
+
+
+@media (max-width: 1190px) and (max-height: 2000px) {
+        
+  .navPerfil{
+    margin-top: 8%;
+}
+
+  .container{
+      height: 100%;
+      overflow-y: auto;
+  }
+
+  .logoMarca{
+      display: none;
+  }
+
+
+  .formGroup button{
+    display: none;
+  }
+
+  .navContainer {
+    display: flex; /* Utilizamos flexbox para alinear los elementos en una fila */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+  }
+  
+  .logoSolo{
+    width: 160%;
+    margin-left: 50%;
+  }
+
+  .logoUsuario{
+    display: none;
+}
+  
+  .formGroup {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    width: 80%;
+    justify-self: start;
+  }
+
+  .inputIconContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .inputIconContainer input {
+    width: 100%;
+    padding: .5%;
+    font-size: 4vw;
+    padding-left: 9%; /* Ajusta esto para mover el texto dentro del input */
+  }
+
+  .inputIcon {
+    position: absolute;
+    left: 2%;
+    top: 32%;
+    width: 5%;
+    height: 40%;
+  }
+
+  @media (max-width: 500px) and (max-height: 1000px) {
+    .navPerfil{
+      margin-top: 0%;
+    }
+
+    .formGroup {
+      margin-top: -2%;
+    }
+  }
+
+}
