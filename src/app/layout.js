@@ -3,6 +3,8 @@ const inter = Inter({ subsets: ["latin"] });
 import { Providers } from "./Providers";
 import '../app/globals.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import ToasterContext from "@/context/ToasterContext";
+import AuthContext from "@/context/AuthContext";
 
 
 export const metadata = {
@@ -23,9 +25,10 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body className={inter.className}>
-        <Providers>
+      <AuthContext>
+        <ToasterContext />
           {children}
-        </Providers>
+      </AuthContext>
         </body>
     </html>
   );

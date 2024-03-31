@@ -1,51 +1,60 @@
-import { connectMongoDB } from 'src/lib/mongodb.js';
-import User from 'src/models/user.js';
-import NextAuth from 'next-auth';
-import GoogleProvider from "next-auth/providers/google";
+import bcrypt from "bcrypt"
+import NextAuth, { AuthOptions } from "next-auth"
+import CredentialsProvider from "next-auth/providers/credentials"
+import GoogleProvider from "next-auth/providers/google"
+import { PrismaAdapter } from "@next-auth/prisma-adapter"
 
-const handler = NextAuth({
-    providers: [GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID as string,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    })],
-    callbacks: {
-        async signIn({user, account}) {
+import prisma from "@/app/libs/prismadb"
 
-            if (account.provider === "google") {
-                const {name, email} = user;
-                try{
-                    await connectMongoDB();
-                    const userExist = await User.findOne({email});
-
-                    if (!userExist) {
-                        const res = await fetch(process.env.NEXTAUTH_URL + "/api/user", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            name,
-                            email
-                        })
-                    });
-
-                    if (res.ok) {
-                        return true; //return user
-                    } else {
-                        // Stop the sign-in flow and redirect the user
-                        return "/error";
-                    }
-                    }
-                    
-                } catch (error) {
-                    console.log("Error: ", error);
-                    return "/error";
-                }
-            }
-
-            return true;
+// Esta es la configuración de NextAuth que se encarga de la autenticación de los usuarios
+export const authOptions: AuthOptions = {
+  adapter: PrismaAdapter(prisma), // Se le pasa el adapter de Prisma para que NextAuth pueda acceder a la base de datos
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
+    }),
+    CredentialsProvider({ // Este provider se encarga de la autenticación con email y contraseña
+      name: 'credentials',
+      credentials: {
+        email: { label: 'email', type: 'text' },
+        password: { label: 'password', type: 'password' }
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
+          throw new Error(`Invalid credentials. Received: ${JSON.stringify(credentials)}`);
         }
-    }
-});
 
-export {handler as GET, handler as POST}
+        const user = await prisma.user.findUnique({
+          where: {
+            email: credentials.email
+          }
+        });
+
+        if (!user || !user?.hashedPassword) {
+          throw new Error(`Tssss, no te conozco. ¿Quién eres? Received: ${JSON.stringify(credentials)}` );
+        }
+
+        const isCorrectPassword = await bcrypt.compare(
+          credentials.password,
+          user.hashedPassword
+        );
+
+        if (!isCorrectPassword) {
+          throw new Error('Invalid credentials');
+        }
+
+        return user;
+      }
+    })
+  ],
+  debug: process.env.NODE_ENV === 'development',
+  session: {
+    strategy: "jwt",
+  },
+  secret: process.env.NEXTAUTH_SECRET,
+}
+
+const handler = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };

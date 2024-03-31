@@ -1,8 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import styles from "./ButtonGoogle.module.css"
-import {signIn, useSession, signOut} from 'next-auth/react';
+import {signIn} from 'next-auth/react';
 
 const handleSignIn = async () => {
     await signIn('google', { callbackUrl: '/dashboard' }); // Llama a signIn con la callbackUrl '/dashboard'
