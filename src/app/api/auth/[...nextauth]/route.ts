@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt"
-import NextAuth, { AuthOptions } from "next-auth"
+import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
@@ -7,7 +7,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import prisma from "@/app/libs/prismadb"
 
 // Esta es la configuración de NextAuth que se encarga de la autenticación de los usuarios
-export const authOptions: AuthOptions = {
+const handler = NextAuth({
   adapter: PrismaAdapter(prisma), // Se le pasa el adapter de Prisma para que NextAuth pueda acceder a la base de datos
   providers: [
     GoogleProvider({
@@ -53,8 +53,6 @@ export const authOptions: AuthOptions = {
     strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
-}
-
-const handler = NextAuth(authOptions);
+})
 
 export { handler as GET, handler as POST };
