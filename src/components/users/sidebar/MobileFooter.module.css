@@ -1,0 +1,17 @@
+.container{
+    display: flex; 
+    position: fixed; 
+    bottom: 0; 
+    z-index: 40; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    background-color: #ffffff; 
+    border: 1px solid #E5E7EB;
+}
+
+@media (min-width: 1024px) { 
+    .container{ /* sirve para que se muestre en desktop */
+        display: none; 
+    }
+   }

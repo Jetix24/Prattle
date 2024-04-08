@@ -16,7 +16,7 @@ export default function SignUp() {
 
   useEffect(() => {
     if (session) {
-      router.push('/user/descripcion');
+      router.push('/users');
     }
   }, [session, router]);
 
