@@ -1,0 +1,11 @@
+.hola {
+    display: none; 
+    height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .hola {
+        display: block; 
+        padding-left: 20rem; 
+    }
+}

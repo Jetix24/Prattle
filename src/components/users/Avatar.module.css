@@ -1,0 +1,34 @@
+.container{
+    position: relative; 
+}
+
+.inside{
+    display: inline-block; 
+    overflow: hidden; 
+    position: relative; 
+    border-radius: 9999px; 
+}
+
+.span{
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    border-radius: 9999px; 
+    width: 0.5rem; 
+    height: 0.5rem; 
+    background-color: #10B981; 
+}
+
+@media (min-width: 768px) { 
+    .inside { 
+        width: 2.5rem; 
+        height: 2.5rem; 
+    }
+
+    .span { 
+        width: 0.75rem; 
+        height: 0.75rem; 
+    }
+
+   }
