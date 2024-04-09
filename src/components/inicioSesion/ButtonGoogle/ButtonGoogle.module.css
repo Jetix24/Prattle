@@ -1,6 +1,7 @@
 .googleButton {
   text-align: center;
   margin-top: 2%;
+  cursor: pointer;
 }
 
 /* Estilos base para el botón */
@@ -15,6 +16,7 @@
   font-weight: 500;
   background-color: #DBDBDB;
   transition: transform 0.2s ease-in-out; /* added transition property */
+  cursor: pointer;
 }
 
 .btn p {
@@ -25,7 +27,7 @@
   border-color: #CBD5E0; 
   background-color: #F3F4F6; 
   transform: scale(1.005); /* added transform property */
-  
+  cursor: pointer;  
 }
 
 .btn img {

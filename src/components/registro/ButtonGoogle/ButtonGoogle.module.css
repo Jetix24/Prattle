@@ -24,6 +24,7 @@
   border-color: #CBD5E0; 
   background-color: #F3F4F6; 
   transform: scale(1.005); /* added transform property */
+  cursor: pointer;
   
 }
 

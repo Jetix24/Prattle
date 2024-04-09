@@ -1,3 +1,4 @@
+import { ChatButton } from "@/components/shared/ChatButton";
 import { SignOutButton } from "@/components/shared/SignOutButton";
 
 function DashboardPage() {
@@ -6,6 +7,7 @@ function DashboardPage() {
         <h1>Felicidades</h1>
         <p>Estas dentro uwu </p>
         <SignOutButton />
+        <ChatButton />
       </div>
     );
   }

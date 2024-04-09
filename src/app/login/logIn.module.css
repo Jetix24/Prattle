@@ -49,6 +49,7 @@
   max-width: 40%;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .logoContainer h2 {

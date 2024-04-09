@@ -1,0 +1,1 @@
+export { ChatButton } from './ChatButton'; // src/components/shared/SignOutButton/SignOutButton.tsx
