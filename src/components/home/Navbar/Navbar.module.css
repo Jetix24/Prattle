@@ -33,12 +33,14 @@
     padding: 2px 15px;
     background: transparent;
     border: none;
+    cursor: pointer;
 }   
 
 .Navbar nav .navigation button:hover{
     font-size: 20px; /* Aplica una escala del 110% */
     transition: transform 0.8s ease-in-out; /* Agrega una transición suave */
     color: #fff;
+    cursor: pointer;
   }
   
   .Navbar  nav .navigation button:not(:last-child){
@@ -50,6 +52,7 @@
       background-color: transparent;
       cursor: pointer;
       transition: background-color 1s; /* Transición de color de fondo en 1 segundo */
+      cursor: pointer;
     }
     
     .Navbar #registrate {
@@ -64,6 +67,7 @@
       } 
       .Navbar #registrate:hover {
       animation: changeColor 3s infinite; /* Llama a la animación con una duración de 3 segundos */
+      cursor: pointer;
     }
     
     @keyframes changeColor {

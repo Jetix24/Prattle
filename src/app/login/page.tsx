@@ -67,7 +67,9 @@ export default function LogIn() {
                 <div className={styles.right}>
                     <div className={styles.formContainer}> 
                         <div className={styles.logoContainer}>
+                        <Link href="/">
                             <img src="/img/logo_seul.png" alt="Logo de la página"/>
+                        </Link>
                             <h2>Iniciar Sesión</h2>
                         </div>
                         <form onSubmit={handleSubmit(onSubmit)} className={styles.logInForm}>
