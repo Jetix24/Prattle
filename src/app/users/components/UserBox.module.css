@@ -1,0 +1,46 @@
+.userbox{
+    display: flex; 
+    position: relative; 
+    padding: 0.75rem; 
+    align-items: center; 
+    border-radius: 0.5rem; 
+    width: 100%; 
+    background-color: #ffffff; 
+    
+}
+
+.userbox:hover{
+    background-color: #F3F4F6;;
+    cursor: pointer; 
+}
+
+.info{
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 0.75rem; 
+}
+
+.div:focus {
+    outline: none;
+  }
+
+.span{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+}
+
+.inside{
+    display: flex; 
+    margin-bottom: 0.25rem; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.text{
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    font-weight: 500; 
+    color: #111827; 
+}

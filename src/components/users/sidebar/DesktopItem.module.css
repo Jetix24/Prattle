@@ -21,3 +21,9 @@ height: 1.5rem;
     background-color: #F3F4F6; 
     cursor: pointer; 
 }
+
+.active{
+    color: #000000; 
+    background-color: #F3F4F6; 
+    cursor: pointer; 
+}

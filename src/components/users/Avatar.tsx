@@ -17,7 +17,7 @@ const Avatar: React.FC<AvatarProps>= ({
             <div className={styles.inside}>
                 <Image
                     fill
-                    src={user?.image || 'public/img/image.png'}
+                    src={user?.image || '/img/placeholder.jpg'}
                     alt="Avatar"
                     />
             </div>

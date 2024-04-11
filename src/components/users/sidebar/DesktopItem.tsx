@@ -26,7 +26,7 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
     <li onClick={handleClick} key={label} style={{ listStyle: 'none' }}>
       <Link
         href={href}
-        className={styles.link}
+        className={`${styles.link} ${active && styles.active}`} 
       >
         <Icon className={styles.item} aria-hidden="true" />
         <span className="sr-only">{label}</span>
