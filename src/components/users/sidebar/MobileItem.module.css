@@ -22,3 +22,8 @@
     cursor: pointer;
 }
    
+.active{
+    color: #000000; 
+    background-color: #F3F4F6; 
+    cursor: pointer; 
+}
