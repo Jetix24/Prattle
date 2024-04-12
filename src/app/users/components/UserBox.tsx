@@ -33,7 +33,6 @@ const UserBox: React.FC<UserBoxProps> = ({
             <Avatar user={data} />
             <div className={styles.info}>
             <div className={styles.div}>
-            <span className={styles.span} aria-hidden="true" />
             <div className={styles.inside}>
               <p className={styles.text}>
                 {data.name}

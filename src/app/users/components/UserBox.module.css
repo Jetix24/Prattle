@@ -24,23 +24,15 @@
     outline: none;
 }
 
-.span{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; 
-}
-
 .inside{
-    display: flex; 
-    margin-bottom: 0.25rem; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
 }
 
 .text{
     font-size: 0.875rem;
-    line-height: 1.25rem; 
+    text-align: center;
     font-weight: 500; 
-    color: #111827; 
+    color: #111827;  
 }
