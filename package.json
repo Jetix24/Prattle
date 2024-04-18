@@ -18,6 +18,7 @@
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "clsx": "^2.1.0",
+    "date-fns": "^3.6.0",
     "filepond": "^4.30.6",
     "filepond-plugin-file-encode": "^2.1.14",
     "filepond-plugin-image-preview": "^4.6.12",

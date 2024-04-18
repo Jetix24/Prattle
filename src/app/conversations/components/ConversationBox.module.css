@@ -1,0 +1,58 @@
+.aside{
+    display: flex; 
+    position: relative; 
+    padding: 0.75rem; 
+    align-items: center; 
+    border-radius: 0.5rem; 
+}
+
+.aside:hover{
+    background-color: #F3F4F6; 
+    cursor: pointer; 
+}
+
+.selected{
+    background-color: #F3F4F6;;
+}
+
+.unselected{
+    background-color: #ffffff; 
+}
+
+.box{
+    flex: 1 1 0%; 
+    min-width: 0; 
+}
+
+.divname{
+    outline: none;
+}
+
+.name{
+    display: flex; 
+    margin-bottom: 0.25rem; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.text{
+    font-weight: 500; 
+    color: #111827; 
+}
+
+.time{
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    font-weight: 300; 
+    color: #9CA3AF; 
+}
+
+.unseen{
+    font-weight: 500; 
+    color: #000000; 
+}
+
+.seen{
+    color: #6B7280; 
+}
+

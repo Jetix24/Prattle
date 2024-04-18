@@ -1,0 +1,14 @@
+.page{
+    height: 100%;
+}
+
+.layout{
+    height: 100%;
+}
+
+@media (min-width: 1024px) { 
+    .page{
+        display: block; 
+        padding-left: 20rem; 
+    }
+   }
