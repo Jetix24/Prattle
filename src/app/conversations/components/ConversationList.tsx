@@ -42,9 +42,9 @@ const ConversationList: React.FC<ConversationListProps> = ({
       
       <aside
         className={clsx(
-            styles.aside, // Usa las clases del archivo CSS importado
+            styles.aside /*, // Usa las clases del archivo CSS importado
             { [styles.hidden]: isOpen }, // Condición para la clase hidden
-            { [styles.block]: !isOpen } // Condición para la clase full-width
+            { [styles.block]: !isOpen } // Condición para la clase full-width */
           )}
         >
         <div className={styles.div}>

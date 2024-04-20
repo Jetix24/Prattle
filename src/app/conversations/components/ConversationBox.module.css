@@ -26,6 +26,7 @@
 
 .divname{
     outline: none;
+    margin-left: 0.75rem;
 }
 
 .name{
@@ -36,8 +37,10 @@
 }
 
 .text{
-    font-weight: 500; 
-    color: #111827; 
+    font-size: 0.895rem;
+    text-align: center;
+    font-weight: 600; 
+    color: #111827;  
 }
 
 .time{
@@ -45,6 +48,11 @@
     line-height: 1rem; 
     font-weight: 300; 
     color: #9CA3AF; 
+}
+
+.message{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
 .unseen{

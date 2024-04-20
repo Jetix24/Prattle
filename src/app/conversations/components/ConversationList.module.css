@@ -17,7 +17,7 @@
 .inside{
   display: flex; 
   padding-top: 1rem; 
-  margin-bottom: 1rem; 
+  margin-bottom: 3px; 
   justify-content: space-between; 
 }
 
@@ -28,7 +28,11 @@
 }
 
 .group{
-  padding: 0.5rem; 
+  /*centra el icono en el div*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
   border-radius: 9999px; 
   color: #4B5563; 
   background-color: #F3F4F6;
