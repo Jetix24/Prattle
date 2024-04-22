@@ -1,0 +1,16 @@
+.input{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    border-radius: 9999px; 
+    font-weight: 300; 
+}
+
+.div{
+    position: relative; 
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+}
