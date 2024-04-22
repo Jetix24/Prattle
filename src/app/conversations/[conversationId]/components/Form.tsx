@@ -6,6 +6,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import styles from "./Form.module.css";
 import { HiPaperAirplane, HiPhoto } from "react-icons/hi2";
 import MessageInput from "./MessageInput";
+import { CldUploadButton } from "next-cloudinary";
 
 const Form = () => {
 
@@ -33,9 +34,18 @@ const Form = () => {
         })
       };
 
+      const handleUpload = (result: any) => { //Esta funcion se ejecuta cuando se sube una imagen
+        axios.post('/api/messages', {
+          image: result?.info?.secure_url,
+          conversationId
+        })
+      }
+
     return ( 
         <div className={styles.div}>
-            <HiPhoto size={30} className={styles.photo} />
+            <CldUploadButton options={{ maxFiles: 1 }} onUpload={handleUpload} uploadPreset="ft70nulr">
+              <HiPhoto size={30} className={styles.photo} />
+            </CldUploadButton>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <MessageInput
                 id="message"
