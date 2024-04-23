@@ -29,7 +29,7 @@ const ConversationId = async ({ params }: { params: IParams }) => {
     <div className={styles.screen}>
         <div className={styles.state}>
           <Header conversation={conversation} />
-          <Body />
+          <Body initialMessages={messages}/>
           <Form />
         </div>
     </div>
