@@ -14,6 +14,12 @@
 
 .photo{
     color: #6d6969;
+    /*Centra el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Quita el color del fondo*/
+    background-color: transparent;
 }
 
 .form{
@@ -46,6 +52,12 @@
     color: #6d6969;
     margin: auto;
 }
+
+/* Componente.module.css */
+.CldUploadButton {
+    border: none; /* Quita el borde */
+  }
+  
 
 @media (min-width: 1024px) { 
     .form{

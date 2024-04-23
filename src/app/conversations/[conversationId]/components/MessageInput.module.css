@@ -5,9 +5,12 @@
     padding-right: 1rem; 
     border-radius: 9999px; 
     font-weight: 300; 
+    width: 100%;
+    background-color: #f0f0f0;
+    border: none;
 }
 
-.div{
+.messageInput{
     position: relative; 
     display: flex;
     gap: 0.5rem;

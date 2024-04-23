@@ -1,9 +1,9 @@
 .container {
     display: flex;
     gap: 0.75rem; /* 3 in your case */
-    padding: 1rem; /* 4 in your case */
+    padding: 1rem; /* 4 in your case */   
+    width: 100%;
 }
-
 .own {
     justify-content: flex-end;
 }

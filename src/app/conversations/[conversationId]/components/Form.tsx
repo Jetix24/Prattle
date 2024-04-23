@@ -43,7 +43,7 @@ const Form = () => {
 
     return ( 
         <div className={styles.div}>
-            <CldUploadButton options={{ maxFiles: 1 }} onUpload={handleUpload} uploadPreset="ft70nulr">
+            <CldUploadButton options={{ maxFiles: 1 }} onUpload={handleUpload} uploadPreset="ft70nulr" className={styles.CldUploadButton}>
               <HiPhoto size={30} className={styles.photo} />
             </CldUploadButton>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>

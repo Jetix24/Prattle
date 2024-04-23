@@ -1,0 +1,57 @@
+.dialogContainer {
+    position: relative; /* relative in Tailwind */
+    z-index: 50; /* z-50 in Tailwind */
+  }
+
+  .easeout{
+    transition-duration: 500ms; 
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1); 
+  }
+
+  .easein{
+    transition-duration: 500ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1); 
+  }
+
+  .opacity0{
+    opacity: 0; 
+  }
+
+  .opacity100{
+    opacity: 100; 
+  }
+  .overlay {
+    position: fixed; /* fixed in Tailwind */
+    top: 0; /* inset-0 in Tailwind */
+    right: 0; /* inset-0 in Tailwind */
+    bottom: 0; /* inset-0 in Tailwind */
+    left: 0; /* inset-0 in Tailwind */
+    background-color: rgba(0, 0, 0, 0.4); /* bg-black con bg-opacity-40 en Tailwind */
+  }
+  .container{
+    overflow: hidden; 
+    position: fixed; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+  }
+  .container2{
+    overflow: hidden; 
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+  }
+  .container3{
+        display: flex; 
+        position: fixed; 
+        top: 0;
+        bottom: 0; 
+        right: 0; 
+        padding-left: 2.5rem; 
+        max-width: 100%; 
+        pointer-events: none; 
+  }
+  

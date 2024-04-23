@@ -22,7 +22,7 @@ const MessageInput: React.FC<MessageInputProps>= ({
     errors
 }) => {
     return ( 
-    <div className={styles.div}>
+    <div className={styles.messageInput}>
         <input
         id={id}
         type={type}
