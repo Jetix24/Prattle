@@ -5,8 +5,7 @@
   top: 0;
   bottom: 0; 
   padding-bottom: 5rem; 
-  border-right-width: 1px; 
-  border-color: #E5E7EB; 
+  border-right: 1px solid #e2e8f0; /* border-r in Tailwind */
   }
   
 .div{
@@ -56,7 +55,9 @@
   display: none;
 }
 
-.block{
+.nothidden{
   display: block; 
+  left: 0; 
+  width: 100%; 
 }
   

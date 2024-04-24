@@ -30,23 +30,15 @@ const ConversationList: React.FC<ConversationListProps> = ({
 
   const { conversationId, isOpen } = useConversation();
 
-  const pusherKey = useMemo(() => {
-    return session.data?.user?.email;
-  }, [session.data?.user?.email]);
-
-  
-
-
   return (
     <>
       
       <aside
-        className={clsx(
-            styles.aside /*, // Usa las clases del archivo CSS importado
-            { [styles.hidden]: isOpen }, // Condición para la clase hidden
-            { [styles.block]: !isOpen } // Condición para la clase full-width */
+          className={clsx(
+              styles.aside,
+              isOpen ? styles.notidden : styles.idden
           )}
-        >
+      >
         <div className={styles.div}>
           <div className={styles.inside}>
             <div className={styles.text}>
