@@ -14,12 +14,17 @@
 
 .div{
     display: flex; 
-    gap: 0.75rem; 
+    gap: 1.75rem;  
     align-items: center; 
+
 }
 
 .link{
-    display: block; 
+    display: block; /*Que los elementos dentro de la caja se muestren en bloque,*/
+    /*Que los elementos dentro de la caja se alineen al centro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link:hover{
@@ -41,19 +46,22 @@
     cursor: pointer; 
 }
 
-@media (min-width: 640px) { 
+@media (min-width: 1024px) { /*Si la pantalla es mayor a 1024px*/
     .header {
-        padding-left: 1rem; 
-        padding-right: 1rem; 
+        padding-left: 1.5rem; 
+        padding-right: 1.5rem; 
     }
     .link {
         display: none; 
     }
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 640px) { /*Si la pantalla es mayor a 640px*/
     .header {
-        padding-left: 1.5rem; 
-        padding-right: 1.5rem; 
+        padding-left: 1rem; 
+        padding-right: 1rem; 
+    }
+    .link {
+        display: none; 
     }
 }

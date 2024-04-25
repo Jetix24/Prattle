@@ -36,7 +36,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
       <aside
           className={clsx(
               styles.aside,
-              isOpen ? styles.notidden : styles.idden
+              isOpen ? styles.hidden : styles.idden //Si esta abierto se muestra, si no esta abierto se oculta
           )}
       >
         <div className={styles.div}>
