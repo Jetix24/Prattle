@@ -9,8 +9,6 @@ import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
 import { FiAlertTriangle } from "react-icons/fi";
-import styles from './ConfirmModal.module.css';
-import Avatar from "@/components/users/Avatar";
 
 interface ConfirmModalProps {
   isOpen?: boolean;
@@ -43,25 +41,62 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
       isOpen={isOpen}
       onClose={onClose}
     >
-      <div className={styles.container}>
-        <div className={styles.background}>
-          <FiAlertTriangle className={styles.alert}/>
+      <div className="sm:flex sm:items-start">
+        <div
+          className="
+            mx-auto
+            flex
+            h-12
+            w-12
+            flex-shrink-0
+            items-center
+            justify-center
+            rounded-full
+            bg-red-100
+            sm:mx-0
+            sm:h-10
+            sm:w-10
+          "
+        >
+          <FiAlertTriangle
+            className="h-6 w-6 text-red-600"
+          />
         </div>
-        <div className={styles.info}>
+        <div
+          className="
+            mt-3
+            text-center
+            sm:ml-4
+            sm:mt-0
+            sm:text-left
+          "
+        >
           <Dialog.Title
             as="h3"
-            className={styles.title}>
+            className="
+              text-base
+              font-semibold
+              leading-6
+              text-gray-900
+            "
+          >
             Delete conversation
           </Dialog.Title>
-          <div className={styles.divtext}>
-            <p className={styles.text}>
+          <div className="mt-2">
+            <p className="text-sm text-gray-500">
               Are you sure you want to delete this conversation? This action cannot be undone.
             </p>
           </div>
         </div>
       </div>
       <div
-        className={styles.divbuttons}>
+        className="
+          mt-5
+          sm:mt-4
+          sm:flex
+          sm:flex-row-reverse
+        "
+      >
         <Button
           disabled={isLoading}
           danger

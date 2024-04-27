@@ -24,16 +24,16 @@ const Body: React.FC<BodyProps> = ({
     }, [conversationId]);
 
     return ( 
-        <div className={styles.div}>
-            {messages.map((message, i) => (
-                <MessageBox
-                isLast={i === messages.length - 1} //Asi sabemos si es el ultimo mensaje
-                key={message.id}
-                data={message}
-              />
-            ))}
-            <div ref={bottomRef} className={styles.div}/>
-        </div> 
+      <div className="flex-1 overflow-y-auto">
+        {messages.map((message, i) => (
+          <MessageBox
+            isLast={i === messages.length - 1}
+            key={message.id}
+            data={message}
+          />
+        ))}
+        <div ref={bottomRef} className="pt-24" />
+      </div>
     );
 }
 export default Body;

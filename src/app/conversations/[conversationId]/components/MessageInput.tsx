@@ -22,14 +22,24 @@ const MessageInput: React.FC<MessageInputProps>= ({
     errors
 }) => {
     return ( 
-    <div className={styles.messageInput}>
+    <div className="relative w-full">
         <input
         id={id}
         type={type}
         autoComplete={id}
         {...register(id, { required })}
         placeholder={placeholder}
-        className={styles.input}/>
+        className="
+        text-black
+        font-light
+        py-2
+        px-4
+        bg-neutral-100
+        w-full
+        rounded-full
+        focus:outline-none
+      "
+    />
   </div>);
 }
  

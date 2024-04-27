@@ -29,24 +29,22 @@ interface MessageBoxProps {
     .map((user) => user.name)
     .join(', '); //La coma es para separar los nombres de los usuarios que han visto el mensaje
 
-    const container =  clsx(
-        styles.container,
-        isOwn && styles.own
+    const container = clsx(
+        "flex gap-3 p-4",
+        isOwn && "justify-end"
       );
-
-    const avatar = clsx(
-        isOwn && styles.avatar
-    );
-
-    const body =  clsx(
-        styles.body,
-        isOwn && styles.itemsend
-    );
-
-    const message = clsx(
-        styles.message,
-        isOwn ? styles.bgSky500 : styles.bgGray100,
-        data.image ? styles.roundedMd : styles.roundedFull
+    
+      const avatar = clsx(isOwn && "order-2");
+    
+      const body = clsx(
+        "flex flex-col gap-2",
+        isOwn && "items-end"
+      );
+    
+      const message = clsx(
+        "text-sm w-fit overflow-hidden",
+        isOwn ? 'bg-sky-500 text-white' : 'bg-gray-100',
+        data.image ? 'rounded-md p-0' : 'rounded-full py-2 px-3'
       );
     
 
@@ -56,11 +54,11 @@ interface MessageBoxProps {
                 <Avatar user={data.sender} />
             </div>
             <div className={body}>
-                <div className={styles.info}>
-                    <div className={styles.sender}>
+                <div className="flex items-center gap-1">
+                    <div className="text-sm text-gray-500">
                         {data.sender.name}
                     </div>
-                    <div className={styles.time}>
+                    <div className="text-xs text-gray-400">
                         {format(new Date(data.createdAt), 'p')}
                     </div>
                 </div>
@@ -72,17 +70,24 @@ interface MessageBoxProps {
                         height="288"
                         width="288"
                         src={data.image}
-                        className={clsx(
-                            styles.image,
-                            styles.hoverScale
-                        )}
-                        />
+                        className="
+                        object-cover
+                        cursor-pointer
+                        hover:scale-110
+                        transition
+                        translate
+                      "
+                    />
                     ) : (
                     <div>{data.body}</div>
                     )}
                 </div>
                 {isLast && isOwn && seenList.length > 0 && (
-                <div className={styles.seenText}>
+                <div className="
+                    text-xs
+                    font-light
+                    text-gray-500
+                ">
                     {`Seen by ${seenList}`}
                 </div>
                 )}
