@@ -1,0 +1,66 @@
+.container {
+    display: flex; /* flex en Tailwind */
+    align-items: flex-start; /* items-start en Tailwind */
+  }
+
+  .background {
+    margin-left: auto; /* mx-auto en Tailwind */
+    margin-right: auto; /* mx-auto en Tailwind */
+    display: flex; /* flex en Tailwind */
+    height: 3rem; /* h-12 en Tailwind */
+    width: 3rem; /* w-12 en Tailwind */
+    flex-shrink: 0; /* flex-shrink-0 en Tailwind */
+    align-items: center; /* items-center en Tailwind */
+    justify-content: center; /* justify-center en Tailwind */
+    border-radius: 9999px; /* rounded-full en Tailwind */
+    background-color: #fed7d7; /* bg-red-100 en Tailwind */
+  }
+
+  .alert {
+    height: 1.5rem; /* h-6 en Tailwind */
+    width: 1.5rem; /* w-6 en Tailwind */
+    color: #e53e3e; /* text-red-600 en Tailwind */
+  }
+  .info{
+    margin-top: 0.75rem; /* mt-3 en Tailwind */
+    text-align: center; /* text-center en Tailwind */
+  }
+  .title {
+    font-size: 1rem; /* text-base en Tailwind */
+    font-weight: 600; /* font-semibold en Tailwind */
+    line-height: 1.5rem; /* leading-6 en Tailwind */
+    color: #1a202c; /* text-gray-900 en Tailwind */
+  }
+  .divtext{
+    margin-top: 0.5rem; 
+  }
+  .text{
+    font-size: 0.875rem; /* text-sm en Tailwind */
+    color: #718096; /* text-gray-500 en Tailwind */
+  }
+  .divbuttons{
+    margin-top: 1.25rem; /* mt-5 en Tailwind */
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      display: flex; /* sm:flex en Tailwind */
+      align-items: flex-start; /* sm:items-start en Tailwind */
+    }
+    .background {
+        margin-left: 0; /* sm:mx-0 en Tailwind */
+        margin-right: 0; /* sm:mx-0 en Tailwind */
+        height: 2.5rem; /* sm:h-10 en Tailwind */
+        width: 2.5rem; /* sm:w-10 en Tailwind */
+    }
+    .info {
+        margin-left: 1rem; /* sm:ml-4 en Tailwind */
+        margin-top: 0; /* sm:mt-0 en Tailwind */
+        text-align: left; /* sm:text-left en Tailwind */
+    }
+    .divbuttons {
+    margin-top: 1rem; /* sm:mt-4 en Tailwind */
+    display: flex; /* sm:flex en Tailwind */
+    flex-direction: row-reverse; /* sm:flex-row-reverse en Tailwind */
+    }
+  }

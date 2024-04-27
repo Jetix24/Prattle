@@ -1,0 +1,51 @@
+.button {
+    display: flex; /* flex en Tailwind */
+    justify-content: center; /* justify-center en Tailwind */
+    border-radius: 0.375rem; /* rounded-md en Tailwind */
+    padding-left: 0.75rem; /* px-3 en Tailwind */
+    padding-right: 0.75rem; /* px-3 en Tailwind */
+    padding-top: 0.5rem; /* py-2 en Tailwind */
+    padding-bottom: 0.5rem; /* py-2 en Tailwind */
+    font-size: 0.875rem; /* text-sm en Tailwind */
+    font-weight: 600; /* font-semibold en Tailwind */
+    outline-width: 2px; /* focus-visible:outline-2 en Tailwind */
+    outline-offset: 2px; /* focus-visible:outline-offset-2 en Tailwind */
+    margin: 0.2rem; /* m-2 en Tailwind */
+    cursor: pointer;
+    border: none;
+  }
+  
+  .button:disabled {
+    opacity: 0.5; /* opacity-50 en Tailwind */
+    cursor: default; /* cursor-default en Tailwind */
+  }
+  
+  .fullWidth {
+    width: 100%; /* w-full en Tailwind */
+  }
+  
+  .textgray {
+    color: #1a202c; /* text-gray-900 en Tailwind */
+  }
+  .textwhite {
+    color: #ffffff; /* text-white en Tailwind */
+  }
+  
+  .danger {
+    background-color: #e53e3e; /* bg-rose-500 en Tailwind */
+  }
+  
+  .danger:hover,
+  .danger:focus-visible {
+    background-color: #bb3b3b; /* hover:bg-rose-600 y focus-visible:outline-rose-600 en Tailwind */
+  }
+  
+  .default {
+    background-color: #4299e1; /* bg-sky-500 en Tailwind */
+  }
+  
+  .default:hover,
+  .default:focus-visible {
+    background-color: #3182ce; /* hover:bg-sky-600 y focus-visible:outline-sky-600 en Tailwind */
+  }
+  
