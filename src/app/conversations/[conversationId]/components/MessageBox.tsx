@@ -8,6 +8,7 @@ import styles from "./MessageBox.module.css";
 import Avatar from "@/components/users/Avatar";
 import { format } from "date-fns";
 import Image from "next/image";
+import ImageModal from "./ImageModal";
 
 interface MessageBoxProps {
     data: FullMessageType;
@@ -63,6 +64,11 @@ interface MessageBoxProps {
                     </div>
                 </div>
                 <div className={message}>
+                  <ImageModal
+                    src={data.image}
+                    isOpen={imageModalOpen}
+                    onClose={() => setImageModalOpen(false)}
+                  />
                     {data.image ? (
                         <Image
                         onClick={() => setImageModalOpen(true)}
