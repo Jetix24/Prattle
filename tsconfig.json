@@ -2,8 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ]
     },
     "lib": [
       "dom",
@@ -25,15 +29,22 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/login/page.js", "src/app/signup/page.js", "src/app/maintenance/page.js", "src/app/carga/page.js", "src/app/user/descripcion/page.js","src/app/user/intereses/page.js"],
-    "exclude": [
-      "node_modules"
-    ]
+    "src/app/login/page.js",
+    "src/app/signup/page.js",
+    "src/app/maintenance/page.js",
+    "src/app/carga/page.js",
+    "src/app/user/descripcion/page.js",
+    "src/app/user/intereses/page.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
