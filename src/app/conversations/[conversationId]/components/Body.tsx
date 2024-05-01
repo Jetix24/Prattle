@@ -1,49 +1,50 @@
 "use client";
-import { FullMessageType } from "@/app/types";
-import styles from "./Body.module.css";
+
 import { useEffect, useRef, useState } from "react";
+
 import useConversation from "@/app/hooks/useConversation";
+import { FullMessageType } from "@/app/types";
+
 import MessageBox from "./MessageBox";
 import axios from "axios";
 import { pusherClient } from "@/app/libs/pusher";
 import { find } from "lodash";
 
 interface BodyProps {
-    initialMessages: FullMessageType[]
-  }
-  
+  initialMessages: FullMessageType[]
+}
 
 const Body: React.FC<BodyProps> = ({
-    initialMessages
-  }) => {
-    const [messages, setMessages] = useState(initialMessages);
-    const bottomRef = useRef<HTMLDivElement>(null);
+  initialMessages
+}) => {
+  const [messages, setMessages] = useState(initialMessages);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
-    const { conversationId } = useConversation();
+  const { conversationId } = useConversation();
 
-    useEffect(() => { //Cada vez que se abra una conversacion, se marcaran los mensajes como vistos
+  useEffect(() => {
+    axios.post(`/api/conversations/${conversationId}/seen`)
+  }, [conversationId]);
+
+  useEffect(() => {
+    pusherClient.subscribe(conversationId);
+    bottomRef?.current?.scrollIntoView();
+
+    const messageHandler = (message: FullMessageType) => {
       axios.post(`/api/conversations/${conversationId}/seen`)
-    }, [conversationId]);
 
-    useEffect(() => {
-      pusherClient.subscribe(conversationId);
+      setMessages((current) => {
+        if (find(current, { id: message.id })) {
+          return current;
+        }
+
+        return [...current, message];
+      });
+
       bottomRef?.current?.scrollIntoView();
-  
-      const messageHandler = (message: FullMessageType) => {
-        axios.post(`/api/conversations/${conversationId}/seen`)
-  
-        setMessages((current) => {
-          if (find(current, { id: message.id })) { //Si el mensaje ya existe
-            return current; //No se agrega
-          }
-  
-          return [...current, message]; //En caso contrario, se agrega
-        });
-  
-        bottomRef?.current?.scrollIntoView(); //Se hace scroll hacia abajo
     };
 
-    const updateMessageHandler = (newMessage: FullMessageType) => {
+    const updateMessageHandler = (newMessage: FullMessageType) => { //Actualiza el mensaje
       setMessages((current) => current.map((currentMessage) => {
         if (currentMessage.id === newMessage.id) {
           return newMessage;
@@ -61,19 +62,20 @@ const Body: React.FC<BodyProps> = ({
       pusherClient.unbind('messages:new', messageHandler);
       pusherClient.unbind('message:update', updateMessageHandler);
     }
-  }, [conversationId])
-
-    return ( 
-      <div className="flex-1 overflow-y-auto">
-        {messages.map((message, i) => (
-          <MessageBox
-            isLast={i === messages.length - 1}
-            key={message.id}
-            data={message}
-          />
-        ))}
-        <div ref={bottomRef} className="pt-24" />
-      </div>
-    );
+  }, [conversationId]);
+  
+  return ( 
+    <div className="flex-1 overflow-y-auto">
+      {messages.map((message, i) => (
+        <MessageBox
+          isLast={i === messages.length - 1}
+          key={message.id}
+          data={message}
+        />
+      ))}
+      <div ref={bottomRef} className="pt-2" />
+    </div>
+   );
 }
+ 
 export default Body;
