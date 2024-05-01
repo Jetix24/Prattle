@@ -12,7 +12,7 @@ export default function LogIn() {
     const session = useSession();
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         if (session?.status === 'authenticated') {

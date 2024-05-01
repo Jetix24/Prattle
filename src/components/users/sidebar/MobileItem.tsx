@@ -26,7 +26,7 @@ interface MobileItemProps {
       <Link 
         onClick={handleClick} 
         href={href} 
-        className={styles.container}>
+        className={`${styles.container} ${active && styles.active}`} >
         <Icon className={styles.item} />
       </Link>
      );

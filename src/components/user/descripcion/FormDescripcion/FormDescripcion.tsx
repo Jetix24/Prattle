@@ -13,8 +13,8 @@ import Link from 'next/link';
 registerPlugin(FilePondPluginImagePreview, FilePondPluginImageResize, FilePondPluginFileEncode);
 
 export const FormDescripcion = () => {
-  const [coverWidth, setCoverWidth] = useState(null);
-  const [coverHeight, setCoverHeight] = useState(null);
+    const [coverWidth, setCoverWidth] = useState<number | undefined>(undefined);
+    const [coverHeight, setCoverHeight] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     const coverWidthValue = 300; // Reemplaza 230 con el valor que desees para el ancho de la portada

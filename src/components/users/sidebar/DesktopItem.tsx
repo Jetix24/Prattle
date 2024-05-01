@@ -1,5 +1,6 @@
 import styles from "./DesktopItem.module.css";
 import Link from "next/link";
+import clsx from "clsx";
 
 interface DesktopItemProps {
   label: string;
@@ -23,16 +24,29 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
   };
 
   return ( 
-    <li onClick={handleClick} key={label} style={{ listStyle: 'none' }}>
-      <Link
+    <li onClick={handleClick}>
+      <Link 
         href={href}
-        className={styles.link}
+        className={clsx(`
+          group
+          flex
+          gap-x-3
+          rounded-md
+          p-3
+          text-sm
+          leading-6
+          font-semibold
+          text-gray-500
+          hover:text-black
+          hover:bg-gray-100
+        `,
+          active && 'bg-gray-100 text-black'
+        )}
       >
-        <Icon className={styles.item} aria-hidden="true" />
+        <Icon className="h-6 w-6 shrink-0" />
         <span className="sr-only">{label}</span>
       </Link>
     </li>
    );
 }
- 
 export default DesktopItem;
