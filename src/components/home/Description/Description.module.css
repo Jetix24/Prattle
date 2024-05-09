@@ -4,8 +4,8 @@
   }
   
   .Description .info h2{
-    color: #1f667c;
-    font-size: 55px;
+    color: #ffff;
+    font-size: 4vw;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
@@ -14,9 +14,9 @@
   }
   
   .Description .info h2 span{
-    color: #fff;
-    font-size: 50px;
-    font: 600;
+    color: #006A80;
+    font-size: 4vw;
+    font-weight: 800;
   }
   
   .Description .info p{
@@ -27,16 +27,21 @@
   }
   
   .Description .infoBtn{
-    color: #fff;  
-    background: #226A80;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 20px;
-    padding: 20px 20px;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-    transition-property: background;
+      width: 20%;
+      padding: 2%;
+      background: linear-gradient(to right, #006A80, #02A8CB);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 2vw;
+      font-weight: bold; /* Added font-weight property */
+      margin-top: 2%;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      transition-property: background;
   }
   
   .Description .infoBtn:hover{
