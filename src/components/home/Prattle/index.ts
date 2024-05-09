@@ -1,0 +1,1 @@
+export { Prattle } from './Prattle'; // src/components/home/Description/Description.tsx

@@ -1,5 +1,28 @@
 .Home{
-    background: url('/img/background_index.jpg') no-repeat;
+    background-color: #191E26;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+}
+
+    
+.Inicio {
+    position: relative; /* Asegura que el rectángulo se posicione en relación con este contenedor */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    }
+      
+/*  Rectangle {
+    z-index: 1;
+    width: 50px;  Ajusta según tus necesidades
+    height: 300px;  Ajusta según tus necesidades 
+    background-color: #ff0000; /* Ajusta según tus necesidades 
+    position: absolute;
+    transform: rotate(45deg);
+    }*/
+
+.Proyecto  {
     min-height: 100vh;
     background-size: cover;
 }
