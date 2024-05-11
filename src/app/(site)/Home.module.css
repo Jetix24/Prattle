@@ -36,3 +36,8 @@
     min-height: 200vh;
     background-size: cover;
 }
+
+.Footer {
+    min-height: 80vh;
+    background-size: cover;
+}

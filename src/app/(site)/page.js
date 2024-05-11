@@ -5,6 +5,7 @@ import { Navbar } from '@/components/home/Navbar';
 import { Prattle } from '@/components/home/Prattle';
 import { Characteristic } from '@/components/home/Characteristic';
 import { Us } from '@/components/home/Us';
+import { Footer } from '@/components/home/Footer';
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
         </div>
         <div className = {styles.Nosotros}  id="nosotros" >
           <Us />
+        </div>
+        <div className = {styles.Footer} >
+          <Footer />
         </div>
       </section>
      </div> 

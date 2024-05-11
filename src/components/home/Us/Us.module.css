@@ -35,7 +35,7 @@
     margin-top: 3%;
     display: flex;
     width: 85%;
-    height: 50vh;
+    height: 125vh;
 }
 
 .SubGroup{
@@ -87,4 +87,11 @@
     border-radius: 15px;
     width: 50%;
     height: 100%;
+}
+
+.line3 {
+    margin-top: 2%;
+    flex-grow: 1;
+    height: 3vh;
+    border-radius: 15px;
 }
