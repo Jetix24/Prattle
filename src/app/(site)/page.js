@@ -15,13 +15,13 @@ export default function Home() {
           <Navbar />
           <Description />
         </div>
-        <div className = {styles.Proyecto} >
+        <div className = {styles.Proyecto}  id="proyecto">
           <Prattle />
         </div>
         <div className = {styles.Caracteristicas} >
           <Characteristic />
         </div>
-        <div className = {styles.Nosotros} >
+        <div className = {styles.Nosotros}  id="nosotros" >
           <Us />
         </div>
       </section>

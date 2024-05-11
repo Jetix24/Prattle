@@ -50,7 +50,7 @@
     margin-top: 2%;
     margin-left: auto;
     flex-grow: 1;
-    height: 3vh;
+    height: 4vh;
     border-top-left-radius: 15px; /* Redondea el borde superior izquierdo */
     border-bottom-left-radius: 15px; /* Redondea el borde inferior izquierdo */
     align-self: flex-start;/* Alinea la línea al inicio del contenedor flex */
