@@ -3,6 +3,7 @@ import { Description } from '@/components/home/Description';
 import styles from './Home.module.css';
 import { Navbar } from '@/components/home/Navbar';
 import { Prattle } from '@/components/home/Prattle';
+import { Characteristic } from '@/components/home/Characteristic';
 
 export default function Home() {
   return (
@@ -14,8 +15,10 @@ export default function Home() {
           <Description />
         </div>
         <div className = {styles.Proyecto} >
-        <div className={styles.Rectangle}></div> {/* Añade el rectángulo aquí */}
           <Prattle />
+        </div>
+        <div className = {styles.Caracteristicas} >
+          <Characteristic />
         </div>
       </section>
      </div> 

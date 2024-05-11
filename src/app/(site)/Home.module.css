@@ -23,6 +23,11 @@
     }*/
 
 .Proyecto  {
-    min-height: 100vh;
+    min-height: 80vh;
+    background-size: cover;
+}
+
+.Caracteristicas  {
+    min-height: 400vh;
     background-size: cover;
 }

@@ -1,0 +1,128 @@
+.Characteristic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.Title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2vh 0;
+
+}
+.Title h1{
+    font-size: 11vh;
+    padding-bottom: 1vh;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+}
+
+.line{
+    flex-grow: 1;
+    height: 1.5vh;
+    width: 35%;
+    background-color: #00DAA1; 
+    border-radius: 15px;
+}
+
+.Group1{
+    margin-top: 3%;
+    display: flex;
+    width: 85%;
+    height: 50vh;
+}
+    .Image{
+        width: 80%;
+        height: 100%;
+    }
+
+    .Image img{
+        background-color: #00DAA1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Text{
+        margin-left: 5%;
+        align-items: center;
+    }
+
+    .Text h2{
+        font-size: 4vw;
+        margin-top: 4%;
+        text-align: left;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .Text p{
+        margin-top: 2%;
+        font-size: 2vw;
+        color: #fff;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .line2 {
+        margin-top: 5%;
+        flex-grow: 1;
+        height: 2vh;
+        width: 60%;
+        border-radius: 15px;
+        align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
+    }
+
+.Group2{
+    margin-top: 3%;
+    display: flex;
+    width: 85%;
+    height: 50vh;
+}
+    .Image2{
+        width: 54%;
+        height: 100%;
+        padding-left: 5%;
+    }
+
+    .Image2 img{
+        background-color: #00DAA1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Text2{
+        align-items: center;
+        width: 100%;
+    }
+
+    .Text2 h2{
+        font-size: 4vw;
+        margin-top: 4%;
+        text-align: left;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .Text2 p{
+        margin-top: 2%;
+        font-size: 2vw;
+        color: #fff;
+        font-weight: 500;
+        text-align: left;
+    }
+
+.line3 {
+    margin-top: 5%;
+    margin-left: auto;
+    flex-grow: 1;
+    height: 2vh;
+    width: 60%;
+    border-radius: 15px;
+    align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
+}
