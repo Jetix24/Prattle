@@ -1,8 +1,14 @@
 .Prattle {
     display: flex;
+    flex-direction:  column;
+  }
+
+ .Group{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    width: 100%;
+ } 
   
 .Image{
     z-index: 1;
@@ -38,4 +44,14 @@
     font-size: 2vw;
     color: #fff;
     font-weight: 500;
+}
+
+.line {
+    margin-top: 2%;
+    margin-left: auto;
+    flex-grow: 1;
+    height: 3vh;
+    border-top-left-radius: 15px; /* Redondea el borde superior izquierdo */
+    border-bottom-left-radius: 15px; /* Redondea el borde inferior izquierdo */
+    align-self: flex-start;/* Alinea la línea al inicio del contenedor flex */
 }

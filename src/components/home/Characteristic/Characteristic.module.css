@@ -74,7 +74,8 @@
         flex-grow: 1;
         height: 2vh;
         width: 60%;
-        border-radius: 15px;
+        border-top-Right-radius: 15px; /* Redondea el borde superior izquierdo */
+        border-bottom-Right-radius: 15px; /* Redondea el borde inferior izquierdo */
         align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
     }
 
@@ -123,6 +124,7 @@
     flex-grow: 1;
     height: 2vh;
     width: 60%;
-    border-radius: 15px;
+    border-top-left-radius: 15px; /* Redondea el borde superior izquierdo */
+    border-bottom-left-radius: 15px; /* Redondea el borde inferior izquierdo */
     align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
 }
