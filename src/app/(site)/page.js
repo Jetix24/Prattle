@@ -4,6 +4,7 @@ import styles from './Home.module.css';
 import { Navbar } from '@/components/home/Navbar';
 import { Prattle } from '@/components/home/Prattle';
 import { Characteristic } from '@/components/home/Characteristic';
+import { Us } from '@/components/home/Us';
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
         </div>
         <div className = {styles.Caracteristicas} >
           <Characteristic />
+        </div>
+        <div className = {styles.Nosotros} >
+          <Us />
         </div>
       </section>
      </div> 
