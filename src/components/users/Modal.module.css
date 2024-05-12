@@ -95,7 +95,7 @@
     position: relative; /* relative en Tailwind */
     overflow: hidden; /* overflow-hidden en Tailwind */
     border-radius: 0.375rem; /* rounded-lg en Tailwind */
-    background-color: #ffffff; /* bg-white en Tailwind */
+    background-color: #29313d; /* bg-white en Tailwind */
     padding-left: 1rem; /* px-4 en Tailwind */
     padding-bottom: 1rem; /* pb-4 en Tailwind */
     text-align: left; /* text-left en Tailwind */

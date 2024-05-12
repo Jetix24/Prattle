@@ -42,9 +42,9 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
       isOpen={isOpen}
       onClose={onClose}
     >
-      <div className={`sm:flex sm:items-start ${styles.bgPrattle}`}>
+      <div className="sm:flex sm:items-start">
         <div
-          className={`
+          className="
             mx-auto
             flex
             h-12
@@ -55,8 +55,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             rounded-full
             sm:mx-0
             sm:h-10
-            sm:w-10
-            ${styles.bgPrattle}`}
+            sm:w-10"
         >
           <FiAlertTriangle
             className="h-6 w-6 text-red-600"
@@ -77,13 +76,13 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
               text-base
               font-semibold
               leading-6
-              text-gray-900
+              text-white
             "
           >
             Delete conversation
           </Dialog.Title>
           <div className="mt-2">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-300">
               Are you sure you want to delete this conversation? This action cannot be undone.
             </p>
           </div>
@@ -104,6 +103,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
         >
           Delete
         </Button>
+
         <Button
           disabled={isLoading}
           secondary
@@ -111,6 +111,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
         >
           Cancel
         </Button>
+        
       </div>
     </Modal>
    );

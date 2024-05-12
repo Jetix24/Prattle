@@ -6,9 +6,9 @@ export default withAuth({
     },
 });
 
-export const config = { 
-    matcher: [
-        "/users/:path*",
+export const config = { //Esta funcion es para que el middleware se aplique solo en las rutas que se especifiquen
+    matcher: [ //Aqui se especifican las rutas
+        "/users/:path*", //Se aplica en todas las rutas que empiecen con /users
         "/conversations/:path*",
         "/dashboard/:path*",
     ]

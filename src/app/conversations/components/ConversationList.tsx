@@ -72,7 +72,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
       });
 
       if (conversationId === conversation.id) {
-        router.push('/conversations');
+        router.push('/conversations'); //Esto hace que se redirija a la página de conversaciones
       }
     };
 
