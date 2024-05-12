@@ -34,7 +34,7 @@ const Input: React.FC<InputProps> = ({
           text-sm
           font-medium
           leading-6
-          text-gray-900
+          text-white
         "
         htmlFor={id}
       >

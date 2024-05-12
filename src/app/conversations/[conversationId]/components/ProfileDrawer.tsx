@@ -41,7 +41,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
-      return `${data.users.length} members`;
+      return `${data.users.length} miembros`;
     }
     return isActive ? 'En linea' : 'Desconectado';
 }, [data, isActive]);
@@ -210,7 +210,7 @@ return (
                                 text-sm text-neutral-400
                               "
                             >
-                              Delete
+                              Borrar
                             </div>
                           </div>
                         </div>

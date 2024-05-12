@@ -1,0 +1,16 @@
+/* styles.css o tuarchivo.css */
+
+.bgPrattle {
+    background-color: #1f2836;
+  }
+  .bgPrattleclear {
+    background-color: #29313d;
+  }
+.bluePrattle{
+    color: #00C1E9;
+    background-color: #00C1E9;
+    
+}
+:hover.bgPrattlehover {
+    background-color: #29313d;
+  }
