@@ -43,17 +43,7 @@ const Form = () => {
 
       return ( 
         <div
-          className="
-            py-4
-            px-4
-            bg-white
-            border-t
-            flex
-            items-center
-            gap-2
-            lg:gap-4
-            w-full
-          "
+          className={`py-4 px-4 flex items-center gap-2 lg:gap-4 w-full ${styles.bgPrattle}`}
         >
           <CldUploadButton
             options={{ maxFiles: 1 }}
@@ -75,14 +65,13 @@ const Form = () => {
             />
             <button
               type="submit"
-              className="
+              className={`
                 rounded-full
                 p-2
-                bg-sky-500
                 cursor-pointer
-                hover:bg-sky-600
+                hover:bg-sky-500
                 transition
-              "
+                ${styles.bluePrattle}`}
             >
               <HiPaperAirplane
                 size={18}

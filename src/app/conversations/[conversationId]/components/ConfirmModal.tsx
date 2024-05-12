@@ -3,6 +3,7 @@
 import Button from "@/components/users/Button";
 import Modal from "@/components/users/Modal";
 import useConversation from "@/app/hooks/useConversation";
+import styles from "./Form.module.css";
 import { Dialog } from "@headlessui/react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -41,9 +42,9 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
       isOpen={isOpen}
       onClose={onClose}
     >
-      <div className="sm:flex sm:items-start">
+      <div className={`sm:flex sm:items-start ${styles.bgPrattle}`}>
         <div
-          className="
+          className={`
             mx-auto
             flex
             h-12
@@ -52,11 +53,10 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             items-center
             justify-center
             rounded-full
-            bg-red-100
             sm:mx-0
             sm:h-10
             sm:w-10
-          "
+            ${styles.bgPrattle}`}
         >
           <FiAlertTriangle
             className="h-6 w-6 text-red-600"

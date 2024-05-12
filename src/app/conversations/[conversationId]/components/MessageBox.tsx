@@ -38,7 +38,7 @@ interface MessageBoxProps {
       const avatar = clsx(isOwn && "order-2");
     
       const body = clsx(
-        "flex flex-col gap-2",
+        "flex flex-col gap-2", 
         isOwn && "items-end"
       );
     
@@ -56,7 +56,7 @@ interface MessageBoxProps {
             </div>
             <div className={body}>
                 <div className="flex items-center gap-1">
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-300">
                         {data.sender.name}
                     </div>
                     <div className="text-xs text-gray-400">
