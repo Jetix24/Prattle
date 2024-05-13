@@ -50,4 +50,9 @@
         min-height: 80vh;
         background-image: none;
     }
+
+    .Footer {
+        min-height: 60vh;
+        background-size: cover;
+    }
 }
