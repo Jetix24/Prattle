@@ -4,9 +4,9 @@
     background-size: cover;
     display: flex;
 }
-
     
 .Inicio {
+    background-image: url("/img/background_index.jpg");
     position: relative; /* Asegura que el rectángulo se posicione en relación con este contenedor */
     background-size: cover;
     background-position: center;
@@ -40,4 +40,14 @@
 .Footer {
     min-height: 80vh;
     background-size: cover;
+}
+
+@media (max-width: 1190px) and (max-height: 1000px) {
+    .Inicio{
+        justify-content: center;
+        align-items: center;
+        background-size: 100%; 
+        min-height: 80vh;
+        background-image: none;
+    }
 }

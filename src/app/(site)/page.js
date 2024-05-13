@@ -10,9 +10,8 @@ import { Footer } from '@/components/home/Footer';
 export default function Home() {
   return (
     <div className = {styles.Home}>
-      
       <section >
-        <div className = {styles.Inicio} style={{ backgroundImage: "url('/img/background_index.jpg')" }} >
+        <div className = {styles.Inicio}>
           <Navbar />
           <Description />
         </div>

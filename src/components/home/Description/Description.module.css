@@ -1,6 +1,10 @@
 .Description {
-    max-width: 650px;
-    margin: 60px 100px;
+    max-width: 50%;
+    margin: 5% 7%;
+  }
+
+  .Description .info img{
+    display: none;
   }
   
   .Description .info h2{
@@ -8,9 +12,9 @@
     font-size: 4vw;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 60px;
-    margin-bottom: 30px;
+    letter-spacing: .5vh;
+    line-height: 9vh;
+    margin-bottom: 4vh;
   }
   
   .Description .info h2 span{
@@ -21,9 +25,9 @@
   
   .Description .info p{
     color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 40px;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 5vh;
   }
   
   .Description .infoBtn{
@@ -65,42 +69,43 @@
       background-color: #EF476F; /* Primer color */
     }
   }
-/*Aqui empieza el responsivo*/
-@media (max-width: 1170px){
+
+  @media (max-width: 1190px) and (max-height: 1000px) {
+    .Description{   
+      max-width: 100%;
+    }
+
+    .Description .info{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Description .info img{
+      display: block;
+      width: 80%;
+      border-radius: 20px;
+      margin-bottom: 4vh;
+    }
     
     .Description .info h2{
-      font-size: 45px;
-      line-height: 50px;
-    }
-    .Description .info h2{
-      font-size: 40px;
-      font-weight: 600;
-    }
-    .Description .info p{
-      font-size: 14px;
-    }
-    .Description .infoBtn{
-      color: #fff;  
-      background: #226A80;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 15px 15px;
-      border-radius: 20px;
-    }
-  }
-  
-  @media (max-width: 560px){
-    .Description .info h2{
-      font-size: 35px;
-      line-height: 40px;
+      letter-spacing: .3vh;
+      line-height: 5vh;
+      font-size: 9vw;
     }
     .Description .info h2 span{
-      font-size: 30px;
-      font-weight: 600;
+      font-size: 9vw;
     }
-    .Descriptio .info p{
-      font-size: 14px;
+    .Description .info p{
+      font-size: 3vw;
+      margin-bottom: 4vh;
+    }
+    .Description .infoBtn{
+      font-size: 5vw;
+      padding: 5% 5%;
+      width: 70%;
+      border-radius: 15px;
     }
   }
