@@ -52,6 +52,21 @@ const Form = () => {
           >
             <HiPhoto size={30} className="text-sky-500" />
           </CldUploadButton>
+          <button
+              type="submit"
+              className={`
+                rounded-full
+                p-2
+                cursor-pointer
+                hover:bg-neutral-200
+                transition
+                flex
+                items-center
+                justify-center
+                bg-white`}
+            >
+              <img src={"/img/logo_seul.png"} className="h-5 w-5 shrink-0" />
+            </button>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex items-center gap-2 lg:gap-4 w-full"
