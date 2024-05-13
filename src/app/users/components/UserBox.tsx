@@ -3,6 +3,7 @@
 import axios from "axios";
 import { User } from "@prisma/client";
 import { useRouter } from "next/navigation";
+import styles from "./UserList.module.css";
 import { useCallback, useState } from "react";
 import Avatar from "@/components/users/Avatar";
 import LoadingModal from "@/components/users/LoadingModal";
@@ -36,19 +37,19 @@ const UserBox: React.FC<UserBoxProps> = ({
       )}
       <div
         onClick={handleClick}
-        className="
+        className={`
           w-full
           relative
           flex
           items-center
           space-x-3
-          bg-white
           p-3
+          my-1
           hover:bg-neutral-100
           rounded-lg
           transition
           cursor-pointer
-        "
+          ${styles.bgPrattle} ${styles.bgPrattlehover}`}
       >
         <Avatar user={data} />
         <div className="min-w-0 flex-1">
@@ -65,7 +66,7 @@ const UserBox: React.FC<UserBoxProps> = ({
                 className="
                   text-sm
                   font-medium
-                  text-gray-900
+                  text-white
                 "
               >
                 {data.name}
