@@ -85,7 +85,7 @@
 
     .Description .info img{
       display: block;
-      width: 80%;
+      width: 100%;
       border-radius: 20px;
       margin-bottom: 4vh;
     }
@@ -99,7 +99,7 @@
       font-size: 9vw;
     }
     .Description .info p{
-      font-size: 3vw;
+      font-size: 4vw;
       margin-bottom: 4vh;
     }
     .Description .infoBtn{
