@@ -7,10 +7,15 @@ import styles from "./Form.module.css";
 import { HiPaperAirplane, HiPhoto } from "react-icons/hi2";
 import MessageInput from "./MessageInput";
 import { CldUploadButton } from "next-cloudinary";
+import useRoutes from "@/app/hooks/useRoutes";
+import { useState } from "react";
+import AIassistantModal from "./AIassistantModal";
 
 const Form = () => {
 
     const { conversationId } = useConversation();
+    const routes = useRoutes();
+    const [isOpen, setIsOpen] = useState(false);
 
     const {
         register,
@@ -42,6 +47,11 @@ const Form = () => {
       }
 
       return ( 
+        <>
+        <AIassistantModal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+        />
         <div
           className={`py-4 px-4 flex items-center gap-2 lg:gap-4 w-full ${styles.bgPrattle}`}
         >
@@ -54,6 +64,7 @@ const Form = () => {
           </CldUploadButton>
           <button
               type="submit"
+              onClick={() => setIsOpen(true)}
               className={`
                 rounded-full
                 p-2
@@ -79,7 +90,7 @@ const Form = () => {
               placeholder="Write a message"
             />
             <button
-              type="submit"
+              onClick={() =>  setIsOpen(true)}
               className={`
                 rounded-full
                 p-2
@@ -95,6 +106,7 @@ const Form = () => {
             </button>
           </form>
         </div>
+        </>
        );
 }
  
