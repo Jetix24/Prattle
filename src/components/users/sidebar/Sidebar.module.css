@@ -1,5 +1,6 @@
 .div{
     height: 100vh; 
+    background-color: #1f2836;
 }
 .main{
     height: 100vh;
@@ -9,4 +10,16 @@
     .main{
         padding-left: 5rem; 
     }
+}
+
+.bgPrattle {
+    background-color: #1f2836;
+  }
+  .bgPrattleclear {
+    background-color: #29313d;
+  }
+.bluePrattle{
+    color: #00C1E9;
+    background-color: #00C1E9;
+    
 }
