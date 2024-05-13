@@ -102,7 +102,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                     text-gray-900
                   "
                 >
-                  Photo
+                  Imagen
                 </label>
                 <div className="
                   mt-2
