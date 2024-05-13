@@ -128,3 +128,60 @@
     border-bottom-left-radius: 15px; /* Redondea el borde inferior izquierdo */
     align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
 }
+
+@media (max-width: 1190px) and (max-height: 1000px) {
+    
+    .Title h1{
+        font-size: 8vh;
+        padding-bottom: 1vh;
+    }
+    
+    .line{
+        width: 50%;
+    }
+
+    .Group1{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 80vh;
+    }
+
+    .Image{
+        width: 65%;
+        height: 45%;
+    }
+
+    .Image2{
+        width: 80%;
+        height: 45%;
+    }
+
+    .Text, .Text2{
+        text-align: center;
+    }
+
+    .Text h2, .Text2 h2{
+        font-size: 8vw;
+        margin-top: 3vh;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .Text p, .Text2 p{
+        margin-top: 3vh;
+        font-size: 4vw;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .Group2{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 80vh;
+    }
+
+}

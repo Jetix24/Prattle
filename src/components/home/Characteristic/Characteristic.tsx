@@ -14,7 +14,7 @@ return (
                 <img src="/img/Inteligencia.png" alt="" />
             </div>
             <div className= {styles.Text}>           
-                <h2 style={{ color: '#009AAB' }}>Inteligencia artificial avanzada</h2>
+                <h2 style={{ color: '#009AAB' }}>Inteligencia Artificial Avanzada</h2>
                 <p>Prattle utiliza una IA avanzada para enriquecer las conversaciones de los usuarios, proporcionando recomendaciones y personalizaciones únicas.</p>
             </div>
         </div>
@@ -22,7 +22,7 @@ return (
 
         <div className= {styles.Group2}>
             <div className= {styles.Text2}>           
-                <h2 style={{ color: '#FFC535' }}>Personalización de interacciones</h2>
+                <h2 style={{ color: '#FFC535' }}>Personalización de Interacciones</h2>
                 <p>La aplicación adapta las interacciones de acuerdo con las preferencias y el contexto del usuario, ofreciendo una experiencia de usuario altamente personalizada.</p>
             </div>
             <div className= {styles.Image2}>
