@@ -8,7 +8,7 @@ export const Description = () => {
               <h2>Añade esa <span>chispa</span> a la conversación</h2>
               <img src="/img/background_index.jpg" alt="" />
               <p>Bienvenido a Prattle, tu plataforma de mensajería enriquecida con inteligencia artificial. Con Prattle, la conversación va más allá de las palabras; nuestra aplicación aprovecha la potencia de la IA para personalizar tus interacciones de manera única.</p>
-              <a href="/signUp" className={styles.infoBtn}>Comienza ahora</a>
+              <a href="/signup" className={styles.infoBtn}>Comienza ahora</a>
             </div>
           </div>
         </section>

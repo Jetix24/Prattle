@@ -5,9 +5,10 @@ import { ButtonGoogle } from '@/components/registro/ButtonGoogle/ButtonGoogle';
 import { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { signIn, useSession } from 'next-auth/react';
+import { getSession, signIn, useSession } from 'next-auth/react';
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
+import { first } from 'lodash';
 
 export default function SignUp() {
   const { data: session } = useSession();
@@ -38,17 +39,26 @@ export default function SignUp() {
     setIsLoading(true);
     try {
       const bornDateISO = new Date(data.bornDate).toISOString();
-      await axios.post('/api/register', {
+      const response = await axios.post('/api/register', {
         email: data.email,
         name: data.nombre,  // Aquí se envía correctamente el nombre desde el campo "nombre" del formulario
         password: data.password,
         bornDate: bornDateISO,
+        firstTime: true
       });
+
       await signIn('credentials', { // Aquí se envía correctamente el email y la contraseña al endpoint de inicio de sesión
         ...data,
         redirect: false,
       });
-      router.push('/dashboard'); 
+
+      const { firstTime } = response.data;
+      if(firstTime){
+        router.push('/user/descripcion');
+      }else{
+        router.push('/dashboard');
+      }
+
     } catch (error) {
       toast.error('Something went wrong!');
     } finally {
