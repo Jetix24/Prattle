@@ -1,14 +1,4 @@
-import  OpenAI from 'openai';
-import dotenv from 'dotenv';
-
-// Importar dotenv para cargar las variables de entorno
-dotenv.config();
-
-// Create an OPenAI API Client
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true
-  });
+/*
 
 // Crea una funcion que cuando se mande a llamar, le mande un mensaje a OpenAI. Y que al final retorne la respuesta obtenida en un string
 export async function sendMessageToOpenAI(message: string): Promise<string> {
@@ -36,3 +26,4 @@ export async function sendMessageToOpenAI(message: string): Promise<string> {
     }
 }
 
+*/
