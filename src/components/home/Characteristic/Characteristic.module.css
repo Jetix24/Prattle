@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 5%;
+    height: 100%;
 }
 
 .Title{
@@ -129,11 +130,10 @@
     align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
 }
 
-@media (max-width: 1190px) and (max-height: 1000px) {
+@media (max-width: 900px) and (max-height: 900px) {
     
     .Title h1{
-        font-size: 8vh;
-        padding-bottom: 1vh;
+        font-size: 12vw;
     }
     
     .line{
@@ -145,7 +145,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 80vh;
+        height: 120vw;
+        margin-top: 1vw;
     }
 
     .Image{
@@ -154,8 +155,9 @@
     }
 
     .Image2{
-        width: 80%;
+        width: 65%;
         height: 45%;
+        padding-left: 0%;
     }
 
     .Text, .Text2{
@@ -164,13 +166,13 @@
 
     .Text h2, .Text2 h2{
         font-size: 8vw;
-        margin-top: 3vh;
+        margin-top: 3vw;
         text-align: center;
         line-height: 1.2;
     }
 
     .Text p, .Text2 p{
-        margin-top: 3vh;
+        margin-top: 3vw;
         font-size: 4vw;
         text-align: center;
         font-weight: 400;
@@ -181,7 +183,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 80vh;
+        height: 100vw;
     }
 
 }

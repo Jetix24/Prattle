@@ -81,4 +81,16 @@
     .SubGroupLine{
         display: none;
     }
+
+    .Footer img{
+        width: 50%;
+        height: 40%;
+        margin: 0 auto;
+    }
+
+    .Icons img{
+        width: 20%;
+        height: 20%;
+        margin: 2% 1rem;
+    }
 }

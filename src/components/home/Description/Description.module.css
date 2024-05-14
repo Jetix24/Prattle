@@ -70,7 +70,8 @@
     }
   }
 
-  @media (max-width: 1190px) and (max-height: 1000px) {
+ 
+@media (max-width: 1190px) and (max-height: 1000px) {
     .Description{   
       max-width: 100%;
     }
@@ -92,11 +93,11 @@
     
     .Description .info h2{
       letter-spacing: .3vh;
-      line-height: 5vh;
-      font-size: 9vw;
+      line-height: 12vw;
+      font-size: 10vw;
     }
     .Description .info h2 span{
-      font-size: 9vw;
+      font-size: 10vw;
     }
     .Description .info p{
       font-size: 4vw;
@@ -105,7 +106,7 @@
     .Description .infoBtn{
       font-size: 5vw;
       padding: 5% 5%;
-      width: 70%;
+      width: 80%;
       border-radius: 15px;
     }
   }
