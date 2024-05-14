@@ -186,4 +186,8 @@
         height: 100vw;
     }
 
+    .line2, .line3 {
+        height: 2vw;
+    }
+
 }

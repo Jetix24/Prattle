@@ -129,14 +129,14 @@
     }
     
     .line2 {
-        height: 1.5vh;
+        height: 2vw;
         width: 100%;
     }
 
     .line3 {
         margin-top: 4%;
         flex-grow: 1;
-        height: 2vh;
+        height: 3.5vw;
         border-radius: 15px;
     }
 }
