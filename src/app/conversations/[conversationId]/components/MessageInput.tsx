@@ -5,12 +5,13 @@ import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import styles from "./MessageInput.module.css";
 
 interface MessageInputProps {
-    placeholder: string;
-    id: string;
-    type?: string;
-    required?: boolean;
-    register: UseFormRegister<FieldValues>;
-    errors: FieldErrors;
+  placeholder: string;
+  id: string;
+  type?: string;
+  required?: boolean;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+  value?: string; // Añade esta línea
 }
 
 const MessageInput: React.FC<MessageInputProps>= ({
@@ -19,7 +20,8 @@ const MessageInput: React.FC<MessageInputProps>= ({
     type,
     required,
     register,
-    errors
+    errors,
+    value // Añade esta línea
 }) => {
     return ( 
     <div className="relative w-full">
@@ -29,6 +31,7 @@ const MessageInput: React.FC<MessageInputProps>= ({
         autoComplete={id}
         {...register(id, { required })}
         placeholder={placeholder}
+        value={value} // Añade esta línea
         className="
         text-black
         font-light

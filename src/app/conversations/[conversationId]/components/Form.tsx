@@ -12,7 +12,6 @@ import { useState } from "react";
 import AIassistantModal from "./AIassistantModal";
 
 const Form = () => {
-
     const { conversationId } = useConversation();
     const routes = useRoutes();
     const [isOpen, setIsOpen] = useState(false);
@@ -30,27 +29,33 @@ const Form = () => {
         }
       });
 
-      const onSubmit: SubmitHandler<FieldValues> = (data) => { //Esta funcion se ejecuta cuando se envia el formulario
-        setValue('message', '', { shouldValidate: true }); //Se limpia el campo de texto
+      const onSubmit: SubmitHandler<FieldValues> = (data) => {
+        setValue('message', '', { shouldValidate: true });
         
-        axios.post('/api/messages', { //Aqui se envia el mensaje
+        axios.post('/api/messages', {
           ...data,
           conversationId
         })
       };
 
-      const handleUpload = (result: any) => { //Esta funcion se ejecuta cuando se sube una imagen
+      const handleUpload = (result: any) => {
         axios.post('/api/messages', {
           image: result?.info?.secure_url,
           conversationId
         })
       }
 
+      // Asumiendo que tienes una función para manejar la selección del mensaje del modal
+      const handleAIAssistantMessage = (message: string) => {
+        setValue('message', message, { shouldValidate: true });
+      };
+
       return ( 
         <>
         <AIassistantModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
+          onMessageSelect={handleAIAssistantMessage} // Asegúrate de implementar esta prop en AIassistantModal
         />
         <div
           className={`py-4 px-4 flex items-center gap-2 lg:gap-4 w-full ${styles.bgPrattle}`}
@@ -83,14 +88,13 @@ const Form = () => {
             className="flex items-center gap-2 lg:gap-4 w-full"
           >
             <MessageInput
+              placeholder="Escribe tu mensaje aquí"
               id="message"
               register={register}
               errors={errors}
-              required
-              placeholder="Write a message"
             />
             <button
-              onClick={() =>  setIsOpen(true)}
+              type="submit"
               className={`
                 rounded-full
                 p-2
@@ -109,5 +113,5 @@ const Form = () => {
         </>
        );
 }
- 
+
 export default Form;

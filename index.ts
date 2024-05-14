@@ -5,8 +5,6 @@ let key = process.env.NEXT_PUBLIC_OPENAI_KEY as string;
 
 console.log(key)
 
-
-
 // Create an OPenAI API Client
 const openai = new OpenAI({
     apiKey: key,
