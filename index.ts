@@ -10,6 +10,7 @@ console.log(key)
 // Create an OPenAI API Client
 const openai = new OpenAI({
     apiKey: key,
+    dangerouslyAllowBrowser: true
 });
 
 export async function sendMessageToOpenAI(message: string): Promise<string> {
