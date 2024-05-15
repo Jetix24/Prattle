@@ -15,6 +15,7 @@ const Form = () => {
     const { conversationId } = useConversation();
     const routes = useRoutes();
     const [isOpen, setIsOpen] = useState(false);
+    const [message, setMessage] = useState('');
 
     const {
         register,
@@ -55,7 +56,6 @@ const Form = () => {
         <AIassistantModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          onMessageSelect={handleAIAssistantMessage} // Asegúrate de implementar esta prop en AIassistantModal
         />
         <div
           className={`py-4 px-4 flex items-center gap-2 lg:gap-4 w-full ${styles.bgPrattle}`}
@@ -90,8 +90,10 @@ const Form = () => {
             <MessageInput
               placeholder="Escribe tu mensaje aquí"
               id="message"
+              type="text"
+              required={true}
               register={register}
-              errors={errors}
+              errors={{}} // Suponiendo que manejas errores
             />
             <button
               type="submit"

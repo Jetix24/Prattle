@@ -1,4 +1,3 @@
-/*
 import { sendMessageToOpenAI } from "index";
 import { useState } from "react";
 import { aiMessageInput } from "../conversations/[conversationId]/components/MessageInput";
@@ -27,4 +26,3 @@ import { aiMessageInput } from "../conversations/[conversationId]/components/Mes
     // Mostrar el mensaje en el input
         aiMessageInput(message)        
     };
-*/
