@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Conversation, Message, User } from "@prisma/client";
 import { format } from "date-fns";
 import { useSession } from "next-auth/react";
+import styles from "./ConversationList.module.css";
 import clsx from "clsx";
 
 import { FullConversationType } from "@/app/types";
@@ -63,7 +64,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
       return lastMessage.body;
     }
 
-    return "Started a conversation";
+    return "Empezar una conversación";
   }, [lastMessage]);
 
   return ( 
@@ -80,8 +81,9 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
         transition
         cursor-pointer
         p-3
-      `,
-        selected ? 'bg-neutral-100' : 'bg-white'
+        my-2
+      ${styles.bgPrattlehover}`,
+        selected ? `${styles.bgPrattleclear}` : `${styles.bgPrattle}`
       )}
     >
       {data.isGroup ? (
@@ -103,16 +105,16 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
               className="
                 text-md
                 font-medium
-                text-gray-900
+                text-white
               "
             >
-              {data.name || otherUser.name}
+              {data.name || otherUser?.name}
             </p>
             {lastMessage?.createdAt && (
               <p
                 className="
                   text-xs
-                  text-gray-400
+                  text-neutral-300
                   font-light
                 "
               >
@@ -125,7 +127,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
               truncate
               text-sm
             `,
-              hasSeen ? 'text-gray-500' : 'text-black font-medium'
+              hasSeen ? 'text-neutral-400' : 'text-neutral-300 font-medium'
             )}
           >
             {lastMessageText}

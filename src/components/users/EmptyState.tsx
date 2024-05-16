@@ -5,7 +5,7 @@ const EmptyState = () => {
         <div className={styles.state}>
             <div className={styles.container}>
                 <h3 className={styles.title}>
-                    Select a chat or start a new conversation
+                    Selecciona un chat o empieza una conversación
                 </h3>
             </div>
         </div>

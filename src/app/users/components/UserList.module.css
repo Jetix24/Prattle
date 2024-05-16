@@ -7,7 +7,8 @@
     left: 0; 
     padding-bottom: 5rem; 
     border-right-width: 1px; 
-    border-color: #E5E7EB; 
+    border-color: #4f5b74; 
+    background-color: #1f2836;;
     width: 100%; 
 }
 
@@ -26,6 +27,7 @@
     font-size: 1.5rem;
     line-height: 2rem; 
     font-weight: 700; 
+    color: #ffffff;
 }
 
 @media (min-width: 1024px) { 
@@ -36,3 +38,17 @@
         width: 20rem; }
    }
   
+   .bgPrattle {
+    background-color: #1f2836;
+  }
+  .bgPrattleclear {
+    background-color: #29313d;
+  }
+.bluePrattle{
+    color: #00C1E9;
+    background-color: #00C1E9;
+    
+}
+:hover.bgPrattlehover {
+    background-color: #29313d;
+  }

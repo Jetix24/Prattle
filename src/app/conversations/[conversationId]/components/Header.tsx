@@ -2,7 +2,7 @@
 
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
-import style from "./Header.module.css";
+import styles from "./Form.module.css";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { HiChevronLeft, HiEllipsisHorizontal } from "react-icons/hi2";
@@ -28,10 +28,10 @@ const Header: React.FC<HeaderProps> = ({
 
     const statusText = useMemo(() => {
         if(conversation.isGroup) {
-            return `${conversation.users.length} members`;
+            return `${conversation.users.length} miembros`;
         }   
 
-        return isActive ? 'Active' : 'Offline';
+        return isActive ? 'En linea' : 'Desconectado';
     }, [conversation]);
 
     return ( 
@@ -42,11 +42,9 @@ const Header: React.FC<HeaderProps> = ({
           onClose={() => setDrawerOpen(false)}
         />
         <div
-          className="
-            bg-white
+          className={`
             w-full
             flex
-            border-b-[1px]
             sm:px-4
             py-3
             px-4
@@ -54,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({
             justify-between
             items-center
             shadow-sm
-          "
+            ${styles.bgPrattle}`}
         >
           <div className="flex gap-3 items-center">
             <Link 
@@ -76,14 +74,14 @@ const Header: React.FC<HeaderProps> = ({
               <Avatar user={otherUser} />
             )}
             <div className="flex flex-col">
-              <div>
+              <div className="text-white">
                 {conversation.name || otherUser.name}
               </div>
               <div
                 className="
                   text-sm
                   font-light
-                  text-neutral-500
+                  text-neutral-400
                 "
               >
                 {statusText}

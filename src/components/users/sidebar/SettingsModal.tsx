@@ -57,7 +57,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
       router.refresh();
       onClose();
     })
-    .catch(() => toast.error('Something went wrong!'))
+    .catch(() => toast.error('Algo salió mal!'))
     .finally(() => setIsLoading(false))
   }
 
@@ -102,7 +102,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                     text-gray-900
                   "
                 >
-                  Photo
+                  Imagen
                 </label>
                 <div className="
                   mt-2

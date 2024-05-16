@@ -5,12 +5,22 @@ import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import styles from "./MessageInput.module.css";
 
 interface MessageInputProps {
-    placeholder: string;
-    id: string;
-    type?: string;
-    required?: boolean;
-    register: UseFormRegister<FieldValues>;
-    errors: FieldErrors;
+  placeholder: string;
+  id: string;
+  type?: string;
+  required?: boolean;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+  value?: string; // Añade esta línea
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export const aiMessageInput = (message: string) => {
+  const inputElement = document.getElementById('message') as HTMLInputElement | null;
+  if (inputElement) {
+    inputElement.value = message;
+    inputElement.dispatchEvent(new Event('change', { bubbles: true }));
+  }
 }
 
 const MessageInput: React.FC<MessageInputProps>= ({
@@ -19,8 +29,17 @@ const MessageInput: React.FC<MessageInputProps>= ({
     type,
     required,
     register,
-    errors
+    errors,
+    value, // Añade esta línea
+    onChange, // Añade esta línea
 }) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(e);
+    }
+  };
+
     return ( 
     <div className="relative w-full">
         <input
@@ -29,6 +48,8 @@ const MessageInput: React.FC<MessageInputProps>= ({
         autoComplete={id}
         {...register(id, { required })}
         placeholder={placeholder}
+        value={value} // Value sirve para mostrar el mensaje en el input
+        onChange={handleChange}
         className="
         text-black
         font-light
@@ -38,8 +59,7 @@ const MessageInput: React.FC<MessageInputProps>= ({
         w-full
         rounded-full
         focus:outline-none
-      "
-    />
+      "/>
   </div>);
 }
  
