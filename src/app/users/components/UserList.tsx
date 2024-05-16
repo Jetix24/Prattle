@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import { User } from "@prisma/client";
 import styles from "./UserList.module.css";

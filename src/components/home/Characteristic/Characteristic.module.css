@@ -1,0 +1,193 @@
+.Characteristic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    height: 100%;
+}
+
+.Title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2vh 0;
+
+}
+.Title h1{
+    font-size: 11vh;
+    padding-bottom: 1vh;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+}
+
+.line{
+    flex-grow: 1;
+    height: 1.5vh;
+    width: 35%;
+    background-color: #00DAA1; 
+    border-radius: 15px;
+}
+
+.Group1{
+    margin-top: 3%;
+    display: flex;
+    width: 85%;
+    height: 50vh;
+}
+    .Image{
+        width: 80%;
+        height: 100%;
+    }
+
+    .Image img{
+        background-color: #00DAA1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Text{
+        margin-left: 5%;
+        align-items: center;
+    }
+
+    .Text h2{
+        font-size: 4vw;
+        margin-top: 4%;
+        text-align: left;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .Text p{
+        margin-top: 2%;
+        font-size: 2vw;
+        color: #fff;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .line2 {
+        margin-top: 5%;
+        flex-grow: 1;
+        height: 2vh;
+        width: 60%;
+        border-top-Right-radius: 15px; /* Redondea el borde superior izquierdo */
+        border-bottom-Right-radius: 15px; /* Redondea el borde inferior izquierdo */
+        align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
+    }
+
+.Group2{
+    margin-top: 3%;
+    display: flex;
+    width: 85%;
+    height: 50vh;
+}
+    .Image2{
+        width: 54%;
+        height: 100%;
+        padding-left: 5%;
+    }
+
+    .Image2 img{
+        background-color: #00DAA1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Text2{
+        align-items: center;
+        width: 100%;
+    }
+
+    .Text2 h2{
+        font-size: 4vw;
+        margin-top: 4%;
+        text-align: left;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .Text2 p{
+        margin-top: 2%;
+        font-size: 2vw;
+        color: #fff;
+        font-weight: 500;
+        text-align: left;
+    }
+
+.line3 {
+    margin-top: 5%;
+    margin-left: auto;
+    flex-grow: 1;
+    height: 2vh;
+    width: 60%;
+    border-top-left-radius: 15px; /* Redondea el borde superior izquierdo */
+    border-bottom-left-radius: 15px; /* Redondea el borde inferior izquierdo */
+    align-self: flex-start; /* Alinea la línea al inicio del contenedor flex */
+}
+
+@media (max-width: 900px) and (max-height: 900px) {
+    
+    .Title h1{
+        font-size: 12vw;
+    }
+    
+    .line{
+        width: 50%;
+    }
+
+    .Group1{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 120vw;
+        margin-top: 1vw;
+    }
+
+    .Image{
+        width: 65%;
+        height: 45%;
+    }
+
+    .Image2{
+        width: 65%;
+        height: 45%;
+        padding-left: 0%;
+    }
+
+    .Text, .Text2{
+        text-align: center;
+    }
+
+    .Text h2, .Text2 h2{
+        font-size: 8vw;
+        margin-top: 3vw;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .Text p, .Text2 p{
+        margin-top: 3vw;
+        font-size: 4vw;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .Group2{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vw;
+    }
+
+    .line2, .line3 {
+        height: 2vw;
+    }
+
+}

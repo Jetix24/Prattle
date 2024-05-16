@@ -1,0 +1,1 @@
+export { Us} from './Us'; // src/components/home/Description/Description.tsx

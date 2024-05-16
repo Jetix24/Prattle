@@ -1,50 +1,53 @@
+.Navbar{
+  width: 100%;
+}
+
+
 .Navbar label{
   display:none;
 }
 
-.Navbar #check{
-  z-index: 3;
-  display: none;
+#check{
+  z-index: 5;
+  background-color: #06D6A0;
 }
 .Navbar nav {
     position: relative;
     top: 0;
     width: 100%;
-    height: 15%;
-    padding: 3px 100px;
+    height: 2%;
+    padding: 0px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #1c202b98;
   }
 
-  .Navbar #logo{
-    height: 100px; 
-    margin-top: 15px;
-    margin-bottom: 15px;
+  .Navbar nav #logo{
+    height: 16vh; 
   }
   
 .Navbar nav .navigation button{
     color: #dbdbdb;
     text-decoration: none;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.5vw;
     letter-spacing: 1px;
-    padding: 2px 15px;
+    padding: 0% 1vw;
     background: transparent;
     border: none;
     cursor: pointer;
 }   
 
 .Navbar nav .navigation button:hover{
-    font-size: 20px; /* Aplica una escala del 110% */
+    font-size: 1.5vw; /* Aplica una escala del 110% */
     transition: transform 0.8s ease-in-out; /* Agrega una transición suave */
     color: #fff;
     cursor: pointer;
   }
   
   .Navbar  nav .navigation button:not(:last-child){
-    margin-right: 18px;
+    margin-right: 2vw;
   }
   
   .Navbar  nav .navigation Link:last-child:hover {
@@ -89,29 +92,34 @@
     }
     
     @media (max-width: 1170px){
+      .Navbar nav #logo{
+        height: 10vh; 
+      }
+      
       .Navbar nav .navigation{
         display: none;
       }
-      .Navbar img{
-        height: 80px;
-        margin-left: 50px;
-      }
+
       .Navbar label{
         display: block;
-        font-size: 25px;
+        font-size: 10vw;
         cursor: pointer;
         transition: 0.3s;
+        display: none;
         transition-property: color;
         color: #DBDBDB;
       }
+
       .Navbar label:hover{
         color: #fff;
       }
+
       label .close-btn{
         display: none;
       }
+
       #check:checked ~ nav .navigation{
-        z-index: 2;
+        z-index: 5;
         position: fixed;
         background: #1c202bf3;
         top: 0;
@@ -123,27 +131,39 @@
         justify-content: center;
         align-items: center;
       }
+
       #check:checked ~ nav .navigation a{
         font-weight: 700;
         margin-right: 0;
         margin-bottom: 50px;
-        letter-spacing: 2px;
       }
+
       #check:checked ~ nav label .menu-btn{
         display: none;
       }
+
       #check:checked ~ nav label .close-btn{
         z-index: 2;
         display: block;
         position:fixed;
       }
+      /*
+      .Navbar img{
+        height: 80px;
+        margin-left: 50px;
+      }
+      
+      
+      
+      
+      
       label .menu-btn{
         position: absolute;
       }
       .Navbar nav img{
         position: absolute;
         bottom: -6px;
-      }
+      }*/
 
     }
     

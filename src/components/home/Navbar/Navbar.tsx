@@ -10,8 +10,13 @@ return (
                 <img src="/img/logo_blanc.png" id={styles.logo} alt="Logo" />
         </Link>
             <div className={styles.navigation}>
-                <button>Proyecto</button>
-                <button>Sobre nosotros</button>
+                <Link href="#proyecto">
+                    <button>Proyecto</button>
+                </Link>
+                <Link href="#nosotros">
+                    <button>Sobre nosotros</button>
+                </Link>
+
                 <Link href="/login">
                     <button>Iniciar sesión</button>
                 </Link>

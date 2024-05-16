@@ -1,6 +1,6 @@
 import styles from './descripcion.module.css'; 
 import Link from 'next/link';
-import { FormPerfil} from '@/components/user/descripcion/FormPerfil/FormPerfil';
+import { FormPerfil } from '@/components/user/perfil/FormPerfil';
 import { FormDescripcion } from '@/components/user/descripcion/FormDescripcion/FormDescripcion';
 export default function descripcion() {
 

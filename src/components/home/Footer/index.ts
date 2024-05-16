@@ -1,0 +1,1 @@
+export { Footer } from './Footer'; // src/components/home/Description/Description.tsx

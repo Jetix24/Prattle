@@ -1,0 +1,96 @@
+.Footer{
+    display: flex;
+    flex-direction:  column;
+    background: linear-gradient(to top, #01235A, #191E26); /* Crea un degradado lineal del color #000 al color #333 */
+}
+
+.Footer img{
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.Footer p{
+    margin-top: 1%;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #fff;
+    font-weight: 500;
+}
+
+.Icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.Icons img{
+    width: 20%;
+    height: 20%;
+    margin: 2% 1rem;
+}
+.Group{
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.SubGroupLine{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.SubGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.line{
+    margin-top: 5%;
+    flex-grow: 1;
+    height: 4vh;
+    border-top-Right-radius: 15px; /* Redondea el borde superior izquierdo */
+    border-bottom-Right-radius: 15px; /* Redondea el borde inferior izquierdo */
+    align-self: flex-start; 
+}
+
+.line2{
+    margin-top: 5%;
+    margin-left: auto;
+    flex-grow: 1;
+    height: 4vh;
+    border-top-left-radius: 15px; /* Redondea el borde superior izquierdo */
+    border-bottom-left-radius: 15px; /* Redondea el borde inferior izquierdo */
+    align-self: flex-start;
+}
+
+@media (max-width: 1190px) and (max-height: 1000px) {
+    
+    .Footer p{
+        margin-top: 4%;
+        font-size: 4vw;
+        font-weight: 400;
+    }
+
+    .SubGroupLine{
+        display: none;
+    }
+
+    .Footer img{
+        width: 50%;
+        height: 40%;
+        margin: 0 auto;
+    }
+
+    .Icons img{
+        width: 20%;
+        height: 20%;
+        margin: 2% 1rem;
+    }
+}
