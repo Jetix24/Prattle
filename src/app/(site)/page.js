@@ -10,7 +10,6 @@ import { Footer } from '@/components/home/Footer';
 export default function Home() {
   return (
     <div className = {styles.Home}>
-      <section >
         <div className = {styles.Inicio}>
           <Navbar />
           <Description />
@@ -27,7 +26,6 @@ export default function Home() {
         <div className = {styles.Footer} >
           <Footer />
         </div>
-      </section>
      </div> 
   );
 }

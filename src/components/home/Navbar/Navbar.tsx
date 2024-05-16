@@ -1,35 +1,35 @@
+"use client";
 import Link from "next/link"
 import styles from "./Navbar.module.css"
+import NavbarItem from "./NavbarItem"
+import { IoMenu } from "react-icons/io5";
+import MobileMenu from "./MobileMenu";
+import { useCallback, useState } from "react";
 
 export const Navbar = () => {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    const toggleMobileMenu = useCallback(() => {
+        setShowMobileMenu((current) => !current);
+    }, []);
+
 return (
-    <section className = {styles.Navbar}> 
-        <input type="checkbox" id={styles.check} />
-        <nav>
-        <Link href="/"> 
-                <img src="/img/logo_blanc.png" id={styles.logo} alt="Logo" />
-        </Link>
-            <div className={styles.navigation}>
-                <Link href="#proyecto">
-                    <button>Proyecto</button>
-                </Link>
-                <Link href="#nosotros">
-                    <button>Sobre nosotros</button>
-                </Link>
-
-                <Link href="/login">
-                    <button>Iniciar sesión</button>
-                </Link>
-                <Link href="/signup">
-                    <button id={styles.registrate}>Registrate</button>
-                </Link>
+    <nav className="w-full fixed z-40">
+        <div className={`flex justify-between md:px-16 py-6 flex-row items-center transition duration-500 bg-opacity-90 ${styles.navBG}`}>
+            <Link href="/"> 
+                <img src="/img/logo_blanc.png" className={styles.logo} alt="Logo" />
+            </Link>
+            <div className="flex-row ml-8 gap-7 hidden justify-end lg:flex ">
+                <NavbarItem href="#proyecto" label="Proyecto" />
+                <NavbarItem href="#nosotros" label="Sobre nosotros" />
+                <NavbarItem href="/login" label="Iniciar sesión" />
+                <NavbarItem href="/signup" label="Registrate" />
             </div>
-
-            <label htmlFor="check" className={styles.checkbtn}>
-                <i className="fas fa-bars menu-btn"></i>
-                <i className="fas fa-times close-btn"></i>
-            </label>
-        </nav>
-    </section>
+            <div onClick={toggleMobileMenu} className="lg:hidden  flex-row items-center gap-2 ml-8 cursor-pointer relative justify-start">
+                <IoMenu className="text-white transition" size={50}/>
+                <MobileMenu visible={showMobileMenu}/>
+            </div>
+        </div>
+    </nav>
     )
 }

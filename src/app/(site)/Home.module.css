@@ -2,12 +2,11 @@
     background-color: #191E26;
     min-height: 100vh;
     background-size: cover;
-    display: flex;
 }
     
 .Inicio {
     background-image: url("/img/background_index.jpg");
-    position: relative; /* Asegura que el rectángulo se posicione en relación con este contenedor */
+    position: relative; 
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -50,8 +49,6 @@
         background-size: 100%; 
         min-height: 80vh;
         background-image: none;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 
 
