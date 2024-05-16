@@ -1,42 +1,22 @@
-"use client";
+import getCurrentUser from "@/app/actions/getCurrentUser";
 import { ChatButton } from "@/components/shared/ChatButton";
 import { SignOutButton } from "@/components/shared/SignOutButton";
-
 import useRoutes from "@/app/hooks/useRoutes";
-import { useState } from "react";
 import {User} from "@prisma/client";
-import { useRouter } from "next/navigation";
-import { useForm, FieldValues } from 'react-hook-form';
 
-interface DashboardProps {
-  currentUser: User;
+async function DashboardPage({ children }: {
+  children: React.ReactNode,
+}) {
+  const currentUser = await getCurrentUser();
+  
+  return (
+    <div>
+      <h1>Felicidades {currentUser?.name} ee </h1>
+      <p>Estas dentro uwu </p>
+      <SignOutButton />
+      <ChatButton />
+    </div>
+  )
 }
 
-const DashboardPage: React.FC<DashboardProps> = ({
-    currentUser
-}) => {
-  const router = useRouter();
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-
-  } = useForm<FieldValues>({
-    defaultValues: {
-      name: currentUser?.name,
-      email: currentUser?.email,
-    }
-  });
-
-    return (
-      <div>
-        <h1>Felicidades {currentUser?.name} w </h1>
-        <p>Estas dentro uwu </p>
-        <SignOutButton />
-        <ChatButton />
-      </div>
-    );
-  }
-  
-  export default DashboardPage;
+export default DashboardPage;

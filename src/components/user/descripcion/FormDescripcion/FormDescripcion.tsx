@@ -58,3 +58,5 @@ export const FormDescripcion = () => {
         </form>
     )
 }
+
+export default FormDescripcion;

@@ -1,28 +1,61 @@
 "use client";
-import useRoutes from "@/app/hooks/useRoutes";
-import { useState } from "react";
 import styles from "./FormPerfil.module.css";
-import {User} from "@prisma/client";
+import { User } from "@prisma/client";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import Image from "next/image";
+import { CldUploadButton } from "next-cloudinary";
 
 interface FormPerfilProps {
-    currentUser: User
-}
+    currentUser: User;
+  }
 
-const FormPerfil: React.FC<FormPerfilProps> = (
-    {currentUser}
-) => {
-   
+  const FormPerfil: React.FC<FormPerfilProps> = ({
+    currentUser
+    }) => {
+        const {
+            register,
+            handleSubmit,
+            setValue,
+            watch,
+            formState: {
+              errors,
+            }
+          } = useForm<FieldValues>({
+            defaultValues: {
+              nombre: currentUser.name,
+              img: currentUser.image,
+            }
+          });
+
+          const image = watch('image');
+
+        const handleUpload = (result: any) => {
+            setValue('image', result?.info?.secure_url, {
+            shouldValidate: true
+            })
+        }
+
     return (
         <div className={styles.perfilForm}>
             <div className={styles.nombreGroup}>
                 <label id="nombre">{currentUser.name}</label>
             </div>
             <div className={styles.imgGroup}>
-                <img src="/img/adult.jpg" alt="icon" className={styles.imgPerfil}/> {/* Asegúrate de que 'image' es un campo en tu objeto User */}
+            <Image
+                    width="48"
+                    height="48"
+                    className="rounded-full"
+                    src={image || currentUser?.image || "/img/placeholder.jpg"}
+                    alt="Avatar"
+                  />
             </div>
             <div className={styles.edadGroup}>
                 <label>Edad: {" "}</label>
-                <label id="edad">21</label> {/* Asegúrate de que 'age' es un campo en tu objeto User */}
+                <label id="edad">21</label> 
             </div>
         </div>
     )
