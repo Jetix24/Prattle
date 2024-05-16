@@ -14,8 +14,8 @@ export const Navbar = () => {
     }, []);
 
 return (
-    <nav className="w-full fixed z-40">
-        <div className={`flex justify-between md:px-16 py-6 flex-row items-center transition duration-500 bg-opacity-90 ${styles.navBG}`}>
+    <nav className= "w-full fixed top-0">
+        <div className={`flex justify-between md:px-16 py-3 flex-row items-center transition duration-500 bg-opacity-90 ${styles.navBG}`}>
             <Link href="/"> 
                 <img src="/img/logo_blanc.png" className={styles.logo} alt="Logo" />
             </Link>
@@ -25,7 +25,7 @@ return (
                 <NavbarItem href="/login" label="Iniciar sesión" />
                 <NavbarItem href="/signup" label="Registrate" />
             </div>
-            <div onClick={toggleMobileMenu} className="lg:hidden  flex-row items-center gap-2 ml-8 cursor-pointer relative justify-start">
+            <div onClick={toggleMobileMenu} className="lg:hidden flex-row items-center gap-2 ml-8 cursor-pointer relative ">
                 <IoMenu className="text-white transition" size={50}/>
                 <MobileMenu visible={showMobileMenu}/>
             </div>
