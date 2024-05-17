@@ -1,42 +1,32 @@
-"use client";
+import React from 'react';
 import { ChatButton } from "@/components/shared/ChatButton";
 import { SignOutButton } from "@/components/shared/SignOutButton";
+import styles from "./dashboard.module.css";
+import getCurrentUser from "@/app/actions/getCurrentUser";
+import Navbar from "@/components/user/perfil/navbar/Navbar";
 
-import useRoutes from "@/app/hooks/useRoutes";
-import { useState } from "react";
-import {User} from "@prisma/client";
-import { useRouter } from "next/navigation";
-import { useForm, FieldValues } from 'react-hook-form';
 
-interface DashboardProps {
-  currentUser: User;
+async function DashboardPage({ children }: {
+  children: React.ReactNode,
+}) {
+  let currentUser;
+  try {
+      currentUser = await getCurrentUser();
+  } catch (error) {
+      console.error("Error al obtener el usuario actual:", error);
+      // Aquí puedes manejar el error de la manera que consideres apropiada,
+      // como mostrar un mensaje de error al usuario o redirigirlo a otra página.
+  }
+
+  return (
+      <div className={styles.bgPrattle}>
+          <Navbar currentUser={currentUser} />
+          <h1>Felicidades</h1>
+          <p>Estas dentro uwu</p>
+          <SignOutButton />
+          <ChatButton />
+      </div>
+  );
 }
 
-const DashboardPage: React.FC<DashboardProps> = ({
-    currentUser
-}) => {
-  const router = useRouter();
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-
-  } = useForm<FieldValues>({
-    defaultValues: {
-      name: currentUser?.name,
-      email: currentUser?.email,
-    }
-  });
-
-    return (
-      <div>
-        <h1>Felicidades {currentUser?.name} w </h1>
-        <p>Estas dentro uwu </p>
-        <SignOutButton />
-        <ChatButton />
-      </div>
-    );
-  }
-  
-  export default DashboardPage;
+export default DashboardPage;
