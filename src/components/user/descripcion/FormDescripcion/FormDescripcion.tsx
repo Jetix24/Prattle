@@ -14,13 +14,14 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-
+import Image from "next/image";
+import { CldUploadButton } from "next-cloudinary";
+import Button from '@/components/users/Button';
 
 interface FormDescripcionProps {
     currentUser: User;
   }
 
-registerPlugin(FilePondPluginImagePreview, FilePondPluginImageResize, FilePondPluginFileEncode);
 
 const FormDescripcion: React.FC<FormDescripcionProps> = ({
     currentUser
@@ -43,6 +44,14 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
             }
     });
 
+    const cover = watch('cover');
+
+    const handleUpload = (result: any) => {
+        setValue('cover', result?.info?.secure_url, {
+          shouldValidate: true
+        })
+      }
+
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         console.log('data:',data);
         setIsLoading(true);
@@ -56,17 +65,7 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
         .finally(() => setIsLoading(false))
       }
 
-    const [coverWidth, setCoverWidth] = useState<number | undefined>(undefined);
-    const [coverHeight, setCoverHeight] = useState<number | undefined>(undefined);
-
-    useEffect(() => {
-        const coverWidthValue = 300; // Reemplaza 230 con el valor que desees para el ancho de la portada
-        const coverAspectRatio = .75; // Reemplaza 0.75 con el valor que desees para el aspecto de la portada
-        const coverHeightValue = coverWidthValue / coverAspectRatio;
-
-        setCoverWidth(coverWidthValue);
-        setCoverHeight(coverHeightValue);
-    }, [])
+    
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.descripcionForm}>
@@ -74,15 +73,22 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
             <div className={styles.leftContainer}>
                 <div className={styles.formGroup}>
                     <label htmlFor="cover">Portada</label>
-                    
-                    <FilePond
-                    className={styles.filePond}
-                    id="cover"
-                    required
-                    {...register("cover" )} 
-                    imageResizeTargetWidth={coverWidth}
-                    imageResizeTargetHeight={coverHeight}
-                    />
+                    <div className={styles.coverContainer} id="cover">
+                    <Image
+                    width="400"
+                    height="400"
+                    className="rounded-[15px]"
+                    src={cover || currentUser?.cover || "/img/placeholder.jpg"}
+                    alt="Avatar"
+                  />
+                  </div>
+                  <CldUploadButton 
+                    options={{ maxFiles: 1 }}
+                    onUpload={handleUpload}
+                    uploadPreset="ft70nulr"
+                  >
+                      Change                    
+                  </CldUploadButton>
                 </div>
             </div>
             <div className={styles.rightContainer}>
@@ -106,9 +112,9 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
                     </div>
             </div>
         </div>
-            <button disabled={isLoading} type="submit">
+            <Button disabled={isLoading} type="submit">
                 Enviar
-            </button>
+            </Button>
         </form>
     )
 }
