@@ -20,7 +20,7 @@ async function descripcion({ children }: {
             <FormPerfil currentUser={currentUser!}/>
           </div>
           <div className={styles.right}>
-            <FormDescripcion/>
+            <FormDescripcion currentUser={currentUser!}/>
           </div>
         </div>
       </div>

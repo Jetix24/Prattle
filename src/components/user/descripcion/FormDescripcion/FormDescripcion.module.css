@@ -73,12 +73,12 @@
   }
 
 
-.formGroup textarea[id="titular"]{
+.formGroup textarea[id="title"]{
     height: 20vh;
     padding: 0% 0% 0% 1%;
 }
 
-.formGroup textarea[id="acerca"]{
+.formGroup textarea[id="description"]{
     height: 33vh;
     padding: 0% 0% 0% 1%;
 }
