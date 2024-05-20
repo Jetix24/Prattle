@@ -5,9 +5,7 @@ import styles from "./dashboard.module.css";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import Navbar from "@/components/user/perfil/navbar/Navbar";
 
-async function DashboardPage({ children }: {
-  children: React.ReactNode,
-}) {
+async function DashboardPage() {
   const currentUser = await getCurrentUser();
 
   return (
@@ -17,9 +15,6 @@ async function DashboardPage({ children }: {
       <p>Estás dentro uwu</p>
       <SignOutButton />
       <ChatButton />
-      <main className={styles.main}>
-            {children}
-        </main>
     </div>
   );
 }
