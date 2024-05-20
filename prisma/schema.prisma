@@ -26,6 +26,7 @@ model User {
   title     String?
   description String?
   cover     String?
+  firstTime Boolean? @default(true)
 
   // Relation
   conversationIds String[] @db.ObjectId

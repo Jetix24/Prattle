@@ -70,7 +70,7 @@
     align-self: flex-start;
 }
 
-@media (max-width: 1190px) and (max-height: 1000px) {
+@media (max-width: 1024px) and (max-height: 1000px) {
     
     .Footer p{
         margin-top: 4%;

@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { email, name, password, bornDate } = body;
+    const { email, name, password, bornDate, firstTime } = body;
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
@@ -14,7 +14,8 @@ export async function POST(request: Request) {
         email,
         name,
         hashedPassword,
-        bornDate, // Se incluye la fecha de nacimiento en la creación del usuario
+        bornDate,
+        firstTime
       },
     });
 

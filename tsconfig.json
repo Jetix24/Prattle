@@ -41,7 +41,7 @@
     "src/app/signup/page.js",
     "src/app/maintenance/page.js",
     "src/app/carga/page.js",
-    "src/app/user/descripcion/page.js",
+    "src/app/user/descripcion/page.ts",
     "src/app/user/intereses/page.js"
   ],
   "exclude": [

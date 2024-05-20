@@ -46,7 +46,7 @@
     color: #191E26;
 }
 
-@media (max-width: 1190px) and (max-height: 1000px) {
+@media (max-width: 1024px) and (max-height: 1000px) {
     .perfilForm{
         height: 100%;
         color: #191E26;
