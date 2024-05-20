@@ -1,6 +1,6 @@
 import styles from './perfil.module.css'; 
 import Link from 'next/link';
-import {Navbar} from '@/components/user/perfil/navbar/Navbar';
+import Navbar from '@/components/user/perfil/navbar/Navbar';
 import { FormPerfil} from '@/components/user/perfil/FormPerfil/FormPerfil';
 
 
