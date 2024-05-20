@@ -1,13 +1,6 @@
 'use client'
 
-import { FilePond, registerPlugin } from 'react-filepond';
-import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-import FilePondPluginImageResize from 'filepond-plugin-image-resize';
-import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
-import 'filepond/dist/filepond.min.css';
-import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 import styles from "./FormDescripcion.module.css"
-import Link from 'next/link';
 import { User } from "@prisma/client";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
@@ -87,7 +80,7 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
                     onUpload={handleUpload}
                     uploadPreset="ft70nulr"
                   >
-                      Change                    
+                      Subir                    
                   </CldUploadButton>
                 </div>
             </div>

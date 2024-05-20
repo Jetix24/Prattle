@@ -6,11 +6,15 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Image from "next/image";
+import { CldUploadButton } from "next-cloudinary";
+import { toast } from "react-hot-toast";
+import Button from '@/components/users/Button';
+
 
 interface FormPerfilProps {
-    currentUser: User;
-  }
-
+  currentUser: User;
+}
+  
   const calculateAge = (bornDate: Date) => {
     const today = new Date();
     let age = today.getFullYear() - bornDate.getFullYear();
@@ -26,7 +30,10 @@ interface FormPerfilProps {
   const FormPerfil: React.FC<FormPerfilProps> = ({
     currentUser
     }) => {
+      const router = useRouter();
+      const [isLoading, setIsLoading] = useState(false);
         const {
+            handleSubmit,
             setValue,
             watch,
             formState: {
@@ -48,27 +55,53 @@ interface FormPerfilProps {
             })
         }
 
+        const onSubmit: SubmitHandler<FieldValues> = (data) => {
+          console.log('data:',data);
+          setIsLoading(true);
+      
+          
+          axios.post('/api/settings', data)
+          .catch(() => toast.error('Something went wrong!'))
+          .finally(() => setIsLoading(false))
+        }
+
         const age = currentUser.bornDate ? calculateAge(new Date(currentUser.bornDate)) : 'Unknown';
 
     return (
+      
         <div className={styles.perfilForm}>
             <div className={styles.nombreGroup}>
                 <label id="nombre">{currentUser.name}</label>
             </div>
-            <div className={styles.imgGroup}>
-                <Image
-                    width="200"
-                    height="100"
-                    className="rounded-full"
-                    src={image || currentUser?.image || "/img/placeholder.jpg"}
-                    alt="Avatar"
-                  />
-            </div>
+            <form onSubmit={handleSubmit(onSubmit)} >
+              <div className={styles.imgGroup}>
+                  <Image
+                      width="1000"
+                      height="1000"
+                      className="rounded-full"
+                      src={image || currentUser?.image || "/img/placeholder.jpg"}
+                      alt="Avatar"
+                    />
+                  <CldUploadButton 
+                    options={{ maxFiles: 1 }}
+                    onUpload={handleUpload}
+                    uploadPreset="ft70nulr"
+                  >
+                  Subir             
+                  </CldUploadButton> 
+              </div>
+              <div className={styles.buttonSubmit}>
+                <Button disabled={isLoading} type="submit" >
+                  Guardar
+              </Button>  
+              </div>
+            </form>
             <div className={styles.edadGroup}>
                 <label>Edad: {" "}</label>
                 <label id="edad">{age}</label> 
             </div>
         </div>
+       
     )
 }
 

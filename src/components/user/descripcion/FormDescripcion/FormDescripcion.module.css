@@ -6,7 +6,7 @@
   .inputContainers {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: .5vw;
   }
   
   .leftContainer {
@@ -75,7 +75,7 @@
 
 .descripcionForm button {
     width: 100%;
-    padding: 1%;
+    padding: 2%;
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
@@ -85,6 +85,10 @@
     font-weight: bold; /* Added font-weight property */
     cursor: pointer;
     transition: all 0.2s ease-in;
+  }
+
+  .formGroup button{
+    padding: 1%;
   }
 
   .coverContainer{
@@ -131,13 +135,17 @@
     }
 
     .descripcionForm button {      
-        padding: 5%;
+        padding: 6%;
         font-size: 7vw;
         margin-bottom: 5%;
     }
 
+    .formGroup button {
+      padding: 3%;
+  }
+
     .coverContainer{
-        height: 40vw;
+        height: 50vw;
         margin-bottom: 6vw;
     }
   }

@@ -149,13 +149,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
               secondary
               onClick={onClose}
             >
-              Cancel
+              Cancelar
             </Button>
             <Button
               disabled={isLoading}
               type="submit"
             >
-              Save
+              Guardar
             </Button>
         </div>
 
