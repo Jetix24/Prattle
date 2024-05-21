@@ -23,7 +23,7 @@ body {
   background-position: center;
 }
 
-/*Aqui empieza el responsivo*/
+/*Aqui empieza el responsivo*//*
 @media (max-width: 1170px){
   header .navigation{
     display: none;
@@ -101,4 +101,4 @@ body {
     padding: 15px 15px;
     border-radius: 20px;
   }
-}
+}*/

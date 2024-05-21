@@ -66,7 +66,7 @@ export default function SignUp() {
       }
 
     } catch (error) {
-      toast.error('Something went wrong!');
+      toast.error('Algo salió mal!');
     } finally {
       setIsLoading(false);
     }

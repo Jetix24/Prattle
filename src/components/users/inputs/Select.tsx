@@ -25,7 +25,7 @@ const Select: React.FC<SelectProps> = ({
         text-sm
         font-medium
         leading-6
-        text-gray-900
+        text-white
       "
     >
       {label}

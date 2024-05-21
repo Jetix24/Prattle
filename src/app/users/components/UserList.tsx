@@ -17,7 +17,7 @@ const UsersList: React.FC<UserListProps> = ({
             <div className={styles.container}>
                 <div className={styles.column}>
                     <div className={styles.people}>
-                        People
+                        Amigos
                     </div>
                 </div>
                 {items.map((item) => (

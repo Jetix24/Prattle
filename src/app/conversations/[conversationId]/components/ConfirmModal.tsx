@@ -3,6 +3,7 @@
 import Button from "@/components/users/Button";
 import Modal from "@/components/users/Modal";
 import useConversation from "@/app/hooks/useConversation";
+import styles from "./Form.module.css";
 import { Dialog } from "@headlessui/react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -32,7 +33,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
       router.push('/conversations');
       router.refresh();
     })
-    .catch(() => toast.error('Something went wrong!'))
+    .catch(() => toast.error('Algo salió mal!'))
     .finally(() => setIsLoading(false))
   }, [conversationId, router, onClose]);
 
@@ -52,11 +53,9 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             items-center
             justify-center
             rounded-full
-            bg-red-100
             sm:mx-0
             sm:h-10
-            sm:w-10
-          "
+            sm:w-10"
         >
           <FiAlertTriangle
             className="h-6 w-6 text-red-600"
@@ -77,13 +76,13 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
               text-base
               font-semibold
               leading-6
-              text-gray-900
+              text-white
             "
           >
             Delete conversation
           </Dialog.Title>
           <div className="mt-2">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-300">
               Are you sure you want to delete this conversation? This action cannot be undone.
             </p>
           </div>
@@ -104,6 +103,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
         >
           Delete
         </Button>
+
         <Button
           disabled={isLoading}
           secondary
@@ -111,6 +111,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
         >
           Cancel
         </Button>
+        
       </div>
     </Modal>
    );

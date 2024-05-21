@@ -1,16 +1,4 @@
-.div{
-    height: 100vh; 
-    background-color: #1f2836;
-}
-.main{
-    height: 100vh;
-}
-
-@media (min-width: 1024px) { 
-    .main{
-        padding-left: 5rem; 
-    }
-}
+/* styles.css o tuarchivo.css */
 
 .bgPrattle {
     background-color: #1f2836;
@@ -23,3 +11,6 @@
     background-color: #00C1E9;
     
 }
+:hover.bgPrattlehover {
+    background-color: #29313d;
+  }

@@ -11,7 +11,8 @@ export default async function handler(
   const session = await getServerSession(request, response, authOptions);
 
   if (!session?.user?.email) {
-    return response.status(401);
+    // Asegúrate de enviar una respuesta después de establecer el estado.
+    return response.status(401).json({ error: "No autorizado" });
   }
 
   const socketId = request.body.socket_id;
@@ -20,7 +21,12 @@ export default async function handler(
     user_id: session.user.email
   };
 
-  const authResponse = pusherServer.authorizeChannel(socketId, channel, data);
-
-  return response.send(authResponse);
+  try {
+    // Asumiendo que authorizeChannel es asíncrono y devuelve una promesa.
+    const authResponse = await pusherServer.authorizeChannel(socketId, channel, data);
+    response.send(authResponse);
+  } catch (error) {
+    // Manejo de errores en caso de que la autorización falle.
+    response.status(500).json({ error: "Error al autorizar el canal" });
+  }
 }

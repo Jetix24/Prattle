@@ -5,7 +5,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Conversation, User } from "@prisma/client";
 import { format } from "date-fns";
 import { Fragment, useMemo, useState } from "react";
-import styles from './ProfileDrawer.module.css';
+import styles from "./Form.module.css";
 import { IoClose, IoTrash } from "react-icons/io5";
 import Avatar from "@/components/users/Avatar";
 import Modal from "@/components/users/Modal";
@@ -41,9 +41,9 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
-      return `${data.users.length} members`;
+      return `${data.users.length} miembros`;
     }
-    return isActive ? 'Active' : 'Offline';
+    return isActive ? 'En linea' : 'Desconectado';
 }, [data, isActive]);
 
 
@@ -113,15 +113,14 @@ return (
                   "
                 >
                   <div
-                    className="
+                    className={`
                       flex
                       h-full
                       flex-col
                       overflow-y-scroll
-                      bg-white
                       py-6
-                      shadow-xl
-                    "
+                      shadow-
+                      ${styles.bgPrattle}`}
                   >
                     <div className="px-4 sm:px-6">
                       <div 
@@ -172,11 +171,11 @@ return (
                             <Avatar user={otherUser} />
                           )}
                         </div>
-                        <div>
+                        <div className="text-white">
                           {title}
                         </div>
                         <div className="
-                          text-sm text-gray-500
+                          text-sm text-neutral-400
                         ">
                           {statusText}
                         </div>
@@ -207,12 +206,11 @@ return (
                             </div>
                             <div
                               className="
-                                text-sm
                                 font-light
-                                text-neutral-600
+                                text-sm text-neutral-400
                               "
                             >
-                              Delete
+                              Borrar
                             </div>
                           </div>
                         </div>
@@ -239,7 +237,7 @@ return (
                                   className="
                                     text-sm
                                     font-medium
-                                    text-gray-500
+                                    text-white
                                     sm:w-40
                                     sm:flex-shrink-0
                                   "
@@ -250,7 +248,7 @@ return (
                                   className="
                                     mt-1
                                     text-sm
-                                    text-gray-900
+                                    text-neutral-400
                                     sm:col-span-2
                                   "
                                 >
@@ -264,7 +262,7 @@ return (
                                   className="
                                     text-sm
                                     font-medium
-                                    text-gray-500
+                                    text-white
                                     sm:w-40
                                     sm:flex-shrink-0
                                   "
@@ -275,7 +273,7 @@ return (
                                   className="
                                     mt-1
                                     text-sm
-                                    text-gray-900
+                                    text-neutral-400
                                     sm:col-span-2
                                   "
                                 >
@@ -291,7 +289,7 @@ return (
                                     className="
                                       text-sm
                                       font-medium
-                                      text-gray-500
+                                      text-white
                                       sm:w-40
                                       sm:flex-shrink-0
                                     "
@@ -302,7 +300,7 @@ return (
                                     className="
                                       mt-1
                                       text-sm
-                                      text-gray-900
+                                      text-neutral-400
                                       sm:col-span-2
                                     "
                                   >

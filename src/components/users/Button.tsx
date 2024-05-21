@@ -1,7 +1,5 @@
 'use client';
 
-import styles from './Button.module.css'; 
-
 import clsx from 'clsx';
 
 interface ButtonProps {
@@ -31,9 +29,11 @@ const Button: React.FC<ButtonProps> = ({
       className={clsx(`
         flex
         justify-center
+        items-center
         rounded-md
         px-3
         py-2
+        mx-1
         text-sm
         font-semibold
         focus-visible:outline
@@ -43,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled && "opacity-50 cursor-default",
       fullWidth && "w-full",
       secondary ? 'text-gray-900 bg-gray-200 hover:bg-gray-400 focus-visible:outline-gray-400' : 'text-white bg-sky-500 hover:bg-sky-600 focus-visible:outline-sky-600',
-      danger && "bg-rose-500 hover:bg-rose-600 focus-visible:outline-rose-600",
+      danger && 'bg-rose-500 hover:bg-rose-600 focus-visible:outline-rose-600', // Aquí se aplica directamente la clase si danger es true
       !secondary && !danger && "bg-sky-500 hover:bg-sky-600 focus-visible:outline-sky-600"
       )}
     >

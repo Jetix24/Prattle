@@ -1,10 +1,11 @@
 import styles from "./DesktopItem.module.css";
 import Link from "next/link";
 import clsx from "clsx";
+import React from "react"; // Asegúrate de importar React
 
 interface DesktopItemProps {
   label: string;
-  icon: any;
+  icon: any; // El tipo podría ser más específico, como React.ReactNode o una combinación de tipos para imágenes y componentes
   href: string;
   onClick?: () => void;
   active?: boolean;
@@ -13,7 +14,7 @@ interface DesktopItemProps {
 const DesktopItem: React.FC<DesktopItemProps> = ({ 
   label, 
   href, 
-  icon: Icon, 
+  icon, // Se elimina la desestructuración a Icon para manejar tanto componentes como imágenes
   active,
   onClick
 }) => {
@@ -22,6 +23,9 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
       return onClick();
     }
   };
+
+  // Verifica si el icono es una cadena (URL de imagen) o un componente de React
+  const isIconUrl = typeof icon === 'string';
 
   return ( 
     <li onClick={handleClick}>
@@ -43,7 +47,14 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
           active && 'bg-gray-100 text-black'
         )}
       >
-        <Icon className="h-6 w-6 shrink-0" />
+        {isIconUrl ? (
+          // Si 'icon' es una URL de imagen, renderiza un elemento <img>
+          <img src={"/img/logo_seul.png"} alt={label} className="h-6 w-6 shrink-0" />
+        ) : (
+          // Si 'icon' es un componente de React, lo renderiza
+          React.createElement(icon, { className: "h-6 w-6 shrink-0" })
+        )}
+
         <span className="sr-only">{label}</span>
       </Link>
     </li>
