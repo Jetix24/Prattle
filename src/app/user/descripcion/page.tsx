@@ -5,9 +5,7 @@ import FormPerfil from '@/components/user/descripcion/FormPerfil/FormPerfil';
 import { User } from '@prisma/client';
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
-async function descripcion({ children }: {
-  children: React.ReactNode,
-}) {
+async function descripcion() {
   const currentUser = await getCurrentUser();
   return (
     <section>
