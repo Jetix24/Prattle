@@ -60,10 +60,10 @@ const UserCard: React.FC<UserCardProps> = ({
                 ring-white
                 top-0
                 right-0
-                h-2
-                w-2
-                md:h-3
-                md:w-3
+                h-4
+                w-4
+                md:h-5
+                md:w-5
               "
             />
           )} 
