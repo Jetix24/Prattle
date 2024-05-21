@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = (
                 </div>
                 <SearchBar />
                 <GoChatButton />
-                <div className="relative hidden sm:block">
+                <div className="relative">
                     <div
                     onClick={toggleAccountMenu}
                     className="
