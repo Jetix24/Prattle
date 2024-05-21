@@ -9,6 +9,7 @@ import styles from "./UserList.module.css";
 import { useCallback, useState } from "react";
 import Avatar from "@/components/users/Avatar";
 import LoadingModal from "@/components/users/LoadingModal";
+import useActiveList from "@/app/hooks/useActiveList";
 
 interface UserCardProps {
     data: User;
@@ -19,6 +20,9 @@ const UserCard: React.FC<UserCardProps> = ({
 }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
+
+    const { members } = useActiveList();
+    const isActive = members.indexOf(data?.email!) !== -1;
 
     const handleClick = useCallback(() => {
         setIsLoading(true);
@@ -41,10 +45,28 @@ const UserCard: React.FC<UserCardProps> = ({
         <div className="flex justify-end px-4 pt-8">
         </div>
         <div className="flex flex-col items-center pb-10">
-        <div className="relative hidden sm:block"> 
-            <div className="relative overflow-hidden w-24 h-24 mb-3 rounded-full shadow-lg">
+        <div className="relative"> 
+            <div className="relative overflow-hidden w-24 h-24 mb-3 rounded-full ">
                <Image alt="Avatar" src={data?.image || '/img/placeholder.jpg'} fill /> 
-            </div>
+            </div> 
+            {isActive && (
+            <span
+              className="
+                absolute
+                block
+                rounded-full
+                bg-green-500
+                ring-2
+                ring-white
+                top-0
+                right-0
+                h-2
+                w-2
+                md:h-3
+                md:w-3
+              "
+            />
+          )} 
         </div>
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{data.name}</h5>
             <span className="text-sm text-gray-500 dark:text-gray-400">Aqui va el titulo</span>
