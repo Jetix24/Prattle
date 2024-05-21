@@ -23,6 +23,10 @@ model User {
   hashedPassword String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  title     String?
+  description String?
+  cover     String?
+  firstTime Boolean? @default(true)
 
   // Relation
   conversationIds String[] @db.ObjectId
@@ -30,6 +34,9 @@ model User {
 
   seenMessageIds String[] @db.ObjectId
   seenMessages Message[] @relation("Seen", fields: [seenMessageIds], references: [id]) //Se va a relacionar con el campo seenMessageIds de la colección Messages
+
+  interestsIds String[] @db.ObjectId
+  interests Interests[] @relation(fields: [interestsIds], references: [id]) 
 
   accounts Account[]
   messages Message[]
@@ -88,4 +95,16 @@ model Message {
 
   senderId String @db.ObjectId
   sender User @relation(fields: [senderId], references: [id]) //Se va a relacionar con el campo senderId de la colección User
+}
+
+
+//Se define el modelo de intereses
+model Interests {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String?
+  cover     String?
+
+  userIds String[] @db.ObjectId
+  users User[] @relation(fields: [userIds], references: [id])
+ 
 }

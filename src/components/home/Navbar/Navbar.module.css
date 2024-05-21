@@ -1,61 +1,19 @@
-.Navbar label{
-  display:none;
+
+.navBG{
+  background: #1c202b98;
+}
+.navminiBG{
+  background: #1c202bf6;
+}
+.bgPrattleclear {
+  background-color: #29313df8;
 }
 
-.Navbar #check{
-  z-index: 3;
-  display: none;
-}
-.Navbar nav {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 15%;
-    padding: 3px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1c202b98;
-  }
-
-  .Navbar #logo{
-    height: 100px; 
-    margin-top: 15px;
-    margin-bottom: 15px;
+  .logo{
+    height: 16vh; 
   }
   
-.Navbar nav .navigation button{
-    color: #dbdbdb;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 1px;
-    padding: 2px 15px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}   
-
-.Navbar nav .navigation button:hover{
-    font-size: 20px; /* Aplica una escala del 110% */
-    transition: transform 0.8s ease-in-out; /* Agrega una transición suave */
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .Navbar  nav .navigation button:not(:last-child){
-    margin-right: 18px;
-  }
-  
-  .Navbar  nav .navigation Link:last-child:hover {
-      color: #fff; 
-      background-color: transparent;
-      cursor: pointer;
-      transition: background-color 1s; /* Transición de color de fondo en 1 segundo */
-      cursor: pointer;
-    }
-    
-    .Navbar #registrate {
+    .registrate {
       color: #1f667c;  
       background: #fff;
       text-decoration: none;
@@ -64,8 +22,12 @@
       font-size: 17px;
       padding: 15px 20px;
       border-radius: 20px;
+      /*Centrar el contenido del botón*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
       } 
-      .Navbar #registrate:hover {
+      .registrate:hover {
       animation: changeColor 3s infinite; /* Llama a la animación con una duración de 3 segundos */
       cursor: pointer;
     }
@@ -88,64 +50,17 @@
       }
     }
     
-    @media (max-width: 1170px){
-      .Navbar nav .navigation{
-        display: none;
+    @media (max-width: 1024px){
+      .registrate{
+        padding: 4px 1px 4px 1px;
+        margin-left: 2rem;
+        margin-right: 2rem;
       }
-      .Navbar img{
-        height: 80px;
-        margin-left: 50px;
+      .logo{
+        height: 6rem; 
       }
-      .Navbar label{
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        transition: 0.3s;
-        transition-property: color;
-        color: #DBDBDB;
-      }
-      .Navbar label:hover{
-        color: #fff;
-      }
-      label .close-btn{
-        display: none;
-      }
-      #check:checked ~ nav .navigation{
-        z-index: 2;
-        position: fixed;
-        background: #1c202bf3;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #check:checked ~ nav .navigation a{
-        font-weight: 700;
-        margin-right: 0;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-      }
-      #check:checked ~ nav label .menu-btn{
-        display: none;
-      }
-      #check:checked ~ nav label .close-btn{
-        z-index: 2;
-        display: block;
-        position:fixed;
-      }
-      label .menu-btn{
-        position: absolute;
-      }
-      .Navbar nav img{
-        position: absolute;
-        bottom: -6px;
-      }
-
     }
-    
+
+ 
 
     

@@ -29,6 +29,7 @@ const Button: React.FC<ButtonProps> = ({
       className={clsx(`
         flex
         justify-center
+        items-center
         rounded-md
         px-3
         py-2

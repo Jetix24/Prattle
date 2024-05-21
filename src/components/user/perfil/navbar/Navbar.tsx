@@ -1,29 +1,59 @@
-import Link from "next/link"
-import styles from "./navbar.module.css"
+"use client";
+import {User} from "@prisma/client";
+import Image from "next/image";
+import GoChatButton from './GoChatButton';
+import SearchBar from "./SearchBar";
+import AccountMenu from "./AccountMenu";
+import { use, useCallback, useState } from "react";
 
-export const Navbar = () => {
+interface NavbarProps {
+    currentUser: User
+}
+
+const Navbar: React.FC<NavbarProps> = (
+    {currentUser}
+) => {
+    const [showAccountMenu, setShowAccountMenu] = useState(false);
+
+    const toggleAccountMenu = useCallback(() => {
+        setShowAccountMenu((current) => !current);
+    }, []);
+
     return (
-        <section className={styles.navPerfil}>
-            <nav className={styles.navContainer}>
-                <Link href="/">
-                    <img src="/img/logo_blanc.png" className={styles.logoMarca} alt="Logo" />
-                </Link>
-                <form className={styles.formGroup}>
-                    <div className={styles.inputIconContainer}>
-                        <input type="text" id="buscar" name="buscar" required  placeholder="Buscar"/>
-                        <img src="/icon/lupa.png" alt="icon" className={styles.inputIcon} />
+            <nav className="flex w-full items-center p-4">
+                <div className="my-2 mx-3 hidden lg:block">
+                    <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain" alt="Logo" />
+                </div>
+                <SearchBar />
+                <GoChatButton />
+                <div className="relative">
+                    <div
+                    onClick={toggleAccountMenu}
+                    className="
+                    relative
+                    rounded-full
+                    overflow-hidden
+                    h-10
+                    w-10
+                    mx-5
+                    md:h-11
+                    md:w-11
+                    cursor-pointer
+                    hover:opacity-75
+                    flex
+                    items-center
+                    "
+                    >
+                    <Image
+                    alt="Avatar"
+                    src={currentUser?.image || '/img/placeholder.jpg'}
+                    fill
+                    />
                     </div>
-                    <button type="submit">Buscar</button>
-                </form>
-                <div className={styles.linksContainer}>
-                    <Link href="/user/chat" className={styles.link}>
-                        <img src="/img/logo_seul.png" className={styles.logoSolo} alt="Logo" />
-                    </Link>
-                    <Link href="/user/configuracion" className={styles.linkC}>
-                        <img src="/icon/hombre.png" className={styles.logoUsuario} alt="Logo" />
-                    </Link>
+                    <AccountMenu visible={showAccountMenu}/>
                 </div>
             </nav>
-        </section>
     )
 }
+
+export default Navbar;

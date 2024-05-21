@@ -1,5 +1,63 @@
 .Home{
-    background: url('/img/background_index.jpg') no-repeat;
+    background-color: #191E26;
     min-height: 100vh;
     background-size: cover;
+}
+    
+.Inicio {
+    background-image: url("/img/background_index.jpg");
+    position: relative; 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    /*haz que el componente esté pegado al borde superior de la pantalla*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+      
+/*  Rectangle {
+    z-index: 1;
+    width: 50px;  Ajusta según tus necesidades
+    height: 300px;  Ajusta según tus necesidades 
+    background-color: #ff0000; /* Ajusta según tus necesidades 
+    position: absolute;
+    transform: rotate(45deg);
+    }*/
+
+.Proyecto  {
+    min-height: 80vh;
+    background-size: cover;
+}
+
+.Caracteristicas  {
+    min-height: 400vh;
+    background-size: cover;
+}
+
+.Nosotros  {
+    min-height: 80vh;
+    background-size: cover;
+}
+
+.Footer {
+    min-height: 80vh;
+    background-size: cover;
+}
+
+
+@media (max-width: 1024px) and (max-height: 1000px) {
+    .Inicio{
+        justify-content: center;
+        align-items: center;
+        background-size: 100%; 
+        min-height: 80vh;
+        background-image: none;
+    }
+
+
+    .Footer {
+        min-height: 60vh;
+        background-size: cover;
+    }
 }
