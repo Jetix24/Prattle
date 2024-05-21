@@ -14,23 +14,12 @@ import Button from '@/components/users/Button';
 interface FormPerfilProps {
   currentUser: User;
 }
-  
-  const calculateAge = (bornDate: Date) => {
-    const today = new Date();
-    let age = today.getFullYear() - bornDate.getFullYear();
-    const monthDifference = today.getMonth() - bornDate.getMonth();
-  
-    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < bornDate.getDate())) {
-      age--;
-    }
-  
-    return age;
-  };
 
-  const FormPerfil: React.FC<FormPerfilProps> = ({
-    currentUser
-    }) => {
+  const FormPerfil: React.FC<FormPerfilProps> = (
+    {currentUser}
+  ) => {
       const router = useRouter();
+
       const [isLoading, setIsLoading] = useState(false);
         const {
             handleSubmit,
@@ -41,9 +30,9 @@ interface FormPerfilProps {
             }
           } = useForm<FieldValues>({
             defaultValues: {
-              nombre: currentUser.name,
-              img: currentUser.image,
-              date: currentUser.bornDate,
+              nombre: currentUser?.name,
+              img: currentUser?.image,
+              date: currentUser?.bornDate,
             }
           });
 
@@ -65,13 +54,25 @@ interface FormPerfilProps {
           .finally(() => setIsLoading(false))
         }
 
-        const age = currentUser.bornDate ? calculateAge(new Date(currentUser.bornDate)) : 'Unknown';
+      
+        const calculateAge = (bornDate: Date) => {
+          const today = new Date();
+          let age = today.getFullYear() - bornDate.getFullYear();
+          const monthDifference = today.getMonth() - bornDate.getMonth();
+        
+          if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < bornDate.getDate())) {
+            age--;
+          }
+        
+          return age;
+        };
+        const age = currentUser?.bornDate ? calculateAge(new Date(currentUser.bornDate)) : 'Unknown';
 
     return (
       
         <div className={styles.perfilForm}>
             <div className={styles.nombreGroup}>
-                <label id="nombre">{currentUser.name}</label>
+                <label id="nombre">{currentUser?.name || 'Prueba'}</label>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} >
               <div className={styles.imgGroup}>
@@ -98,7 +99,7 @@ interface FormPerfilProps {
             </form>
             <div className={styles.edadGroup}>
                 <label>Edad: {" "}</label>
-                <label id="edad">{age}</label> 
+                <label id="edad">{age || 'Prueba'}</label> 
             </div>
         </div>
        
