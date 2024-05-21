@@ -17,10 +17,13 @@ async function DashboardPage() {
       <div>
         <UsersList title="Nuevos usuarios" items={users}/>
       </div>
-      <h1>Felicidades</h1>
-      <p>Estás dentro uwu</p>
-      <SignOutButton />
-      <ChatButton />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   );
 }
