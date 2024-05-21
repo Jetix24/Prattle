@@ -106,7 +106,7 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
             </div>
         </div>
             <Button disabled={isLoading} type="submit">
-                Enviar
+                Guardar
             </Button>
         </form>
     )
