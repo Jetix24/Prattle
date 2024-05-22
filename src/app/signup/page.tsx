@@ -32,6 +32,9 @@ export default function SignUp() {
       password: '',
       password2: '',
       bornDate: '',
+      title:    '',
+      description: '',
+      cover:    '',
     },
   });
 
@@ -44,7 +47,10 @@ export default function SignUp() {
         name: data.nombre,  // Aquí se envía correctamente el nombre desde el campo "nombre" del formulario
         password: data.password,
         bornDate: bornDateISO,
-        firstTime: true
+        firstTime: true,
+        title:    '',
+        description: '',
+        cover:    ''
       });
 
       await signIn('credentials', { // Aquí se envía correctamente el email y la contraseña al endpoint de inicio de sesión

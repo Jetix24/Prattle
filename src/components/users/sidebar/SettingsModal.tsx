@@ -36,7 +36,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
     }
   } = useForm<FieldValues>({
     defaultValues: {
-      name: currentUser?.name,
+      email: currentUser?.name,
       image: currentUser?.image
     }
   });
@@ -149,13 +149,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
               secondary
               onClick={onClose}
             >
-              Cancel
+              Cancelar
             </Button>
             <Button
               disabled={isLoading}
               type="submit"
             >
-              Save
+              Guardar
             </Button>
         </div>
 
