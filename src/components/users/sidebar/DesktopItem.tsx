@@ -42,9 +42,9 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
           font-semibold
           text-gray-500
           hover:text-slate-900
-          hover:bg-slate-600
+          hover:bg-slate-700
         `,
-          active && 'bg-slate-700 text-slate-900'
+          active && 'bg-slate-600 text-slate-900'
         )}
       >
         {isIconUrl ? (
