@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ChatButton } from "@/components/shared/ChatButton";
-import { SignOutButton } from "@/components/shared/SignOutButton";
 import styles from "./dashboard.module.css";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import Navbar from "@/components/user/perfil/navbar/Navbar";
