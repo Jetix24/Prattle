@@ -4,27 +4,26 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, cover } = body;
+    const { name } = body;
 
-    const existingInterest = await prisma.interests.findUnique({
+    const existingCategories = await prisma.categories.findUnique({
       where: {
         name: name,
       },
     });
 
-    if (existingInterest) {
+    if (existingCategories) {
       // Si el interés ya existe, devuelve un error
-      return new NextResponse("Interest already exists", { status: 400 });
+      return new NextResponse("La categoria ya existe", { status: 400 });
     }
 
-    const interest = await prisma.interests.create({
+    const categories = await prisma.categories.create({
       data: {
-        name,
-        cover
+        name
       },
     });
 
-    return NextResponse.json(interest);
+    return NextResponse.json(categories);
   } catch (error) {
     console.log(error, "Registration error");
     return new NextResponse("Internal Error", { status: 500 });

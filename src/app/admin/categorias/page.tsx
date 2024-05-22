@@ -1,5 +1,5 @@
 "use client";
-import styles from './intereses.module.css'; 
+import styles from './categorias.module.css'; 
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import { getSession, signIn, useSession } from 'next-auth/react';
@@ -10,7 +10,7 @@ import { CldUploadButton } from "next-cloudinary";
 import { toast } from "react-hot-toast";
 import Button from '@/components/users/Button';
 
-export default function Intereses() {
+export default function Categorias() {
   const { data: session } = useSession();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
