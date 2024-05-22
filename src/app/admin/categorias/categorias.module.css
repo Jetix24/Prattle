@@ -6,7 +6,7 @@
 
   .left {
     flex: 75%;
-    background: url('/img/agregar_intereses.jpg') no-repeat;
+    background: url('/img/categorias.jpg') no-repeat;
     background-size: cover;
   }
   
@@ -30,11 +30,12 @@
     margin-top: 5%;
   }
   
-  .interesesForm {
+  .categoriasForm {
     margin: 2% 17% 7% 17%;
+    width: 63%;
   }
  
-  .interesesForm label {
+  .categoriasForm label {
     display: block;
     color: #00C1E9;
     font-weight: 700;
@@ -42,7 +43,7 @@
     font-size: 1.5vw;
   }
   
-  .interesesForm input {
+  .categoriasForm input {
     width: 100%;
     padding: 2%;
     border-radius: 10px;
@@ -53,15 +54,15 @@
     transition: all 0.2s ease-in;
   }
 
-  .interesesForm input:hover {
+  .categoriasForm input:hover {
     background: #FFFFFF;
   }
-  .interesesForm input:focus {
+  .categoriasForm input:focus {
     background: #FFFFFF;
     outline: none;
   }
   
-  .interesesForm button {
+  .categoriasForm button {
     width: 100%;
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
@@ -75,7 +76,7 @@
     transition: all 0.2s ease-in;
   }
 
-  .interesesForm button:hover {
+  .categoriasForm button:hover {
     background-color: #00C1E9;
   }
 
@@ -146,12 +147,12 @@
         margin-top: 5%;
       }
 
-    .interesesForm {
+    .categoriasForm {
         width: 80%;
         height: 150vw;
     }
 
-    .interesesForm label {
+    .categoriasForm label {
         display: block;
         color: #00C1E9;
         font-weight: 700;
@@ -159,7 +160,7 @@
         font-size: 6vw;
     }
 
-    .interesesForm input {
+    .categoriasForm input {
         padding: 3%;
         font-size: 4vw;
         padding-left: 14%;
@@ -174,7 +175,7 @@
         height: 50vw;
       }
 
-      .interesesForm button {
+      .categoriasForm button {
         padding: 2%;
         font-size: 6vw;
         margin-top: 4vw;

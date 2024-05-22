@@ -6,7 +6,6 @@ import { getSession, signIn, useSession } from 'next-auth/react';
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { CldUploadButton } from "next-cloudinary";
 import { toast } from "react-hot-toast";
 import Button from '@/components/users/Button';
 
@@ -19,13 +18,10 @@ export default function Categorias() {
     register,
     handleSubmit,
     reset,
-    watch,
-    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      nombre: '',
-      cover:    '',
+      nombre: ''
     },
   });
 
@@ -33,9 +29,8 @@ export default function Categorias() {
     setIsLoading(true);
     try {
 
-      await axios.post('/api/interest', {
-        name: data.nombre,  // Aquí se envía correctamente el nombre desde el campo "nombre" del formulario
-        cover: data.cover 
+      await axios.post('/api/categories', {
+        name: data.nombre  // Aquí se envía correctamente el nombre desde el campo "nombre" del formulario 
       });
       toast.success('Se agrego correctamente');
       // Limpia los campos de entrada
@@ -48,12 +43,6 @@ export default function Categorias() {
     }
   };
 
-  const cover = watch('cover');
-  const handleUpload = (result: any) => {
-    setValue('cover', result?.info?.secure_url, {
-      shouldValidate: true
-    })
-  }
 
   return (
     <section>
@@ -61,35 +50,16 @@ export default function Categorias() {
       <div className={styles.left}></div>
         <div className={styles.right}>
             <div className={styles.logoContainer}>
-                <h2>Registro de Intereses</h2>
+                <h2>Registro de Categorias</h2>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className={styles.interesesForm}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.categoriasForm}>
                 <div className={styles.formGroup}>
-                    <label htmlFor="nombre">Etiqueta</label>
+                    <label htmlFor="nombre">Nombre</label>
                     <div className={styles.inputIconContainer}>
-                        <input type="text" id="name" {...register('nombre', { required: true })} placeholder="Ingresa el nombre del interes" />
+                        <input type="text" id="name" {...register('nombre', { required: true })} placeholder="Ingresa la categoria" />
                         <img src="/icon/nombre.png" alt="icon" className={styles.inputIcon} />
                     </div>
                 </div>
-                <label htmlFor="cover">Portada</label>
-                <div className={styles.coverContainer}>
-                    <div className={styles.imgGroup}>
-                        <Image
-                            width="400"
-                            height="400"
-                            className="rounded-[10px]"
-                            src={cover || "/img/placeholder.jpg"}
-                            alt="Avatar"
-                            />
-                    </div>
-                </div> 
-                <CldUploadButton 
-                            options={{ maxFiles: 1 }}
-                            onUpload={handleUpload}
-                            uploadPreset="ft70nulr"
-                        >
-                        Subir             
-                        </CldUploadButton>    
                 <button type="submit" disabled={isLoading}>
                   {isLoading ? 'Cargando...' : 'Guardar'}
                 </button>
@@ -99,9 +69,5 @@ export default function Categorias() {
       </div>
     </section>
   );
-}
-
-function setValue(arg0: string, secure_url: any, arg2: { shouldValidate: boolean; }) {
-    throw new Error('Function not implemented.');
 }
 
