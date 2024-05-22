@@ -76,9 +76,9 @@ export default function Intereses() {
                 <div className={styles.coverContainer}>
                     <div className={styles.imgGroup}>
                         <Image
-                            width="1000"
-                            height="1000"
-                            className="rounded-[15px]"
+                            width="400"
+                            height="400"
+                            className="rounded-[10px]"
                             src={cover || "/img/placeholder.jpg"}
                             alt="Avatar"
                             />
