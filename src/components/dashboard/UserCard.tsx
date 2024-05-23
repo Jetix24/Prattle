@@ -47,7 +47,7 @@ const UserCard: React.FC<UserCardProps> = ({
         <LoadingModal />
       )}
       <UserProfileModal visible={isOpen} onClose={closeModal}/>
-    <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700">
+    <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700 px-4 lg:px-0">
         <div className="flex justify-end px-4 pt-8">
         </div>
         <div className="flex flex-col items-center pb-10">
