@@ -1,6 +1,6 @@
 // Intereses.tsx
 import React from 'react';
-import styles from './Intereses.module.css';
+import styles from './intereses.module.css';
 import getCategories from '@/app/actions/getCategories';
 import FormIntereses from '@/components/admin/intereses/FormIntereses/FormIntereses';
 
