@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { NextPageContext } from "next";
 import styles from "./dashboard.module.css";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import Navbar from "@/components/user/perfil/navbar/Navbar";
@@ -10,19 +11,19 @@ async function DashboardPage() {
   const users = await getUsers();
 
   return (
-    <div className={styles.bgPrattle}>
-      <Navbar currentUser={currentUser!} /> {/* Puedes pasar null o undefined mientras se carga */}
-      <div>
-        <UsersList title="Nuevos usuarios" items={users}/>
+      <div className={styles.bgPrattle}>
+        <Navbar currentUser={currentUser!} />
+        <div>
+          <UsersList title="Nuevos usuarios" items={users}/>
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    </div>
   );
 }
 
