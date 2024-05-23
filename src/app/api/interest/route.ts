@@ -1,11 +1,13 @@
 import prisma from "@/app/libs/prismadb";
 import { NextResponse } from "next/server";
+import Categorias from '../../admin/categorias/page';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, cover } = body;
+    const { name, category ,cover } = body;
 
+    // Verificar si el nombre ya existe
     const existingInterest = await prisma.interests.findUnique({
       where: {
         name: name,
@@ -13,16 +15,22 @@ export async function POST(request: Request) {
     });
 
     if (existingInterest) {
-      // Si el interés ya existe, devuelve un error
-      return new NextResponse("Interest already exists", { status: 400 });
+      return new NextResponse('El nombre ya existe', { status: 400, headers: { 'Content-Type': 'text/plain' } });
     }
 
-    const interest = await prisma.interests.create({
-      data: {
-        name,
-        cover
+    const categoryIds = category ? category.map((category: { value: string }) => category.value) : [];
+
+  const interest = await prisma.interests.create({
+    data: {
+      name,
+      cover,
+      category: {
+        connect: categoryIds.map((categoryId) => ({
+          id: categoryId,
+        })),
       },
-    });
+    },
+  });
 
     return NextResponse.json(interest);
   } catch (error) {

@@ -107,14 +107,14 @@ model Interests {
   userIds String[] @db.ObjectId
   users User[] @relation(fields: [userIds], references: [id])
 
-  categoryIds String @db.ObjectId
-  category Categories @relation(fields: [categoryIds], references: [id]) 
- 
+  categoryIds String[] @db.ObjectId
+  category Categories[] @relation(fields: [categoryIds], references: [id]) 
 }
 
 model Categories {
     id        String   @id @default(auto()) @map("_id") @db.ObjectId
     name      String?  @unique
 
-    interests Interests[] 
-  }
+    interestsIds String[] @db.ObjectId
+    interests Interests[] @relation(fields: [interestsIds], references: [id]) 
+}

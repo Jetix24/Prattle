@@ -1,6 +1,5 @@
 import prisma from "@/app/libs/prismadb";
 import getSession from "./getSession";
-import Intereses from '../admin/intereses/page';
 
 const getInterests = async () => {
     const session = await getSession();
