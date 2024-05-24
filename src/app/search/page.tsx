@@ -43,7 +43,7 @@ const SearchPage = () => {
         {isLoading && <p>Loading...</p>}
         {!isLoading && data && data.users && (
           <div>
-            <UsersList title="AA" items={data.users}/>
+            <UsersList title="Resultados de busqueda" items={data.users}/>
           </div>
         )}
         {!isLoading && (!data || !data.users) && <p>No results found.</p>}

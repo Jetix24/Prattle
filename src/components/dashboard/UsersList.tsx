@@ -12,16 +12,16 @@ const UsersList = ({items, title}) => {
     if(isEmpty(items)) {
         return null;
     }
-if(title === "AA"){
+if(title === "Resultados de busqueda"){
     return (
         <div className="px-4 md:px-12 mt-4 space-y-8">
             <div>
                 <p className="text-white text-md md:text-xl lg:text-2xl font-semibold mb-4">
                     {title}
                 </p>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                     {items.map((item) => (
-                        <div key={item} className="flex-none m-2 w-72">
+                        <div key={item} className="flex-none m-2 w-full">
                             <UserCard data={item} />
                         </div>
                     ))}
