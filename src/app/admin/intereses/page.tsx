@@ -1,10 +1,9 @@
-// Intereses.tsx
 import React from 'react';
-import styles from './intereses.module.css';
 import getCategories from '@/app/actions/getCategories';
 import FormIntereses from '@/components/admin/intereses/FormIntereses/FormIntereses';
+import styles from './Intereses.module.css';
 
-const Intereses = async () => {
+export default async function Intereses() {
   const categories = await getCategories();
 
   return (
@@ -12,11 +11,9 @@ const Intereses = async () => {
       <div className={styles.container}>
         <div className={styles.left}></div>
         <div className={styles.right}>
-          <FormIntereses categories={categories}/> 
+          <FormIntereses categories={categories} />
         </div>
       </div>
     </section>
   );
-};
-
-export default Intereses;
+}

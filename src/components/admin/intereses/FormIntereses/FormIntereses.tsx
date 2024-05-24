@@ -1,4 +1,3 @@
-// FormIntereses.tsx
 "use client";
 import React, { useState } from 'react';
 import styles from './FormIntereses.module.css';
@@ -8,10 +7,9 @@ import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import { toast } from "react-hot-toast";
 import { Categories } from '@prisma/client';
-import { useRouter } from 'next/navigation';
 import Select from '@/components/users/inputs/Select';
-
 import Input from "@/components/users/inputs/Input";
+
 interface FormInteresesProps {
   categories: Categories[];
 }
@@ -31,7 +29,7 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ categories }) => {
     defaultValues: {
       name: '',
       cover: '',
-      category: []
+      category: ''
     },
   });
 
@@ -42,16 +40,16 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ categories }) => {
     axios.post('/api/interest', {
       ...data
     })
-    .then(response => {
+    .then(() => {
       toast.success('Se agregó correctamente');
       reset();
     })
     .catch(error => {
-        if (error.response && error.response.status === 400) {
-            toast.error('El interes ya existe');
-          } else {
-            toast.error('Algo salió mal');
-          }
+      if (error.response && error.response.status === 400) {
+        toast.error('El interes ya existe');
+      } else {
+        toast.error('Algo salió mal');
+      }
       console.error(error); // Esto imprimirá el error en la consola
     })
     .finally(() => {
@@ -74,22 +72,21 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ categories }) => {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.interesesForm}>
           <div className={styles.formGroup}>
-            
             <div className={styles.inputIconContainer}>
-              <Input label="Nombre"type="text" id="name" disabled={isLoading} register={register} required errors={errors} />
+              <Input label="Nombre" type="text" id="name" disabled={isLoading} register={register} required errors={errors} />
               <img src="/icon/nombre.png" alt="icon" className={styles.inputIcon} />
             </div>
             <Select
-                disabled={isLoading}
-                label="Categorías"
-                options={categories.map((category) => ({
+              disabled={isLoading}
+              label="Categorías"
+              options={categories.map((category) => ({
                 value: category.id,
                 label: category.name
-                }))}
-                onChange={(value) => setValue('category', value, { 
+              }))}
+              onChange={(value) => setValue('category', value, { 
                 shouldValidate: true 
-                })}
-                value={category}
+              })}
+              value={category}
             />
           </div>
           <label htmlFor="cover">Portada</label>
