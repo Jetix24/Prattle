@@ -11,18 +11,11 @@ async function DashboardPage() {
   const users = await getUsers();
 
   return (
-      <div className={styles.bgPrattle}>
+      <div className={`h-screen ${styles.bgPrattle}`}>
         <Navbar currentUser={currentUser!} />
         <div>
           <UsersList title="Nuevos usuarios" items={users}/>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
       </div>
   );
 }

@@ -6,6 +6,7 @@ import Navbar from '@/components/user/perfil/navbar/Navbar';
 import SearchBar from '@/components/user/perfil/navbar/SearchBar';
 import styles from '@/app/dashboard/dashboard.module.css';
 import useSWR from 'swr';
+import UsersList from '@/components/dashboard/UsersList';
 
 const fetchPosts = async (url: string) => {
     const response = await fetch(url);
@@ -38,9 +39,15 @@ const SearchPage = () => {
         <SearchBar />
     </nav>
     </div>
-    <div>
-      <h1>Search Page</h1>
-    </div>
+    <main className={`h-full ${styles.bgPrattle}`}>
+        {isLoading && <p>Loading...</p>}
+        {!isLoading && data && data.users && (
+          <div>
+            <UsersList title="AA" items={data.users}/>
+          </div>
+        )}
+        {!isLoading && (!data || !data.users) && <p>No results found.</p>}
+      </main>
     </>
   );
 };
