@@ -21,12 +21,6 @@ export default async function handler(
                                 contains: query,
                                 mode: 'insensitive'
                             }
-                        },
-                        {
-                            email: {
-                                contains: query,
-                                mode: 'insensitive'
-                            }
                         }
                     ]
                 }
