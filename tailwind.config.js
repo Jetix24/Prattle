@@ -13,7 +13,11 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-    },
+      colors: {
+        'input-gray': '#D9D9D9',
+        'icon-color': '#191E26',
+      }
+    }
   },
   plugins: [
     require('postcss-import'),
