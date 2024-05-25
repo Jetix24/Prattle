@@ -22,15 +22,9 @@ const useRoutes = () => {
       icon: HiUsers, 
       active: pathname === '/users'
     },
-    { 
-      label: 'Prattle', 
-      href: '/dashboard', 
-      icon: 'prattle',
-    },
     {
-      label: 'Logout', 
-      href: '/',
-      onClick: () => signOut({ callbackUrl: '/' }),
+      label: 'Dashboard', 
+      href: '/dashboard',
       icon: HiArrowLeftOnRectangle, 
     }
   ], [pathname, conversationId]);

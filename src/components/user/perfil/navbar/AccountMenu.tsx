@@ -19,7 +19,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
             <Link href="/conversations"> Chat </Link>
           </li>
           <li className=" block px-4 py-2 hover:bg-gray-600 hover:text-white cursor-pointer">
-            <Link href="/conversations"> Configuración </Link>
+            <Link href="/configuration"> Configuración </Link>
           </li>
         </ul>
         <div onClick={() => signOut({callbackUrl: '/'})} className="py-2 cursor-pointer block px-4 text-sm  hover:underline text-red-500">
