@@ -79,7 +79,7 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ categories }) => {
                 <input 
                   type="text" 
                   id="input-group-1" 
-                  className="bg-input-gray text-gray-900 text-sm rounded hover:bg-white focus:outline-none focus:bg-white focus:ring-0 block w-full ps-10 p-2.5 transition-colors duration-200" 
+                  className="bg-input-gray text-gray-900 text-sm font-semibold rounded hover:bg-white focus:outline-none focus:bg-white focus:ring-0 block w-full ps-10 p-2.5 transition-colors duration-200" 
                   placeholder="Nombre del interes"
                   disabled={isLoading} 
                   {...register('name')}

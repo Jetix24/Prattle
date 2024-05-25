@@ -5,13 +5,13 @@
   }
 
   .left {
-    flex: 75%;
+    width: 60%;
     background: url('/img/categorias.jpg') no-repeat;
     background-size: cover;
   }
   
   .right {
-    flex: 50%;
+    width: 40%;
     background-color: #191E26;
     align-items: center;
     display: flex;
@@ -25,16 +25,17 @@
   
   .logoContainer h2 {
     color: #fff;
-    font-size: 4vw;
+    font-size: 5vw;
     font-weight: bold; /* Added font-weight property */
     margin-top: 5%;
+    margin-bottom: 3%;
+  }
+
+  .categoriasForm {
+    width: 60%;
   }
   
-  .categoriasForm {
-    margin: 2% 17% 7% 17%;
-    width: 63%;
-  }
- 
+
   .categoriasForm label {
     display: block;
     color: #00C1E9;
@@ -43,41 +44,18 @@
     font-size: 1.5vw;
   }
   
-  .categoriasForm input {
-    width: 100%;
-    padding: 2%;
-    border-radius: 10px;
-    font-size: 1vw;
-    font-weight: 600;
-    border: 1px solid #bababa;
-    background: #D9D9D9;
-    transition: all 0.2s ease-in;
-  }
-
-  .categoriasForm input:hover {
-    background: #FFFFFF;
-  }
-  .categoriasForm input:focus {
-    background: #FFFFFF;
-    outline: none;
-  }
-  
   .categoriasForm button {
     width: 100%;
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fff;
     font-size: 2vw;
     font-weight: bold; /* Added font-weight property */
     margin-top: 1.5vw;
     cursor: pointer;
     transition: all 0.2s ease-in;
-  }
-
-  .categoriasForm button:hover {
-    background-color: #00C1E9;
   }
 
   .inputIconContainer {
@@ -93,11 +71,6 @@
     width: 6%;
     height: 60%;
   }
-
-  .inputIconContainer input {
-    padding-left: 10%; /* Ajusta esto para mover el texto dentro del input */
-  }
-
 
   .coverContainer{
     display: flex;
@@ -119,7 +92,6 @@
     flex-direction: column;
   }
 
-
   .imgGroup img{
     width: 90%;
     height: 90%;
@@ -139,57 +111,27 @@
       }
 
     .right{
-        flex: 100%;
+        width: 100%;
+        height: 100%;
     }
     
     .logoContainer h2 {
-        font-size: 10vw;
+        font-size: 14vw;
         margin-top: 5%;
       }
 
     .categoriasForm {
-        width: 80%;
-        height: 150vw;
+        width: 70%;
+        height: 100%;
     }
 
     .categoriasForm label {
-        display: block;
-        color: #00C1E9;
-        font-weight: 700;
-        margin-top: 2%;
         font-size: 6vw;
     }
-
-    .categoriasForm input {
-        padding: 3%;
-        font-size: 4vw;
-        padding-left: 14%;
-      }
-    
-      .inputIcon {
-        width: 8%;
-      }
-
-      .coverContainer{
-        width: 100%;
-        height: 50vw;
-      }
-
       .categoriasForm button {
         padding: 2%;
         font-size: 6vw;
         margin-top: 4vw;
-      }
-
-      .imgGroup{
-        width: 100%;
-        height: 100%;
-      }
-    
-    
-      .imgGroup img{
-        width: 90%;
-        height: 90%;
       }
 
   }

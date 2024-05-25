@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
 import Button from '@/components/users/Button';
+import { MdNewLabel } from "react-icons/md";
+
 
 export default function Categorias() {
   const { data: session } = useSession();
@@ -50,15 +52,26 @@ export default function Categorias() {
       <div className={styles.left}></div>
         <div className={styles.right}>
             <div className={styles.logoContainer}>
-                <h2>Registro de Categorias</h2>
+                <h2>Categorias</h2>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.categoriasForm}>
                 <div className={styles.formGroup}>
-                    <label htmlFor="nombre">Nombre</label>
-                    <div className={styles.inputIconContainer}>
-                        <input type="text" id="name" {...register('nombre', { required: true })} placeholder="Ingresa la categoria" />
-                        <img src="/icon/nombre.png" alt="icon" className={styles.inputIcon} />
+                   
+                    <label htmlFor="input-group-1" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <MdNewLabel className="w-6 h-6 text-icon-color dark:text-icon-color"/>      
                     </div>
+                    <input 
+                      type="text" 
+                      id="input-group-1" 
+                      className="bg-input-gray text-gray-900 text-sm font-semibold rounded hover:bg-white focus:outline-none focus:bg-white focus:ring-0 block w-full ps-10 p-2.5 transition-colors duration-200" 
+                      placeholder="Nombre del interes"
+                      disabled={isLoading} 
+                      {...register('nombre')}
+                      required 
+                    />
+              </div>
                 </div>
                 <button type="submit" disabled={isLoading}>
                   {isLoading ? 'Cargando...' : 'Guardar'}
