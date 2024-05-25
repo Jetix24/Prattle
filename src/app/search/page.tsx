@@ -39,7 +39,7 @@ const SearchPage = () => {
         <SearchBar />
     </nav>
     </div>
-    <main className={`h-full ${styles.bgPrattle}`}>
+    <main className={`h-screen ${styles.bgPrattle}`}>
         {isLoading && <p>Loading...</p>}
         {!isLoading && data && data.users && (
           <div>
