@@ -7,6 +7,7 @@ import SearchBar from '@/components/user/perfil/navbar/SearchBar';
 import styles from '@/app/dashboard/dashboard.module.css';
 import useSWR from 'swr';
 import UsersList from '@/components/dashboard/UsersList';
+import Link from 'next/link';
 
 const fetchPosts = async (url: string) => {
     const response = await fetch(url);
@@ -34,7 +35,9 @@ const SearchPage = () => {
     <div className={styles.bgPrattle}>
     <nav className="flex w-full items-center p-4">
         <div className="my-2 mx-3 hidden lg:block">
-            <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain" alt="Logo" />
+          <Link href="/dashboard">
+            <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain cursor-pointer" alt="Logo" />
+          </Link>
         </div>
         <SearchBar />
     </nav>
