@@ -13,7 +13,7 @@ async function SearchPage() {
       <div className={`h-screen ${styles.bgPrattle}`}>
         <Navbar currentUser={currentUser!} />
         <div>
-          <SearchResults />
+          <SearchResults currentUser={currentUser!} />
         </div>
       </div>
   );

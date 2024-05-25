@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import {User} from "@prisma/client";
+import { User } from "@prisma/client";
 import Image from "next/image";
 
 import axios from "axios";
@@ -16,15 +16,17 @@ import useUserProfileModal from "@/app/hooks/useUserProfileModal";
 
 interface UserCardProps {
     data: User;
+    ifUser?: string; // Recibe el id del usuario actual
 }
 
 const UserCard: React.FC<UserCardProps> = ({
-    data
+    data,
+    ifUser
 }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const { openModal } = useUserProfileModal();
-    const { isOpen, closeModal} = useUserProfileModal();
+    const { isOpen, closeModal } = useUserProfileModal();
 
     const { members } = useActiveList();
     const isActive = members.indexOf(data?.email!) !== -1;
@@ -33,13 +35,18 @@ const UserCard: React.FC<UserCardProps> = ({
         setIsLoading(true);
 
         axios.post('/api/conversations', { 
-        userId: data.id
+            userId: data.id
         })
         .then((data) => {
-        router.push(`/conversations/${data.data.id}`);
+            router.push(`/conversations/${data.data.id}`);
         })
         .finally(() => setIsLoading(false));
     }, [data, router]);
+
+    // Si el id del usuario actual es igual al id del usuario en data, retornar null
+    if (data.id === ifUser) {
+        return null;
+    }
 
     return ( 
         <>

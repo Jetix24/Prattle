@@ -5,6 +5,7 @@ import GoChatButton from './GoChatButton';
 import SearchBar from "./SearchBar";
 import AccountMenu from "./AccountMenu";
 import { use, useCallback, useState } from "react";
+import Link from "next/link";
 
 interface NavbarProps {
     currentUser: User
@@ -21,8 +22,10 @@ const Navbar: React.FC<NavbarProps> = (
 
     return (
             <nav className="flex w-full items-center p-4">
-                <div className="my-2 mx-3 hidden lg:block">
-                    <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain" alt="Logo" />
+                <div className="my-2 mx-3 hidden lg:block" >
+                    <Link href="/dashboard" className="cursor-pointer">
+                        <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain" alt="Logo" />
+                    </Link>
                 </div>
                 <SearchBar />
                 <GoChatButton />

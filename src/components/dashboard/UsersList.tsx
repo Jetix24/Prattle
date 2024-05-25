@@ -2,11 +2,6 @@ import React from "react";
 import { isEmpty } from "lodash";
 import UserCard from "./UserCard";
 
-interface UsersListProps {
-    items: string[];
-    title: string;
-}   
-
 const UsersList = ({items, title}) => {
     
     if(isEmpty(items)) {
@@ -30,7 +25,6 @@ if(title === "Resultados de busqueda"){
         </div>
     );
 } else {
-
     return ( 
         <div className="px-4 md:px-12 mt-4 space-y-8">
             <div>
@@ -51,5 +45,5 @@ if(title === "Resultados de busqueda"){
     );
 }
 }
- 
+
 export default UsersList;
