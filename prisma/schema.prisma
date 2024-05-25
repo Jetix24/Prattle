@@ -101,10 +101,20 @@ model Message {
 //Se define el modelo de intereses
 model Interests {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  name      String?
+  name      String?  @unique
   cover     String?
 
   userIds String[] @db.ObjectId
   users User[] @relation(fields: [userIds], references: [id])
- 
+
+  categoryIds String[] @db.ObjectId
+  category Categories[] @relation(fields: [categoryIds], references: [id]) 
+}
+
+model Categories {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    name      String?  @unique
+
+    interestsIds String[] @db.ObjectId
+    interests Interests[] @relation(fields: [interestsIds], references: [id]) 
 }

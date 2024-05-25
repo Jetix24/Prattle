@@ -37,13 +37,13 @@ const Select: React.FC<SelectProps> = ({
         onChange={onChange}
         isMulti
         options={options}
-        menuPortalTarget={document.body}
-        styles={{
-          menuPortal: (base) => ({
-            ...base,
-            zIndex: 9999
-          })
-        }}
+        menuPortalTarget={typeof window !== 'undefined' ? document.body : undefined} // esta linea hace que el menu se muestre por encima de otros elementos
+      styles={{
+        menuPortal: (base) => ({
+          ...base,
+          zIndex: 9999
+        })
+      }}
         classNames={{
           control: () => "text-sm"
         }}

@@ -1,6 +1,7 @@
 .descripcionForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   .inputContainers {
@@ -10,13 +11,13 @@
   }
   
   .leftContainer {
-    height: 60vh;
-    flex: 1;
+    height: 30vw;
+    width: 35vw;
     margin-right: 20px;
   }
   
   .rightContainer {
-    flex: 1;
+    width: 30vw;
   }
     .formGroup{
         margin-bottom: 2%;
@@ -64,12 +65,12 @@
 
 
 .formGroup textarea[id="title"]{
-    height: 20vh;
+    height: 10vw;
     padding: 0% 0% 0% 1%;
 }
 
 .formGroup textarea[id="description"]{
-    height: 33vh;
+    height: 16vw;
     padding: 0% 0% 0% 1%;
 }
 
@@ -103,11 +104,29 @@
     transition: all 0.2s ease-in;
   }
 
+  .coverContainer img{
+    height: 80%;
+  }
+
   .coverContainer:hover{
     background: #FFFFFF;
   }
 
   @media (max-width: 1190px) and (max-height: 1000px) {
+
+    .inputContainers {
+      width: 100%;
+    }
+
+
+    .leftContainer {
+      height: 80vw;
+      width: 100%
+    }
+    
+    .rightContainer {
+      width: 100%
+    }
 
     .descripcionForm {
         flex-direction: column;
@@ -134,6 +153,14 @@
         font-size: 5vw;
     }
 
+    .formGroup textarea[id="title"]{
+      height: 25vw;
+    }
+  
+    .formGroup textarea[id="description"]{
+        height: 35vw;
+    }
+
     .descripcionForm button {      
         padding: 6%;
         font-size: 7vw;
@@ -148,4 +175,10 @@
         height: 50vw;
         margin-bottom: 6vw;
     }
+
+    .coverContainer img{
+      width: 80%;
+      height: 80%;
+    }
+  
   }
