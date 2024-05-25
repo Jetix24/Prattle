@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
   }
@@ -23,7 +23,7 @@
     
     .container {
         width: 100%;
-        height: 110vh;
+        height: 160vw;
         display: flex;
         flex-direction: column;
       }
