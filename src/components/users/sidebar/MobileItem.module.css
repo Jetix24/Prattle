@@ -17,13 +17,13 @@
 }
 
 .container:hover {
-    color: #000000; 
-   background-color: #F3F4F6; 
+    color: #0f172a; 
+   background-color: #334155; 
     cursor: pointer;
 }
    
 .active{
-    color: #000000; 
-    background-color: #F3F4F6; 
+    color: #0f172a; 
+   background-color: #475569; 
     cursor: pointer; 
 }

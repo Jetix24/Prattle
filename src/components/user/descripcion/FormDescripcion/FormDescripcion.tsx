@@ -46,7 +46,7 @@ const FormDescripcion: React.FC<FormDescripcionProps> = ({
       }
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
-        console.log('data:',data);
+        
         setIsLoading(true);
     
         

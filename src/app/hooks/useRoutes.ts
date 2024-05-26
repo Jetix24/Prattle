@@ -17,20 +17,14 @@ const useRoutes = () => {
       active: pathname === '/conversations' || !!conversationId
     },
     { 
-      label: 'Users', 
-      href: '/users', 
+      label: 'Friends', 
+      href: '/friends', 
       icon: HiUsers, 
-      active: pathname === '/users'
-    },
-    { 
-      label: 'Prattle', 
-      href: '/dashboard', 
-      icon: 'prattle',
+      active: pathname === '/friends'
     },
     {
-      label: 'Logout', 
-      href: '/',
-      onClick: () => signOut({ callbackUrl: '/' }),
+      label: 'Dashboard', 
+      href: '/dashboard',
       icon: HiArrowLeftOnRectangle, 
     }
   ], [pathname, conversationId]);

@@ -7,6 +7,7 @@ import DesktopItem from "./DesktopItem";
 import {User} from "@prisma/client";
 import Avatar from "../Avatar";
 import SettingsModal from "./SettingsModal";
+import Image from "next/image";
 
 interface DesktopSidebarProps {
     currentUser: User
@@ -33,16 +34,33 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = (
             lg:left-0
             lg:z-40
             lg:w-20
-            xl:px-6
             lg:overflow-y-auto
-            lg:bg-white
+            lg:bg-slate-900
             lg:border-r-[1px]
+            border-slate-800
             lg:pb-4
             lg:flex
             lg:flex-col
-            justify-between
           "
         >
+          <div
+            className="
+            py-4
+            flex
+            items-center
+            justify-center   
+            w-full
+            h-50        
+            "
+          >
+            <Image
+              src="/img/logo_seul.png"
+              alt="Logo"
+              width={50}
+              height={50}
+            />
+          </div>
+          <hr className="w-full border-slate-600" />
           <nav
             className="
               mt-4
@@ -67,7 +85,6 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = (
                   label={item.label}
                   icon={item.icon}
                   active={item.active}
-                  onClick={item.onClick}
                 />
               ))}
             </ul>
@@ -79,6 +96,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = (
               flex-col
               justify-between
               items-center
+              h-96
             "
           >
             <div
@@ -87,6 +105,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = (
                 cursor-pointer
                 hover:opacity-75
                 transition
+                mt-auto
               "
             >
               <Avatar user={currentUser} />
