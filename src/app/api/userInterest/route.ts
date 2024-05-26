@@ -18,8 +18,9 @@ export async function POST(request: Request) {
         },
         data: {
           interests: {
-            connect: interests.map((interestId: string) => ({ id: interestId })),
+            set: interests.map((interestId: string) => ({ id: interestId })),
           },
+        firstTime: false,
         },
       });
 

@@ -4,3 +4,17 @@
 .bgPrattle {
     background-color: #1f2836;
   }
+
+  .btnGuardar {
+    width: 50%;
+    background: linear-gradient(to right, #006A80, #02A8CB);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 2vw;
+    font-weight: bold; /* Added font-weight property */
+    cursor: pointer;
+    padding: .5%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
