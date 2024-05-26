@@ -98,7 +98,7 @@
 .logInForm input {
   width: 100%;
   padding: 2%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 1vw;
   font-weight: 600;
   border: 1px solid #bababa;
@@ -120,7 +120,7 @@
   background: linear-gradient(to right, #006A80, #02A8CB);
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #fff;
   font-size: 2vw;
   font-weight: bold; /* Added font-weight property */

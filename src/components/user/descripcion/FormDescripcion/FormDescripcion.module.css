@@ -1,32 +1,23 @@
 .descripcionForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   .inputContainers {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: .5vw;
   }
   
   .leftContainer {
-    height: 60vh;
-    flex: 1;
+    height: 30vw;
+    width: 35vw;
     margin-right: 20px;
   }
   
-  .filePond {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-
   .rightContainer {
-    flex: 1;
+    width: 30vw;
   }
     .formGroup{
         margin-bottom: 2%;
@@ -73,19 +64,19 @@
   }
 
 
-.formGroup textarea[id="titular"]{
-    height: 20vh;
+.formGroup textarea[id="title"]{
+    height: 10vw;
     padding: 0% 0% 0% 1%;
 }
 
-.formGroup textarea[id="acerca"]{
-    height: 33vh;
+.formGroup textarea[id="description"]{
+    height: 16vw;
     padding: 0% 0% 0% 1%;
 }
 
 .descripcionForm button {
     width: 100%;
-    padding: 1%;
+    padding: 2%;
     background: linear-gradient(to right, #006A80, #02A8CB);
     color: #fff;
     border: none;
@@ -97,7 +88,45 @@
     transition: all 0.2s ease-in;
   }
 
-  @media (max-width: 1024px) and (max-height: 1000px) {
+  .formGroup button{
+    padding: 1%;
+  }
+
+  .coverContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vw;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-bottom: 1vw;
+    transition: all 0.2s ease-in;
+  }
+
+  .coverContainer img{
+    height: 80%;
+  }
+
+  .coverContainer:hover{
+    background: #FFFFFF;
+  }
+
+  @media (max-width: 1190px) and (max-height: 1000px) {
+
+    .inputContainers {
+      width: 100%;
+    }
+
+
+    .leftContainer {
+      height: 80vw;
+      width: 100%
+    }
+    
+    .rightContainer {
+      width: 100%
+    }
 
     .descripcionForm {
         flex-direction: column;
@@ -107,11 +136,6 @@
         flex-direction: column;
     }
 
-    .filePond {
-        width: 100%;
-        height: 30vh;
-      }
-  
     .leftContainer {
         width: 100%;
         margin-right: 0;
@@ -129,10 +153,32 @@
         font-size: 5vw;
     }
 
-    .descripcionForm button {
-       margin-top: -4%;
-        padding: 2%;
+    .formGroup textarea[id="title"]{
+      height: 25vw;
+    }
+  
+    .formGroup textarea[id="description"]{
+        height: 35vw;
+    }
+
+    .descripcionForm button {      
+        padding: 6%;
         font-size: 7vw;
         margin-bottom: 5%;
     }
+
+    .formGroup button {
+      padding: 3%;
+  }
+
+    .coverContainer{
+        height: 50vw;
+        margin-bottom: 6vw;
+    }
+
+    .coverContainer img{
+      width: 80%;
+      height: 80%;
+    }
+  
   }

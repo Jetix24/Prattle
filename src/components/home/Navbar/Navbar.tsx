@@ -25,7 +25,7 @@ return (
                 <NavbarItem href="/login" label="Iniciar sesión" />
                 <NavbarItem href="/signup" label="Registrate" />
             </div>
-            <div onClick={toggleMobileMenu} className="lg:hidden flex-row items-center gap-2 ml-8 cursor-pointer relative ">
+            <div onClick={toggleMobileMenu} className="lg:hidden flex-row items-center gap-2 ml-8 cursor-pointer relative " style={{ marginRight: '5%' }}>
                 <IoMenu className="text-white transition" size={50}/>
                 <MobileMenu visible={showMobileMenu}/>
             </div>

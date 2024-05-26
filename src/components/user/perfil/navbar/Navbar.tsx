@@ -1,8 +1,11 @@
-
+"use client";
 import {User} from "@prisma/client";
 import Image from "next/image";
 import GoChatButton from './GoChatButton';
 import SearchBar from "./SearchBar";
+import AccountMenu from "./AccountMenu";
+import { use, useCallback, useState } from "react";
+import Link from "next/link";
 
 interface NavbarProps {
     currentUser: User
@@ -11,16 +14,24 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = (
     {currentUser}
 ) => {
+    const [showAccountMenu, setShowAccountMenu] = useState(false);
+
+    const toggleAccountMenu = useCallback(() => {
+        setShowAccountMenu((current) => !current);
+    }, []);
 
     return (
             <nav className="flex w-full items-center p-4">
-                <div className="my-2 mx-3 hidden lg:block">
-                    <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain" alt="Logo" />
+                <div className="my-2 mx-3 hidden lg:block" >
+                    <Link href="/dashboard" className="cursor-pointer">
+                        <img src="/img/logo_blanc.png" className="h-24 w-auto object-contain" alt="Logo" />
+                    </Link>
                 </div>
                 <SearchBar />
                 <GoChatButton />
-                <div className="relative hidden sm:block">
+                <div className="relative">
                     <div
+                    onClick={toggleAccountMenu}
                     className="
                     relative
                     rounded-full
@@ -42,6 +53,7 @@ const Navbar: React.FC<NavbarProps> = (
                     fill
                     />
                     </div>
+                    <AccountMenu visible={showAccountMenu} currentUser={currentUser}/>
                 </div>
             </nav>
     )

@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { email, name, password, bornDate, firstTime } = body;
+    const { email, name, password, bornDate, firstTime, title, description, cover } = body;
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
@@ -15,7 +15,10 @@ export async function POST(request: Request) {
         name,
         hashedPassword,
         bornDate,
-        firstTime
+        firstTime,
+        title, 
+        description, 
+        cover
       },
     });
 
