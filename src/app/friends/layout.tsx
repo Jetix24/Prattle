@@ -1,13 +1,13 @@
 import Sidebar from "@/components/users/sidebar/Sidebar";
-import getUsers from "../actions/getUsers";
 import UsersList from "./components/UserList";
+import getFriends from "../actions/getFriends";
 
 export default async function UsersLayout({
     children
   }: {
     children: React.ReactNode,
   }) {
-    const users = await getUsers();
+    const users = await getFriends();
 
     return (
       <Sidebar>

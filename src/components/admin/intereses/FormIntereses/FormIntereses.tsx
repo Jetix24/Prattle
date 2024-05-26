@@ -71,7 +71,7 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ categories }) => {
           <h2>Intereses</h2>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.interesesForm}>        
-          <label htmlFor="input-group-1" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+          <label htmlFor="input-group-1" className="block text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <MdNewLabel className="w-6 h-6 text-icon-color dark:text-icon-color"/>      
@@ -102,17 +102,19 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ categories }) => {
               value={category}
             />
           </div>
-          <label htmlFor="cover">Portada</label>
+          <div className={styles.formGroup}>
+          <label htmlFor="cover" className='mb-0'>Portada</label>
           <div className={styles.coverContainer}>
             <div className={styles.imgGroup}>
               <Image
                 width="400"
                 height="400"
-                className="rounded-[10px]"
+                className="rounded-[5px]"
                 src={cover || "/img/agregar.png"}
                 alt="Avatar"
               />
             </div>
+          </div>
           </div>
           <CldUploadButton
             options={{ maxFiles: 1 }}

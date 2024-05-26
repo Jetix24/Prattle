@@ -24,11 +24,13 @@
   }
  
   .interesesForm label {
-    display: block;
+    display: flex;
     color: #00C1E9;
     font-weight: 700;
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-bottom: 3%;
     font-size: 1.5vw;
+    padding: 0;
   }
   
   .interesesForm button {
@@ -52,7 +54,7 @@
     width: 100%;
     height: 14.5vw;
     background: #D9D9D9;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all 0.2s ease-in;
   }
 
@@ -79,7 +81,7 @@
     
       .container {
           width: 100%;
-          height: 110vh;
+          height: 180vw;
           display: flex;
           flex-direction: column;
       }

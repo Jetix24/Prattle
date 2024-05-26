@@ -42,7 +42,7 @@
     min-height: 100vh; /* min-h-full en Tailwind */
     align-items: center; /* items-center en Tailwind */
     justify-content: center; /* justify-center en Tailwind */
-    padding: 1rem; /* p-4 en Tailwind */
+    padding: 3rem; /* p-4 en Tailwind */
     text-align: center; /* text-center en Tailwind */
   }
 
@@ -113,9 +113,9 @@
     transform: translateY(0); /* translate-y-0 en Tailwind */
   }
   
-  @media (min-width: 640px) {
+  @media (min-width: 640px) { /* Cuando la pantalla sea de 640px o más */
     .container {
-      padding: 0; /* sm:p-0 en Tailwind */
+      padding: 0rem; 
     }
     
     .divbutton {
