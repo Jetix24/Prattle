@@ -16,6 +16,7 @@ interface FormInteresesProps {
 const FormIntereses: React.FC<FormInteresesProps> = ({ currentUser, interest, userInterest }) => {
     const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
     const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setSelectedInterests(userInterest);
@@ -37,6 +38,7 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ currentUser, interest, us
             userId: currentUser.id,
             interests: selectedInterests
         });
+        toast.success('Se guardo correctamente');
         router.push('/dashboard');
     }, [selectedInterests, router, currentUser.id]);
 
@@ -57,7 +59,7 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ currentUser, interest, us
                 </div>
             </div>
             <div className="fixed bottom-0 left-0 right-0 w-full bg-white flex justify-center mt-20">
-                <button onClick={handleSave} className={styles.btnGuardar} >Guardar</button>
+                <button onClick={handleSave} className={styles.btnGuardar} disabled={isLoading}>{isLoading ? 'Cargando...' : 'Guardar'}</button>
             </div>
         </div>
     );
