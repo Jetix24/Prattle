@@ -1,12 +1,7 @@
 "use client";
 
-import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import Modal from "../users/Modal";
-import useOtherUser from "@/app/hooks/useOtherUser";
-import { format } from "date-fns";
-import Avatar from "../users/Avatar";
-import { IoTrash } from "react-icons/io5";
 import useUserProfileModal from "@/app/hooks/useUserProfileModal";
 import Image from "next/image";
 
