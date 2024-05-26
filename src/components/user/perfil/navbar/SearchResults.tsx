@@ -29,8 +29,6 @@ const SearchResults: React.FC<SearchResultsProps> = ({ currentUser }) => {
 
   const filteredUsers = data?.users?.filter((user: User) => user.id !== currentUser.id);
 
-  console.log(filteredUsers);
-
   return (
     <main className={`h-screen ${styles.bgPrattle}`}>
       {isLoading && (
