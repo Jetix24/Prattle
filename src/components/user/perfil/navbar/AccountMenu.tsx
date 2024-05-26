@@ -12,12 +12,13 @@ interface AccountMenuProps {
 }   
 
 const AccountMenu: React.FC<AccountMenuProps> = ({ visible, currentUser }) => {
+    
+  const [isOpen, setIsOpen] = useState(false);
+
     if(!visible){ 
         return null;
     }
     
-    const [isOpen, setIsOpen] = useState(false);
-
     return ( 
       <>
       <SettingsModal
