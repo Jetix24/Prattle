@@ -1,1 +1,0 @@
-export { FormIntereses } from './FormIntereses';
