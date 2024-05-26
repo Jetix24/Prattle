@@ -3,11 +3,13 @@ import Link from 'next/link';
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getInterests from '@/app/actions/getInterests';
 import FormIntereses from '@/components/user/intereses/FormIntereses/FormIntereses';
+import getUserInterests from '@/app/actions/getUserInterests';
 
 async function descripcion() {
 
   const currentUser = await getCurrentUser();
   const interests = await getInterests();
+  const userInterests = await getUserInterests();
 
   return (
     <section>
@@ -17,7 +19,7 @@ async function descripcion() {
                <h3>Esto personalizará tu experiencia de inicio elige 3 opciones</h3>
             </div>
             <div className={styles.bgPrattle}>
-                <FormIntereses currentUser={currentUser!} interest={interests}/>
+                <FormIntereses currentUser={currentUser!} interest={interests} userInterest={userInterests}/>
             </div>
         </div>
     </section>

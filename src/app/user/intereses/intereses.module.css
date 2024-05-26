@@ -31,13 +31,16 @@
             height: 100vh;
             overflow-y: auto;
         }
+        .header{
+            text-align: center;
+        }
     
         .header h2{
-            font-size: 10vw;
+            font-size: 14vw;
             margin-top: 10%;
         }
     
         .header h3{
-            font-size: 3vw;
+            font-size: 5vw;
         }
 }
