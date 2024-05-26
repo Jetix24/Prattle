@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = (
                     fill
                     />
                     </div>
-                    <AccountMenu visible={showAccountMenu}/>
+                    <AccountMenu visible={showAccountMenu} currentUser={currentUser}/>
                 </div>
             </nav>
     )
