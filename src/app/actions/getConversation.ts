@@ -31,6 +31,7 @@ const getConversations = async () => {
 
     return conversations;
   } catch (error: any) {
+    console.log("Erorcito: ",error);
     return [];
   }
 };
