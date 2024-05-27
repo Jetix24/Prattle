@@ -30,7 +30,7 @@ const InterestCard: React.FC<InterestCardProps> = ({ data, onInterestChange, isS
             <div className="flex flex-col items-center">
                 <div className="relative overflow-hidden w-60 h-40 rounded-md">
                     <Image alt="Cover" src={data.cover || '/img/agregar.png'} layout="fill" objectFit="cover" className="w-full h-full mb-1"/>
-                    <div className={`absolute inset-0 bg-black transition-opacity duration-200 ${isChecked ? 'opacity-20 ' : 'opacity-70 border-blue-500 border-2'}`}></div>
+                    <div className={`absolute inset-0 bg-black transition-opacity duration-200 ${isChecked ? 'opacity-70 border-blue-500 border-2' : 'opacity-20'}`}></div>
                     <h5 className="absolute bottom-0 left-0 text-xl font-medium text-white">{data.name}</h5>
                 </div>
             </div>
