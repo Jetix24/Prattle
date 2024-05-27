@@ -32,6 +32,9 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible, currentUser }) => {
             <Link href="/conversations"> Chat </Link>
           </li>
           <li className=" block px-4 py-2 hover:bg-gray-600 hover:text-white cursor-pointer">
+            <Link href="/user/intereses"> Mis Intereses </Link>
+          </li>
+          <li className=" block px-4 py-2 hover:bg-gray-600 hover:text-white cursor-pointer">
             <div onClick={() => setIsOpen(true)}> Configuración </div>
           </li>
         </ul>

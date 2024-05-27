@@ -6,6 +6,7 @@ import { IoMenu } from "react-icons/io5";
 import MobileMenu from "./MobileMenu";
 import { useCallback, useState } from "react";
 
+
 export const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
