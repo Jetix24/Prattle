@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styles from "./dashboard.module.css";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import Navbar from "@/components/user/perfil/navbar/Navbar";

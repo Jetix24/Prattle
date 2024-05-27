@@ -6,6 +6,8 @@ import SearchBar from "./SearchBar";
 import AccountMenu from "./AccountMenu";
 import { use, useCallback, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect} from 'react';
 
 interface NavbarProps {
     currentUser: User
@@ -19,6 +21,15 @@ const Navbar: React.FC<NavbarProps> = (
     const toggleAccountMenu = useCallback(() => {
         setShowAccountMenu((current) => !current);
     }, []);
+    const [loading, setLoading] = useState(true);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (currentUser?.firstTime) {
+          router.push('/user/descripcion')
+        }
+      }, [router, currentUser]); // Agrega currentUser a la lista de dependencias
+    
 
     return (
             <nav className="flex w-full items-center p-4">

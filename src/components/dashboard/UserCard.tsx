@@ -5,9 +5,7 @@ import Image from "next/image";
 
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import styles from "./UserList.module.css";
 import { useCallback, useState } from "react";
-import Avatar from "@/components/users/Avatar";
 import LoadingModal from "@/components/users/LoadingModal";
 import useActiveList from "@/app/hooks/useActiveList";
 
