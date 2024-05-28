@@ -8,14 +8,13 @@ import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import { toast } from "react-hot-toast";
 import Button from '@/components/users/Button';
-import Input from "@/components/users/inputs/Input";
 
 
 interface FormPerfilProps {
   currentUser: User;
 }
 
-  const FormPerfil: React.FC<FormPerfilProps> = (
+  const FormImagen: React.FC<FormPerfilProps> = (
     {currentUser}
   ) => {
       const router = useRouter();
@@ -53,23 +52,17 @@ interface FormPerfilProps {
       
           
           axios.post('/api/settings', data)
-        .then(() => {
-          router.push('/user/intereses');
-        })
-        .catch(() => toast.error('Something went wrong!'))
-        .finally(() => setIsLoading(false))
-      }
+          .catch(() => toast.error('Something went wrong!'))
+          .finally(() => setIsLoading(false))
+        }
 
-    
 
     return (
       <main>
         <div className="m-4">
         <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="md:flex md:items-center gap-x-8">
-          <div id="images">
           <div className="space-y-12">
-            <div className="border-b border-gray-900/10 pb-8">
+            <div className="border-b border-gray-900/10 pb-12">
               <div className="mt-6 gap-x-8">
                 <div className="mb-4">
                   <label className="block text-xl text-center font-medium leading-6 text-white">
@@ -103,7 +96,7 @@ interface FormPerfilProps {
                     Portada
                   </label>
                   <div className="mt-2 gap-x-3">
-                  <div className="my-4 flex items-center justify-center">
+                  <div className="my-4">
                     <Image
                       width="168"
                       height="122"
@@ -129,55 +122,6 @@ interface FormPerfilProps {
             </div>
 
           </div>
-          </div>
-        
-          <div id="Inputs" className="w-fit sm:w-96">
-            <div className="space-y-12">
-              <div className="border-b border-gray-900/10">
-                
-                {/* User Info */}
-                <div className="mt-6 flex flex-col gap-y-8">
-                  <Input
-                    disabled={isLoading}
-                    label="Nombre"
-                    id="name"
-                    errors={errors}
-                    required
-                    register={register}
-                  />
-                  <Input
-                    disabled={isLoading}
-                    label="Fecha de Nacimiento"
-                    id="bornDate"
-                    type="date"
-                    errors={errors}
-                    register={register}
-                  />
-                  <Input
-                    disabled={isLoading}
-                    label="Título"
-                    id="title"
-                    errors={errors}
-                    register={register}
-                  />
-                  <Input
-                    disabled={isLoading}
-                    label="Descripción"
-                    id="description"
-                    errors={errors}
-                    register={register}
-                  />
-                  
-                </div>
-              </div>
-              <div className="mt-6 flex items-center justify-end gap-x-6">
-                <Button disabled={isLoading} type="submit">
-                  Guardar
-                </Button>
-              </div>
-            </div>
-          </div>
-          </div>
         </form>
       </div>
       </main>       
@@ -185,4 +129,4 @@ interface FormPerfilProps {
 }
 
 
-export default FormPerfil;
+export default FormImagen;

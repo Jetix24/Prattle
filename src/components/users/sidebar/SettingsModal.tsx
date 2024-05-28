@@ -76,10 +76,10 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
               <p className="mt-1 text-sm leading-6 text-gray-400">
                 Edita tu información pública.
               </p>
-              <div className="mt-6 flex items-center gap-x-8">
+              <div className="mt-6 md:flex md:items-center gap-x-8">
                 <div 
               className="">
-                  <label className="block text-sm font-medium leading-6 text-gray-900">
+                  <label className="block text-sm font-medium leading-6 text-white">
                     Imagen
                   </label>
                   <div className="mt-2 flex items-center gap-x-3">
@@ -101,8 +101,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                     </CldUploadButton>
                   </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium leading-6 text-gray-900">
+                <div className="mt-3 md:mt-0 ">
+                  <label className="block text-sm font-medium leading-6 text-white">
                     Portada
                   </label>
                   <div className="mt-2 flex items-center gap-x-3">

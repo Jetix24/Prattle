@@ -58,7 +58,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             sm:w-10"
         >
           <FiAlertTriangle
-            className="h-6 w-6 text-red-600"
+            className="mt-1 h-6 w-6 text-red-600"
           />
         </div>
         <div
@@ -81,7 +81,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
           >
             Delete conversation
           </Dialog.Title>
-          <div className="mt-2">
+          <div className="m-2 sm:mt-2 sm:mx-0 sm:mb-0">
             <p className="text-sm text-gray-300">
               Are you sure you want to delete this conversation? This action cannot be undone.
             </p>
@@ -91,9 +91,11 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
       <div
         className="
           mt-5
+          mr-4
           sm:mt-4
-          sm:flex
-          sm:flex-row-reverse
+          sm:mr-0
+          flex
+          flex-row-reverse
         "
       >
         <Button

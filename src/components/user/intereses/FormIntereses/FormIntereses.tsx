@@ -58,7 +58,7 @@ const FormIntereses: React.FC<FormInteresesProps> = ({ currentUser, interest, us
                     ))}
                 </div>
             </div>
-            <div className="fixed bottom-0 left-0 right-0 w-full bg-white flex justify-center mt-20">
+            <div className="fixed bottom-0 left-0 right-0 w-full bg-slate-900 flex justify-center mt-20">
                 <button onClick={handleSave} className={styles.btnGuardar} disabled={isLoading}>{isLoading ? 'Cargando...' : 'Guardar'}</button>
             </div>
         </div>
