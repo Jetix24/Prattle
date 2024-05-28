@@ -17,7 +17,9 @@ export const Us = () => {
                         <div className= {styles.Image}>
                             <img src="/img/Fer.jpeg" alt="" />
                         </div>
-                        <p>La chica más increible que alguien puede conocer, es genial en todo lo que hace, patinar, programar, hacer pasteles, es la mejor y a quien más amo.</p>
+                        <p>Soy estudiante de Ingeniería Informática apasionada por 
+                            la programación en diversos lenguajes de programación. 
+                            Me considero una persona proactiva y con habilidades de liderazgo. </p>
                     </div>
                 </div>
                 <div className= {styles.SubGroup}>
@@ -27,7 +29,10 @@ export const Us = () => {
                         <div className= {styles.Image}>
                             <img src="/img/Jose.jpeg" alt="" />
                         </div>
-                        <p>Un chico sencillo que quiere cumplir sus metas, apuntando al cielo el sabe, es un amante de los videojuegos y algun dia llegara a hacer uno del que se sienta orgulloso.</p>
+                        <p>Estudiante de Ingeniería en Sistemas Computacionales con
+                            experiencia en diversos lenguajes de programación. Me 
+                            considero una persona proactiva, organizada y 
+                            capaz de resolver cualquier problema.</p>
                     </div>
                 </div>
             </div>
