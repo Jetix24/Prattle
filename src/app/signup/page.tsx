@@ -17,7 +17,7 @@ export default function SignUp() {
 
   useEffect(() => {
     if (session) {
-      router.push('/user/descripcion');
+      router.push('/dashboard');
     }
   }, [session, router]);
 
@@ -60,7 +60,7 @@ export default function SignUp() {
 
       const { firstTime } = response.data;
       if(firstTime){
-        router.push('/user/descripcion');
+        router.push('/user/profile');
       }else{
         router.push('/dashboard');
       }

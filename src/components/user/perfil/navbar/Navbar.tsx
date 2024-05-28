@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = (
 
     useEffect(() => {
         if (currentUser?.firstTime) {
-          router.push('/user/descripcion')
+          router.push('/user/profile')
         }
       }, [router, currentUser]); // Agrega currentUser a la lista de dependencias
     
