@@ -14,7 +14,7 @@ const SearchBar = () => {
     };
 
     return ( 
-    <form onSubmit={onSearch} className="w-full px-1 lg:px-8">
+    <form onSubmit={onSearch} className="w-full px-1 lg:px-8" autoComplete="off">
         <div className="relative w-full h-full">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">

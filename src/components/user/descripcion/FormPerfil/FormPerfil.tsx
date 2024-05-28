@@ -52,7 +52,7 @@ interface FormPerfilProps {
           setIsLoading(true);
       
           
-          axios.post('/api/descripcion', data)
+          axios.post('/api/settings', data)
         .then(() => {
           router.push('/user/intereses');
         })
