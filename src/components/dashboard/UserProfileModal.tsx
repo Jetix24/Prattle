@@ -84,14 +84,11 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({
               {user?.description ||
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"}
             </p>
-            <div className="mt-4">
-              <h4 className="text-gray-400 font-bold">Intereses:</h4>
-              <ul className="text-gray-500 text-sm list-disc list-inside">
-                {interests.map((interest) => (
-                  <li key={interest}>{interest}</li>
-                ))}
-              </ul>
-            </div>
+            <div className="mt-4 mx-4">
+              {interests.map((interest) => (
+                <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full" key={interest}>{interest}</span>
+              ))}
+              </div>
           </div>
         </div>
       </div>
