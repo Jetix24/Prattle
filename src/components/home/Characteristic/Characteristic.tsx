@@ -1,6 +1,4 @@
-import Link from "next/link"
 import styles from "./Characteristic.module.css"
-import Image from 'next/image';
 
 export const Characteristic = () => {
 return (

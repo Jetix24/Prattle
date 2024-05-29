@@ -1,5 +1,4 @@
 import styles from './intereses.module.css'; 
-import Link from 'next/link';
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getInterests from '@/app/actions/getInterests';
 import FormIntereses from '@/components/user/intereses/FormIntereses/FormIntereses';

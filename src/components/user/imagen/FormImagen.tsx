@@ -1,7 +1,6 @@
 "use client";
 import { User } from "@prisma/client";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Image from "next/image";
@@ -17,8 +16,6 @@ interface FormPerfilProps {
   const FormImagen: React.FC<FormPerfilProps> = (
     {currentUser}
   ) => {
-      const router = useRouter();
-
       const [isLoading, setIsLoading] = useState(false);
       const {
         register,
