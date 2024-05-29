@@ -84,11 +84,11 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({
               {user?.description ||
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"}
             </p>
-            <div className="mt-4 mx-4">
-              {interests.map((interest) => (
-                <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full" key={interest}>{interest}</span>
-              ))}
-              </div>
+            <div className="mt-4 gap-2 flex flex-col sm:flex-row flex-wrap justify-center items-center">
+  {interests.map((interest) => (
+    <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full" key={interest}>{interest}</span>
+  ))}
+</div>
           </div>
         </div>
       </div>
