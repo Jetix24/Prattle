@@ -1,7 +1,6 @@
 import styles from './descripcion.module.css';
 import FormPerfil from '@/components/user/descripcion/FormPerfil/FormPerfil';
 import getCurrentUser from "@/app/actions/getCurrentUser";
-import FormImagen from '@/components/user/imagen/FormImagen';
 
 async function profile() {
   const currentUser = await getCurrentUser();

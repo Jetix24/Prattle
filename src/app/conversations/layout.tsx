@@ -1,6 +1,5 @@
 import getUsers from "../actions/getUsers";
 import Sidebar from "src/components/users/sidebar/Sidebar"
-import styles from "./page.module.css";
 import ConversationList from "./components/ConversationList";
 import getConversations from "../actions/getConversation";
 

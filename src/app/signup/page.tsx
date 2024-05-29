@@ -5,10 +5,9 @@ import { ButtonGoogle } from '@/components/registro/ButtonGoogle/ButtonGoogle';
 import { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { getSession, signIn, useSession } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
-import { first } from 'lodash';
 
 export default function SignUp() {
   const { data: session } = useSession();

@@ -1,8 +1,6 @@
 "use client";
 
-import styles from "./page.module.css";
 import clsx from "clsx";
-
 import useConversation from "../hooks/useConversation";
 import EmptyState from "src/components/users/EmptyState";
 

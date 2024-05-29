@@ -1,4 +1,3 @@
-import styles from "./DesktopItem.module.css";
 import Link from "next/link";
 import clsx from "clsx";
 import React from "react"; // Asegúrate de importar React

@@ -4,7 +4,7 @@ import Image from "next/image";
 import GoChatButton from './GoChatButton';
 import SearchBar from "./SearchBar";
 import AccountMenu from "./AccountMenu";
-import { use, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect} from 'react';
@@ -21,7 +21,6 @@ const Navbar: React.FC<NavbarProps> = (
     const toggleAccountMenu = useCallback(() => {
         setShowAccountMenu((current) => !current);
     }, []);
-    const [loading, setLoading] = useState(true);
     const router = useRouter();
 
     useEffect(() => {

@@ -4,7 +4,7 @@ import styles from "./FormDescripcion.module.css"
 import { User } from "@prisma/client";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Image from "next/image";
