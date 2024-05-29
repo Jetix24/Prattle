@@ -8,7 +8,7 @@ import { HiPaperAirplane, HiPhoto } from "react-icons/hi2";
 import MessageInput from "./MessageInput";
 import { CldUploadButton } from "next-cloudinary";
 import useRoutes from "@/app/hooks/useRoutes";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AIassistantModal from "./AIassistantModal";
 
 interface FormProps {
@@ -44,10 +44,6 @@ const Form: React.FC<FormProps> = ({ otherUserId }) => {
       image: result?.info?.secure_url,
       conversationId
     });
-  };
-
-  const handleAIAssistantMessage = (message: string) => {
-    setValue('message', message, { shouldValidate: true });
   };
 
   return ( 

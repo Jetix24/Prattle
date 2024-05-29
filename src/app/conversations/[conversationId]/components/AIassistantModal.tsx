@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Button from "@/components/users/Button";
 import Modal from "@/components/users/Modal";
 import { messageReceived, sendRequestToOpenAI } from "@/app/hooks/useOpenAIConnection";

@@ -1,6 +1,5 @@
 // hooks/useOpenAIConnection.ts
 import { sendMessageToOpenAI } from "index";
-import { useState } from "react";
 import { aiMessageInput } from "../conversations/[conversationId]/components/MessageInput";
 
 // Modifica la función para aceptar setters como argumentos y los intereses del usuario
@@ -14,7 +13,6 @@ export const sendRequestToOpenAI = async (
   try {
     // Construir el mensaje para OpenAI usando los intereses del usuario
     const prompt = `Basándote en estos intereses: ${interests.join(", ")}, dame una frase o una pregunta para continuar cualquier conversación. Sin poner comillas, por favor.`;
-    console.log("Prompt:", prompt);
     const response = await sendMessageToOpenAI(prompt);
     setButtonText(response);
   } catch (error) {
