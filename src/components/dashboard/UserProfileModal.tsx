@@ -1,6 +1,7 @@
+// components/dashboard/UserProfileModal.tsx
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Modal from "../users/Modal";
 import useUserProfileModal from "@/app/hooks/useUserProfileModal";
 import Image from "next/image";
@@ -12,33 +13,40 @@ interface UserProfileModalProps {
 
 const UserProfileModal: React.FC<UserProfileModalProps> = ({
   visible,
-  onClose
+  onClose,
 }) => {
-  const [isVisible, setIsVisible] = useState(!!visible);
-  const { user } = useUserProfileModal();
+  const { user, interests } = useUserProfileModal();
 
   const calculateAge = (bornDate: Date) => {
     const today = new Date();
     let age = today.getFullYear() - bornDate.getFullYear();
     const monthDifference = today.getMonth() - bornDate.getMonth();
-  
-    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < bornDate.getDate())) {
+
+    if (
+      monthDifference < 0 ||
+      (monthDifference === 0 && today.getDate() < bornDate.getDate())
+    ) {
       age--;
     }
-  
+
     return age;
   };
 
-  const age = user?.bornDate ? `, ${calculateAge(new Date(user.bornDate))}` : '';
+  const age = user?.bornDate ? `, ${calculateAge(new Date(user.bornDate))}` : "";
 
-  return ( 
+  return (
     <Modal isOpen={visible} onClose={onClose}>
       <div>
         <div className="h-40 overflow-hidden relative mr-4 mt-4 md:mr-0 md:mt-0">
-          <Image alt="Portada" src={user?.cover || '/img/defaultcover.jpg'} layout="fill" />
+          <Image
+            alt="Portada"
+            src={user?.cover || "/img/defaultcover.jpg"}
+            layout="fill"
+          />
         </div>
         <div className="flex justify-center px-5 -mt-20">
-          <div className="
+          <div
+            className="
                 relative
                 rounded-full
                 overflow-hidden
@@ -56,25 +64,39 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({
                 border-white
                 "
           >
-            <Image alt="Avatar" src={user?.image || '/img/placeholder.jpg'} layout="fill" />
-          </div> 
+            <Image
+              alt="Avatar"
+              src={user?.image || "/img/placeholder.jpg"}
+              layout="fill"
+            />
+          </div>
         </div>
         <div className="">
           <div className="text-center px-14">
             <h2 className="text-gray-100 text-2xl md:text-3xl font-bold">
-              {user?.name}{age}
+              {user?.name}
+              {age}
             </h2>
             <h3 className="text-gray-400 mt-2">
               {user?.title || "Estoy usando Prattle"}
             </h3>
             <p className="mt-2 text-gray-500 text-sm">
-              {user?.description || "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"}
+              {user?.description ||
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"}
             </p>
+            <div className="mt-4">
+              <h4 className="text-gray-400 font-bold">Intereses:</h4>
+              <ul className="text-gray-500 text-sm list-disc list-inside">
+                {interests.map((interest) => (
+                  <li key={interest}>{interest}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </Modal>
   );
-}
+};
 
 export default UserProfileModal;

@@ -23,8 +23,7 @@ const UserCard: React.FC<UserCardProps> = ({
 }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
-    const { openModal } = useUserProfileModal();
-    const { isOpen, closeModal } = useUserProfileModal();
+    const { openModal, isOpen, closeModal } = useUserProfileModal();
 
     const { members } = useActiveList();
     const isActive = members.indexOf(data?.email!) !== -1;

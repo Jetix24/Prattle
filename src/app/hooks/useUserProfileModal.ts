@@ -1,18 +1,29 @@
+// hooks/useUserProfileModal.ts
 import { create } from 'zustand';
-import { User } from "@prisma/client";
+import { User } from '@prisma/client';
+import getEachUserItsInterest from '@/app/actions/getEachUserItsInterest';
 
 export interface UserProfileModalInterface {
-    user?: User;
-    isOpen: boolean;
-    openModal: (user: User) => void; 
-    closeModal: () => void;
-};
+  user?: User;
+  interests: string[];
+  isOpen: boolean;
+  openModal: (user: User) => void;
+  closeModal: () => void;
+}
 
 const useUserProfileModal = create<UserProfileModalInterface>((set) => ({
-    userId: undefined,
-    isOpen: false,
-    openModal: (user: User) => set({ isOpen: true, user }),
-    closeModal: () => set({ isOpen: false, user: undefined}),
+  user: undefined,
+  interests: [],
+  isOpen: false,
+  openModal: async (user: User) => {
+    try {
+      const interests = await getEachUserItsInterest(user.id);
+      set({ isOpen: true, user, interests });
+    } catch (error) {
+      console.error('Failed to fetch user interests:', error);
+    }
+  },
+  closeModal: () => set({ isOpen: false, user: undefined, interests: [] }),
 }));
 
 export default useUserProfileModal;
