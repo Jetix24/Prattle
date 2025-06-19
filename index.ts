@@ -1,12 +1,12 @@
 import  OpenAI from 'openai';
 import * as dotenv from 'dotenv';
 
-let key = process.env.NEXT_PUBLIC_OPENAI_KEY as string;
+let key = process.env.OPENAI_KEY as string;
 
 // Create an OPenAI API Client
 const openai = new OpenAI({
     apiKey: key,
-    dangerouslyAllowBrowser: true
+    dangerouslyAllowBrowser: false
 });
 
 export async function sendMessageToOpenAI(message: string): Promise<string> {
